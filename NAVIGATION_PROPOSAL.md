@@ -245,12 +245,6 @@ Products for discreetly viewing information
 - Specifications
 - Compatibility
 
-#### Espyon NFC/RFID Reader (Main page + 3 sub-pages)
-- First Steps
-- Specifications
-- FAQ
-- Troubleshooting
-
 ### 8. **Mobile Apps**
 
 #### PeekSmith App (Main page)

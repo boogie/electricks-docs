@@ -38,10 +38,83 @@ class ElectricksMarkdownParser extends Parsedown {
         // Enable line breaks
         $parser->setBreaksEnabled(true);
 
+        // Allow raw HTML (needed for alerts and youtube embeds)
+        $parser->setMarkupEscaped(false);
+
         // Apply typographic improvements before parsing
         $markdown = self::improveTypography($markdown);
 
-        return $parser->text($markdown);
+        // Convert [youtube:VIDEO_ID] to embedded iframe before parsing
+        $markdown = self::convertYouTubeEmbeds($markdown);
+
+        // Convert [alert:TYPE]...[/alert] to styled alert boxes before parsing
+        $markdown = self::convertAlerts($markdown);
+
+        $html = $parser->text($markdown);
+
+        // Post-process: unwrap alerts from <p> tags that Parsedown may have added
+        $html = self::unwrapAlertsFromParagraphs($html);
+
+        return $html;
+    }
+
+    /**
+     * Remove <p> tags wrapping alert divs
+     */
+    private static function unwrapAlertsFromParagraphs($html) {
+        // Pattern to match <p> tags containing only an alert div
+        return preg_replace(
+            '/<p>(\s*<div class="alert alert-(?:info|success|warning|danger)"[^>]*>.*?<\/div>\s*)<\/p>/s',
+            '$1',
+            $html
+        );
+    }
+
+    /**
+     * Convert [youtube:VIDEO_ID] syntax to HTML iframe
+     */
+    private static function convertYouTubeEmbeds($markdown) {
+        return preg_replace(
+            '/\[youtube:([a-zA-Z0-9_-]+)\]/',
+            '<div class="video-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/$1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
+            $markdown
+        );
+    }
+
+    /**
+     * Convert [alert:TYPE]TITLE|DESCRIPTION[/alert] syntax to styled alert boxes
+     * Supports types: info, success, warning, danger
+     */
+    private static function convertAlerts($markdown) {
+        return preg_replace_callback(
+            '/\[alert:(info|success|warning|danger)\](.*?)\[\/alert\]/s',
+            function($matches) {
+                $type = $matches[1];
+                $content = $matches[2];
+
+                // Split content into title and description using pipe separator
+                $parts = explode('|', $content, 2);
+                $title = trim($parts[0]);
+                $description = isset($parts[1]) ? trim($parts[1]) : '';
+
+                // Convert markdown links to HTML in the description
+                if (!empty($description)) {
+                    $description = preg_replace('/\[([^\]]+)\]\(([^)]+)\)/', '<a href="$2">$1</a>', $description);
+                }
+
+                $html = '<div class="alert alert-' . $type . '" role="alert">';
+                if (!empty($title)) {
+                    $html .= '<span class="alert-title">' . $title . '</span>';
+                }
+                if (!empty($description)) {
+                    $html .= '<span class="alert-description">' . $description . '</span>';
+                }
+                $html .= '</div>';
+
+                return "\n\n" . $html . "\n\n";
+            },
+            $markdown
+        );
     }
 
     /**
@@ -271,6 +344,86 @@ class ElectricksMarkdownParser extends Parsedown {
             $id = self::slugify($text);
             $Block['element']['attributes']['id'] = $id;
         }
+
+        return $Block;
+    }
+
+    /**
+     * Custom block handler for [alert:TYPE]...[/alert] syntax
+     */
+    protected function blockAlert($Line) {
+        // Check if line starts with [alert:
+        if (preg_match('/^\[alert:(info|success|warning|danger)\](.*)$/', $Line['text'], $matches)) {
+            $type = $matches[1];
+            $content = $matches[2];
+
+            return [
+                'element' => [
+                    'name' => 'div',
+                    'attributes' => [
+                        'class' => 'alert alert-' . $type,
+                        'role' => 'alert'
+                    ],
+                    'handler' => [
+                        'function' => 'linesElements',
+                        'argument' => [$content],
+                        'destination' => 'elements'
+                    ]
+                ],
+                'type' => $type,
+                'content' => $content
+            ];
+        }
+    }
+
+    protected function blockAlertContinue($Line, $Block) {
+        // Check if we've reached the closing tag
+        if (preg_match('/^(.*)\[\/alert\]/', $Line['text'], $matches)) {
+            $Block['content'] .= "\n" . $matches[1];
+            $Block['closed'] = true;
+            return $Block;
+        }
+
+        // Continue collecting content
+        $Block['content'] .= "\n" . $Line['text'];
+        return $Block;
+    }
+
+    protected function blockAlertComplete($Block) {
+        // Parse the content to extract title and description
+        $content = trim($Block['content']);
+        $parts = explode('|', $content, 2);
+        $title = trim($parts[0]);
+        $description = isset($parts[1]) ? trim($parts[1]) : '';
+
+        // Convert markdown links to HTML in the description
+        if (!empty($description)) {
+            $description = preg_replace('/\[([^\]]+)\]\(([^)]+)\)/', '<a href="$2">$1</a>', $description);
+        }
+
+        $elements = [];
+        if (!empty($title)) {
+            $elements[] = [
+                'name' => 'span',
+                'attributes' => ['class' => 'alert-title'],
+                'handler' => [
+                    'function' => 'lineElements',
+                    'argument' => $title,
+                    'destination' => 'elements'
+                ]
+            ];
+        }
+        if (!empty($description)) {
+            $elements[] = [
+                'name' => 'span',
+                'attributes' => ['class' => 'alert-description'],
+                'rawHtml' => $description,
+                'allowRawHtmlInSafeMode' => true
+            ];
+        }
+
+        $Block['element']['elements'] = $elements;
+        unset($Block['element']['handler']);
 
         return $Block;
     }

@@ -6,21 +6,23 @@
  */
 
 $NAVIGATION = array (
-  'docs' => 
+  'docs' =>
   array (
     'title' => 'Getting Started',
     'icon' => 'rocket-launch',
     'icon_color' => 'green',
-    'items' => 
+    'emoji' => '🚀',
+    'items' =>
     array (
       'docs' => 'Documentation',
     ),
   ),
-  'docs/peeksmith-3' => 
+  'docs/peeksmith-3' =>
   array (
     'title' => 'PeekSmith 3',
     'icon' => 'eye',
     'icon_color' => 'blue',
+    'emoji' => '👁️',
     'category' => 'Peeking Devices',
     'items' => 
     array (
@@ -1172,33 +1174,6 @@ $NAVIGATION = array (
       'features' => 
       array (
         'nfc-rfid/compatibility' => 'Compatibility',
-      ),
-    ),
-  ),
-  'docs/espyon-nfc-rfid-reader' => 
-  array (
-    'title' => 'Espyon NFC/RFID Reader',
-    'icon' => 'identification-card',
-    'icon_color' => 'indigo',
-    'category' => 'Cards & NFC',
-    'items' => 
-    array (
-      'espyon-nfc-rfid-reader' => 'Espyon NFC/RFID Reader',
-      'espyon-nfc-rfid-reader/faq' => 'FAQ',
-      'espyon-nfc-rfid-reader/specifications' => 'Specifications',
-      'espyon-nfc-rfid-reader/troubleshooting' => 'Troubleshooting',
-    ),
-    'groups' => 
-    array (
-      'overview' => 
-      array (
-        'espyon-nfc-rfid-reader' => 'Espyon NFC/RFID Reader',
-      ),
-      'general' => 
-      array (
-        'espyon-nfc-rfid-reader/faq' => 'FAQ',
-        'espyon-nfc-rfid-reader/specifications' => 'Specifications',
-        'espyon-nfc-rfid-reader/troubleshooting' => 'Troubleshooting',
       ),
     ),
   ),

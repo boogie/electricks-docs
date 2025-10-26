@@ -3,7 +3,147 @@ title: Labco Scrabble
 updated: "2025-10-26"
 author: Electricks
 category: guides
+sidebar: "a93aec4"
 ---
 
 # Labco Scrabble
 
+## About Labco Scabble Support
+
+The Labco Scrabble support of Atom remote in MagiScript allows developers to connect your Scrabble to Atom, and control the Scrabble using commands.
+
+```javascript
+
+```
+
+## Connecting To Your Scrabble
+
+To connect Atom to Scrabble, you need to use the `labco.connect` method.
+
+If Atom is not yet connected to a Scrabble device, it will start searching for it and then connect. If a Scrabble device is already connected, but the specified name is different, Atom will disconnect from the Scrabble device, and start searching for the specified name.
+
+You can use the `*` character to connect to any available Scrabble device.
+
+The method is flexible regarding its parameters. Let’s review the possible options.
+
+```javascript
+
+```
+
+## Connecting without a Device Name
+
+This is the recommended way to connect, as this way you can share your code and no change will be necessary.
+
+```javascript
+labco.connect();
+```
+
+You can configure a default Scrabble device ID in the Atom Editor Settings. By default, it is *, which means it will connect to the first Scrabble device it finds.
+
+## Connecting by Specifying a Device Name
+
+You can pass a Scrabble device ID as the first parameter, and Atom will connect to it. For example, to connect to a Scrabble with the ID “Labco-166666”, you would use the following command:
+
+```javascript
+labco.connect('Labco-166666');
+```
+
+This is the legacy way, we recommend using it only if you have a specific use case.
+
+## Connecting by Specifying a Device Name and a Callback
+
+As a second parameter, you can specify a callback function. It will be called when Atom successfully connects to the Scrabble device. It will be called immediately if Atom is already connected to a Scrabble.
+
+```javascript
+labco.connect('Labco-166666', connected);
+
+function connected(event) {
+console.log('Labco connected.');
+}
+```
+
+When a Scrabble is connected, then an event will be triggered. Both the onEvent function, and the callback will be called with the event details.
+
+```javascript
+labco.connect('Labco-166666', connected);
+
+function connected(event) {
+console.log('Labco connected.');
+}
+```
+
+## Using the labco.connect Method
+
+```javascript
+
+```
+
+The best way to connect is by adding this call to the beginning of the `main` function, which runs when the code is loaded.
+
+```javascript
+function main() {
+labco.connect();
+// ...
+}
+```
+
+## Disconnecting your Scrabble
+
+To disconnect your Scrabble, simply call the disconnect method. It will disconnect the active Scrabble device.
+
+```javascript
+labco.disconnect();
+```
+
+You can also specify by it’s name which device you would like to disconnect:
+
+```javascript
+labco.disconnect('Labco-036666');
+```
+
+## Querying the Connected Scrabble
+
+You can query the Bluetooth name (ID) of the Scrabble device(s) Atom connected to. The id method gives you the active device’s ID, while the ids method returns an array with the Scrabble devices Atom connected to.
+
+```javascript
+labco.id(); // the active Scrabble device
+labco.ids(); // all the Scrabble devices Atom connected to
+```
+
+You can query the connected Scrabble devices as a list of device objects as well using the list method.
+
+```javascript
+const devs = labco.list();
+for (let i = 0; i
+```
+
+If more than one Scrabble device is connected, you can set one of them to active with the select method. Messages will be sent to this unit.
+
+```javascript
+labco.select('Labco-036666');
+```
+
+## Battery Percentage
+
+```javascript
+
+```
+
+###
+
+The battery level of Scrabble can be queried with the battery method. It reports a number between 0 and 100. It is checked when Atom connects to the device, and is subsequently updated every other minute.
+
+```javascript
+const percentage = labco.battery();
+console.log(Scrabble battery level: ${percentage}%);
+```
+
+## Conclusion
+
+```javascript
+
+```
+
+###
+
+The Scrabble support of Atom remote in MagiScript provides a convenient way for developers to connect their Scrabble to Atom and control its functions. By following the steps outlined in this documentation, you can easily connect to your Scrabble and set its time using MagiScript.

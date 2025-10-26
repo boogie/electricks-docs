@@ -84,7 +84,6 @@ I've successfully implemented a comprehensive navigation system that includes **
 #### **Cards & NFC** (3 products, 6+ pages)
 - **Luna Cards**
 - **NFC/RFID** (specs, compatibility)
-- **Espyon NFC/RFID Reader** (specs, FAQ, troubleshooting)
 
 #### **Mobile Apps** (5 apps, 80+ pages)
 - **PeekSmith App** (overview and features)

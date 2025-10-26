@@ -12,7 +12,6 @@ function buildNavigation($currentPath = '') {
     }
 
     $html = '<nav class="doc-sidebar">';
-    $html .= '<div class="sidebar-content">';
 
     // Group sections by category
     $grouped = [];
@@ -38,16 +37,17 @@ function buildNavigation($currentPath = '') {
     // Render grouped sections
     foreach ($grouped as $categoryName => $sections) {
         $html .= '<div class="nav-category">';
-        $html .= '<h4 class="nav-category-title">' . htmlspecialchars($categoryName) . '</h4>';
+        $html .= '<h4 class="doc-sidebar-heading">' . htmlspecialchars($categoryName) . '</h4>';
 
+        $html .= '<ul class="doc-sidebar-links">';
         foreach ($sections as $sectionSlug => $section) {
             $html .= renderNavSection($sectionSlug, $section, $currentPath, true);
         }
+        $html .= '</ul>';
 
         $html .= '</div>';
     }
 
-    $html .= '</div>';
     $html .= '</nav>';
 
     return $html;
@@ -62,35 +62,34 @@ function renderNavSection($sectionSlug, $section, $currentPath, $isGrouped = fal
 
     // Check if current path matches this product
     $sectionActive = strpos($currentPath, $productSlug) === 0;
-
-    $html = '<div class="nav-section' . ($sectionActive ? ' active' : '') . '">';
-
-    // Section title (clickable, links to main product page)
-    if ($isGrouped) {
-        $html .= '<a href="/docs/' . htmlspecialchars($productSlug) . '" class="nav-section-link' . ($currentPath === $productSlug ? ' current' : '') . '">';
-    } else {
-        $html .= '<h3 class="nav-section-title">';
-    }
-
-    $iconColor = $section['icon_color'] ?? 'blue';
-    $iconName = $section['icon'] ?? 'file-text';
-    if (!$isGrouped) {
-        $html .= '<span class="liquid-glass-icon size-18 ' . htmlspecialchars($iconColor) . '">';
-        $html .= '<i class="ph ph-' . htmlspecialchars($iconName) . '"></i>';
-        $html .= '</span>';
-    }
-
-    $html .= htmlspecialchars($section['title']);
+    $isActive = ($currentPath === $productSlug);
 
     if ($isGrouped) {
+        // Grouped section - render as list item with icon
+        $emoji = $section['emoji'] ?? '📄';
+
+        $html = '<li' . ($isActive ? ' class="active"' : '') . '>';
+        $html .= '<a href="/docs/' . htmlspecialchars($productSlug) . '">';
+        $html .= '<span class="doc-link-icon">' . $emoji . '</span>';
+        $html .= '<span class="doc-link-text">' . htmlspecialchars($section['title']) . '</span>';
         $html .= '</a>';
+        $html .= '</li>';
     } else {
-        $html .= '</h3>';
+        // Standalone section - render with heading
+        $emoji = $section['emoji'] ?? '📄';
+
+        $html = '<div class="nav-section">';
+        $html .= '<h4 class="doc-sidebar-heading">' . htmlspecialchars($section['title']) . '</h4>';
+        $html .= '<ul class="doc-sidebar-links">';
+        $html .= '<li' . ($isActive ? ' class="active"' : '') . '>';
+        $html .= '<a href="/docs/' . htmlspecialchars($productSlug) . '">';
+        $html .= '<span class="doc-link-icon">' . $emoji . '</span>';
+        $html .= '<span class="doc-link-text">Overview</span>';
+        $html .= '</a>';
+        $html .= '</li>';
+        $html .= '</ul>';
+        $html .= '</div>';
     }
-
-    // Don't show items in left sidebar - they'll go in right sidebar
-
-    $html .= '</div>';
 
     return $html;
 }

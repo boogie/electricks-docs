@@ -77,7 +77,6 @@ $productNames = [
     'mental-wave' => 'Mental Wave',
     'lunacards' => 'Luna Cards',
     'nfc-rfid' => 'NFC/RFID',
-    'espyon-nfc-rfid-reader' => 'Espyon NFC/RFID Reader',
     'peeksmith-app' => 'PeekSmith App',
     'timesmith-app' => 'TimeSmith App',
     'dicesmith-app' => 'DiceSmith App',

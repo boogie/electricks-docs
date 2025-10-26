@@ -66,11 +66,62 @@ if (!file_exists($filePath)) {
 // Parse the markdown file
 $frontMatter = ElectricksMarkdownParser::extractFrontMatter($filePath);
 $markdownContent = ElectricksMarkdownParser::getContentWithoutFrontMatter($filePath);
-// Apply typography before parsing
+
+// Apply typography and convert special syntax
 $markdownContent = ElectricksMarkdownParser::improveTypography($markdownContent);
+$markdownContent = preg_replace(
+    '/\[youtube:([a-zA-Z0-9_-]+)\]/',
+    '<div class="video-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/$1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
+    $markdownContent
+);
+
+// Convert kbd tags
+$markdownContent = preg_replace('/\[kbd:([^\]]+)\]/', '<kbd>$1</kbd>', $markdownContent);
+
+// Convert alerts
+$markdownContent = preg_replace_callback(
+    '/\[alert:(info|success|warning|danger)\](.*?)\[\/alert\]/s',
+    function($matches) {
+        $type = $matches[1];
+        $content = $matches[2];
+
+        // Split content into title and description using pipe separator
+        $parts = explode('|', $content, 2);
+        $title = trim($parts[0]);
+        $description = isset($parts[1]) ? trim($parts[1]) : '';
+
+        // Convert markdown links to HTML in the description
+        if (!empty($description)) {
+            $description = preg_replace('/\[([^\]]+)\]\(([^)]+)\)/', '<a href="$2">$1</a>', $description);
+        }
+
+        $html = '<div class="alert alert-' . $type . '" role="alert">';
+        if (!empty($title)) {
+            $html .= '<span class="alert-title">' . $title . '</span>';
+        }
+        if (!empty($description)) {
+            $html .= '<span class="alert-description">' . $description . '</span>';
+        }
+        $html .= '</div>';
+
+        return "\n\n" . $html . "\n\n";
+    },
+    $markdownContent
+);
+
+// Parse markdown to HTML
 $parser = new ElectricksMarkdownParser();
 $parser->setBreaksEnabled(true);
+$parser->setMarkupEscaped(false);
 $content = $parser->text($markdownContent);
+
+// Post-process: unwrap alerts from <p> tags that Parsedown may have added
+$content = preg_replace(
+    '/<p>(\s*<div class="alert alert-(?:info|success|warning|danger)"[^>]*>.*?<\/div>\s*)<\/p>/s',
+    '$1',
+    $content
+);
+
 $toc = ElectricksMarkdownParser::extractTOC($filePath);
 
 // Normalize links: convert electricks.info URLs to relative URLs
@@ -141,16 +192,12 @@ include __DIR__ . '/includes/header.php';
         </article>
     </div>
 
-    <!-- Right Sidebar: Reusable Sidebar or Product Pages -->
+    <!-- Right Sidebar: Reusable Sidebar -->
     <aside class="docs-toc">
         <?php
-        // Check if page has a sidebar ID in frontmatter
+        // Render reusable sidebar from sidebars.json
         if (isset($frontMatter['sidebar']) && !empty($frontMatter['sidebar'])) {
-            // Render reusable sidebar from sidebars.json
             echo buildReusableSidebar($frontMatter['sidebar'], $requestedPath);
-        } else {
-            // Show product page navigation
-            echo buildProductPageNav($requestedPath);
         }
         ?>
     </aside>
