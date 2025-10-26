@@ -129,7 +129,7 @@ class ElectricksDocsCrawler {
     /**
      * Extract and save page content as markdown
      */
-    private function extractPage($html, $product, $url, $slug = null) {
+    public function extractPage($html, $product, $url, $slug = null) {
         $dom = new DOMDocument();
         @$dom->loadHTML($html);
         $xpath = new DOMXPath($dom);
@@ -138,8 +138,8 @@ class ElectricksDocsCrawler {
         $titleNodes = $xpath->query("//h1[@class='entry-title'] | //h1");
         $title = $titleNodes->length > 0 ? trim($titleNodes->item(0)->textContent) : ucwords(str_replace('-', ' ', $slug ?? $product));
 
-        // Extract main content
-        $contentNodes = $xpath->query("//div[contains(@class, 'entry-content')] | //article");
+        // Extract main content - try entry-content first, then Elementor wp-page content
+        $contentNodes = $xpath->query("//div[contains(@class, 'entry-content')] | //div[@data-elementor-type='wp-page'] | //article");
         $content = '';
         if ($contentNodes->length > 0) {
             $content = $this->nodeToMarkdown($contentNodes->item(0), $xpath);
@@ -208,9 +208,32 @@ class ElectricksDocsCrawler {
         // Get HTML content
         $html = $node->ownerDocument->saveHTML($node);
 
-        // Remove Elementor sidebars and widgets
-        $html = preg_replace('/<div[^>]*elementor-element[^>]*>.*?<\/div>/is', '', $html);
-        $html = preg_replace('/<div[^>]*elementor-widget-wrap[^>]*>.*?<\/div>/is', '', $html);
+        // Remove only Elementor container/wrapper divs, keep content
+        // Use DOMDocument to properly handle nested structure
+        $tempDom = new DOMDocument();
+        @$tempDom->loadHTML('<?xml encoding="UTF-8">' . $html);
+        $tempXpath = new DOMXPath($tempDom);
+
+        // Remove sidebar navigation widgets - these are the specific Elementor widgets used for sidebars
+        $elementsToRemove = $tempXpath->query("
+            //div[contains(@class, 'elementor-background-overlay')] |
+            //div[contains(@class, 'elementor-shape')] |
+            //div[contains(@class, 'swiper-pagination')] |
+            //div[contains(@data-widget_type, 'reviews')] |
+            //div[contains(@class, 'elementor-widget-nav-menu')] |
+            //div[contains(@class, 'elementor-widget-ekit-nav-menu')] |
+            //div[contains(@class, 'elementor-widget-shortcode') and @data-id] |
+            //div[contains(@data-widget_type, 'nav-menu')] |
+            //div[contains(@data-widget_type, 'ekit-nav-menu')]
+        ");
+
+        foreach ($elementsToRemove as $element) {
+            if ($element->parentNode) {
+                $element->parentNode->removeChild($element);
+            }
+        }
+
+        $html = $tempDom->saveHTML();
 
         // Convert to markdown
         return $this->htmlToMarkdown($html);
@@ -225,23 +248,208 @@ class ElectricksDocsCrawler {
         $html = preg_replace('/<script[^>]*>.*?<\/script>/is', '', $html);
         $html = preg_replace('/<style[^>]*>.*?<\/style>/is', '', $html);
 
-        // Convert code blocks (pre/code tags)
+        // Convert code blocks (pre/code tags and standalone pre tags)
         $html = preg_replace_callback('/<pre[^>]*><code[^>]*>(.*?)<\/code><\/pre>/is', function($matches) {
             $code = html_entity_decode($matches[1], ENT_QUOTES | ENT_HTML5, 'UTF-8');
             $code = strip_tags($code);
             return "\n\n```javascript\n" . $code . "\n```\n\n";
         }, $html);
 
+        // Also handle standalone <pre> tags without <code>
+        $html = preg_replace_callback('/<pre[^>]*>(.*?)<\/pre>/is', function($matches) {
+            $code = html_entity_decode($matches[1], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+            $code = strip_tags($code);
+            $code = trim($code);
+            // Only create code block if there's actual content
+            if (strlen($code) > 0) {
+                return "\n\n```javascript\n" . $code . "\n```\n\n";
+            }
+            return '';
+        }, $html);
+
         // Convert inline code
         $html = preg_replace('/<code[^>]*>(.*?)<\/code>/is', "`$1`", $html);
 
-        // Convert images
-        $html = preg_replace('/<img[^>]+src="([^"]+)"[^>]*alt="([^"]*)"[^>]*>/i', "\n\n![$2]($1)\n\n", $html);
+        // Convert kbd tags to markdown format [kbd:TEXT]
+        $html = preg_replace('/<kbd[^>]*>(.*?)<\/kbd>/is', "[kbd:$1]", $html);
 
-        // Convert YouTube embeds
+        // Convert linked images FIRST (before standalone images and links)
+        // Pattern: <a href="URL"><img src="..." alt="..."></a>
+        $html = preg_replace_callback('/<a\s+href="([^"]*)"\s*[^>]*>\s*<img[^>]*>\s*<\/a>/is', function($matches) {
+            $linkUrl = $matches[1];
+            $imgTag = $matches[0];
+
+            // Extract image src
+            if (!preg_match('/src="([^"]+)"/i', $imgTag, $srcMatch)) {
+                return '';
+            }
+            $src = $srcMatch[1];
+
+            // Skip data URIs
+            if (strpos($src, 'data:') === 0) {
+                return '';
+            }
+
+            // Extract alt text
+            $alt = '';
+            if (preg_match('/alt="([^"]*)"/i', $imgTag, $altMatch)) {
+                $alt = $altMatch[1];
+            }
+
+            // Return linked image on a single line to prevent parsing issues
+            return "\n\n[![$alt]($src)]($linkUrl)\n\n";
+        }, $html);
+
+        // Convert images - ensure proper spacing and alt text
+        $html = preg_replace_callback('/<img[^>]*>/i', function($matches) {
+            $img = $matches[0];
+            // Extract src
+            if (!preg_match('/src="([^"]+)"/i', $img, $srcMatch)) {
+                return '';
+            }
+            $src = $srcMatch[1];
+
+            // Skip data URIs (SVG placeholders, etc.)
+            if (strpos($src, 'data:') === 0) {
+                return '';
+            }
+
+            // Extract alt text
+            $alt = '';
+            if (preg_match('/alt="([^"]*)"/i', $img, $altMatch)) {
+                $alt = $altMatch[1];
+            }
+
+            return "\n\n![$alt]($src)\n\n";
+        }, $html);
+
+        // Convert YouTube embeds to simple markdown format (let parser handle embedding)
+        // Handle Elementor video widgets with data-settings containing youtube_url
+        // Note: DOMDocument converts data-settings=" to data-settings=' when content has quotes
+        $html = preg_replace_callback(
+            '/<div[^>]*class=["\']?[^"\']*elementor-widget-video[^"\']*["\']?[^>]*data-settings=(["\'])(.*?)\1[^>]*>.*?<\/div>/is',
+            function($matches) {
+                // $matches[1] is the quote character (' or "), $matches[2] is the content
+                $settings = html_entity_decode($matches[2], ENT_QUOTES);
+                // Unescape JSON forward slashes: \/ -> /
+                $settings = str_replace('\/', '/', $settings);
+
+                // Extract YouTube video ID from all possible URL formats
+                // Support youtube.com, m.youtube.com, youtu.be, youtube-nocookie.com
+                // Support watch, watch/, v/, embed/, shorts/, live/, attribution_link, oembed
+
+                // Pattern 1: youtube.com/watch?v=ID or youtube.com/watch?feature=...&v=ID
+                if (preg_match('/(?:m\.)?youtube\.com\/watch(?:\/)?(?:\?|.*&)v=([a-zA-Z0-9_-]+)/', $settings, $videoMatch)) {
+                    return "\n\n[youtube:" . $videoMatch[1] . "]\n\n";
+                }
+                // Pattern 2: youtube.com/watch/ID (without query params)
+                if (preg_match('/(?:m\.)?youtube\.com\/watch\/([a-zA-Z0-9_-]+)/', $settings, $videoMatch)) {
+                    return "\n\n[youtube:" . $videoMatch[1] . "]\n\n";
+                }
+                // Pattern 3: youtube.com/v/ID
+                if (preg_match('/(?:m\.)?youtube\.com\/v\/([a-zA-Z0-9_-]+)/', $settings, $videoMatch)) {
+                    return "\n\n[youtube:" . $videoMatch[1] . "]\n\n";
+                }
+                // Pattern 4: youtube.com/embed/ID
+                if (preg_match('/(?:m\.)?youtube\.com\/embed\/([a-zA-Z0-9_-]+)/', $settings, $videoMatch)) {
+                    return "\n\n[youtube:" . $videoMatch[1] . "]\n\n";
+                }
+                // Pattern 5: youtube.com/e/ID
+                if (preg_match('/(?:m\.)?youtube\.com\/e\/([a-zA-Z0-9_-]+)/', $settings, $videoMatch)) {
+                    return "\n\n[youtube:" . $videoMatch[1] . "]\n\n";
+                }
+                // Pattern 6: youtube.com/shorts/ID
+                if (preg_match('/(?:m\.)?youtube\.com\/shorts\/([a-zA-Z0-9_-]+)/', $settings, $videoMatch)) {
+                    return "\n\n[youtube:" . $videoMatch[1] . "]\n\n";
+                }
+                // Pattern 7: youtube.com/live/ID
+                if (preg_match('/(?:m\.)?youtube\.com\/live\/([a-zA-Z0-9_-]+)/', $settings, $videoMatch)) {
+                    return "\n\n[youtube:" . $videoMatch[1] . "]\n\n";
+                }
+                // Pattern 8: youtu.be/ID
+                if (preg_match('/youtu\.be\/([a-zA-Z0-9_-]+)/', $settings, $videoMatch)) {
+                    return "\n\n[youtube:" . $videoMatch[1] . "]\n\n";
+                }
+                // Pattern 9: youtube-nocookie.com/embed/ID
+                if (preg_match('/youtube-nocookie\.com\/embed\/([a-zA-Z0-9_-]+)/', $settings, $videoMatch)) {
+                    return "\n\n[youtube:" . $videoMatch[1] . "]\n\n";
+                }
+                // Pattern 10: youtube.com/attribution_link?...u=%2Fwatch%3Fv%3DID
+                if (preg_match('/(?:m\.)?youtube\.com\/attribution_link\?.*u=(?:%2F|\/)?watch(?:%3F|\?)v(?:%3D|=)([a-zA-Z0-9_-]+)/', $settings, $videoMatch)) {
+                    return "\n\n[youtube:" . $videoMatch[1] . "]\n\n";
+                }
+                // Pattern 11: youtube.com/oembed?url=...watch?v=ID
+                if (preg_match('/(?:m\.)?youtube\.com\/oembed\?.*v(?:%3D|=)([a-zA-Z0-9_-]+)/', $settings, $videoMatch)) {
+                    return "\n\n[youtube:" . $videoMatch[1] . "]\n\n";
+                }
+                return $matches[0];
+            },
+            $html
+        );
+
+        // Handle youtube.com/embed/ iframe format
         $html = preg_replace(
             '/<iframe[^>]*youtube(?:-nocookie)?\.com\/embed\/([a-zA-Z0-9_-]+)[^>]*>.*?<\/iframe>/is',
-            "\n\n[![YouTube]( https://img.youtube.com/vi/$1/0.jpg)](https://www.youtube.com/watch?v=$1)\n\n",
+            "\n\n[youtube:$1]\n\n",
+            $html
+        );
+
+        // Convert Elementor alert widgets to markdown format
+        // Supports: elementor-alert-info, elementor-alert-success, elementor-alert-warning, elementor-alert-danger
+        $html = preg_replace_callback(
+            '/<div[^>]*class="[^"]*elementor-alert-(info|success|warning|danger)[^"]*"[^>]*>.*?<div class="elementor-alert"[^>]*>.*?<\/div>.*?<\/div>/is',
+            function($matches) {
+                $type = $matches[1];
+                $alertHtml = $matches[0];
+
+                // Extract title
+                $title = '';
+                if (preg_match('/<span class="elementor-alert-title"[^>]*>(.*?)<\/span>/is', $alertHtml, $titleMatch)) {
+                    $title = strip_tags($titleMatch[1]);
+                    $title = html_entity_decode($title, ENT_QUOTES);
+                    $title = trim($title);
+                }
+
+                // Extract description
+                $description = '';
+                if (preg_match('/<span class="elementor-alert-description"[^>]*>(.*?)<\/span>/is', $alertHtml, $descMatch)) {
+                    $description = $descMatch[1];
+                    // Convert links to markdown
+                    $description = preg_replace('/<a[^>]+href="([^"]+)"[^>]*>(.*?)<\/a>/is', '[$2]($1)', $description);
+                    $description = strip_tags($description);
+                    $description = html_entity_decode($description, ENT_QUOTES);
+                    $description = trim($description);
+                }
+
+                // Build markdown alert
+                $markdown = "\n\n[alert:$type]";
+                if (!empty($title)) {
+                    $markdown .= $title;
+                }
+                if (!empty($description)) {
+                    if (!empty($title)) {
+                        $markdown .= '|';
+                    }
+                    $markdown .= $description;
+                }
+                $markdown .= "[/alert]\n\n";
+
+                return $markdown;
+            },
+            $html
+        );
+
+        // Handle lazy-loaded YouTube players with data-id attribute
+        $html = preg_replace(
+            '/<div[^>]*class="[^"]*rll-youtube-player[^"]*"[^>]*data-id="([a-zA-Z0-9_-]+)"[^>]*>.*?<\/div>/is',
+            "\n\n[youtube:$1]\n\n",
+            $html
+        );
+
+        // Handle youtu.be short URLs in links
+        $html = preg_replace(
+            '/https?:\/\/youtu\.be\/([a-zA-Z0-9_-]+)/',
+            "\n\n[youtube:$1]\n\n",
             $html
         );
 
@@ -251,11 +459,23 @@ class ElectricksDocsCrawler {
         $html = preg_replace('/<h3[^>]*>(.*?)<\/h3>/is', "### $1\n\n", $html);
         $html = preg_replace('/<h4[^>]*>(.*?)<\/h4>/is', "#### $1\n\n", $html);
 
-        // Convert text formatting
-        $html = preg_replace('/<strong[^>]*>(.*?)<\/strong>/is', "**$1**", $html);
-        $html = preg_replace('/<b[^>]*>(.*?)<\/b>/is', "**$1**", $html);
-        $html = preg_replace('/<em[^>]*>(.*?)<\/em>/is', "*$1*", $html);
-        $html = preg_replace('/<i[^>]*>(.*?)<\/i>/is', "*$1*", $html);
+        // Convert text formatting - add spaces around markers to prevent merging
+        $html = preg_replace_callback('/<strong[^>]*>(.*?)<\/strong>/is', function($m) {
+            $content = trim($m[1]);
+            return $content ? ' **' . $content . '** ' : '';
+        }, $html);
+        $html = preg_replace_callback('/<b[^>]*>(.*?)<\/b>/is', function($m) {
+            $content = trim($m[1]);
+            return $content ? ' **' . $content . '** ' : '';
+        }, $html);
+        $html = preg_replace_callback('/<em[^>]*>(.*?)<\/em>/is', function($m) {
+            $content = trim($m[1]);
+            return $content ? ' *' . $content . '* ' : '';
+        }, $html);
+        $html = preg_replace_callback('/<i[^>]*>(.*?)<\/i>/is', function($m) {
+            $content = trim($m[1]);
+            return $content ? ' *' . $content . '* ' : '';
+        }, $html);
 
         // Convert links
         $html = preg_replace('/<a\s+href="([^"]*)"[^>]*>(.*?)<\/a>/is', "[$2]($1)", $html);
@@ -272,16 +492,62 @@ class ElectricksDocsCrawler {
         // Remove remaining HTML tags
         $html = strip_tags($html);
 
-        // Clean up whitespace
-        $html = preg_replace('/\n{3,}/', "\n\n", $html);
-        $html = preg_replace('/[ \t]+/', ' ', $html);
+        // Clean up incomplete markdown formatting (e.g., ** with no content or closing)
+        $html = preg_replace('/\*\*\s*\*\*/', '', $html);  // Remove empty bold markers
+        $html = preg_replace('/\*\s*\*/', '', $html);      // Remove empty italic markers
+        $html = preg_replace('/\*\*\s*\n/', '', $html);    // Remove ** on its own line
+        $html = preg_replace('/\*\*\s*$/', '', $html);     // Remove trailing **
+
+        // Clean up whitespace while preserving paragraph structure
+        // First pass: remove empty lines and excessive newlines
+        $html = preg_replace('/\n\s*\n\s*\n+/', "\n\n", $html);  // Max 2 newlines with any whitespace
+        $html = preg_replace('/[ \t]{2,}/', ' ', $html);          // Multiple spaces to single space
+        $html = preg_replace('/ +\n/', "\n", $html);              // Remove trailing spaces before newlines
+        $html = preg_replace('/\n +/', "\n", $html);              // Remove leading spaces after newlines
+
+        // Second pass: clean up any remaining excessive whitespace
+        $lines = explode("\n", $html);
+        $cleanedLines = [];
+        $emptyLineCount = 0;
+
+        foreach ($lines as $line) {
+            $trimmedLine = trim($line);
+
+            if ($trimmedLine === '') {
+                $emptyLineCount++;
+                // Only allow one empty line in a row
+                if ($emptyLineCount === 1) {
+                    $cleanedLines[] = '';
+                }
+            } else {
+                $emptyLineCount = 0;
+                $cleanedLines[] = $line;
+            }
+        }
+
+        $html = implode("\n", $cleanedLines);
         $html = trim($html);
 
         // Decode HTML entities
         $html = html_entity_decode($html, ENT_QUOTES | ENT_HTML5, 'UTF-8');
 
-        // Remove duplicate h1 headings
-        $html = preg_replace('/^#\s+.+?\n\n/m', '', $html);
+        // Remove duplicate h1 headings - keep only the first one
+        $lines = explode("\n", $html);
+        $h1Found = false;
+        $lastH1Text = '';
+        $filteredLines = [];
+        foreach ($lines as $line) {
+            if (preg_match('/^#\s+(.+)$/', $line, $matches)) {
+                $h1Text = trim($matches[1]);
+                if ($h1Found && $h1Text === $lastH1Text) {
+                    continue;  // Skip duplicate h1 with same text
+                }
+                $h1Found = true;
+                $lastH1Text = $h1Text;
+            }
+            $filteredLines[] = $line;
+        }
+        $html = implode("\n", $filteredLines);
 
         return $html;
     }
@@ -599,7 +865,7 @@ class ElectricksDocsCrawler {
     /**
      * Fetch page content
      */
-    private function fetchPage($url) {
+    public function fetchPage($url) {
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
@@ -623,7 +889,15 @@ class ElectricksDocsCrawler {
         }
         $frontmatter .= "---\n\n";
 
-        return $frontmatter . "# $title\n\n" . $content;
+        // Check if content already starts with the title as H1
+        $contentStart = ltrim($content);
+        if (!preg_match('/^#\s+' . preg_quote($title, '/') . '\s*\n/', $contentStart)) {
+            // Title H1 not found at start, add it
+            return $frontmatter . "# $title\n\n" . $content;
+        }
+
+        // Title H1 already exists at start, don't duplicate
+        return $frontmatter . $content;
     }
 
     /**
@@ -639,7 +913,7 @@ class ElectricksDocsCrawler {
     /**
      * Print statistics
      */
-    private function printStats() {
+    public function printStats() {
         echo "\n=== Crawl Complete ===\n";
         echo "Pages crawled: {$this->stats['pages']}\n";
         echo "Sidebars extracted: {$this->stats['sidebars']}\n";
@@ -650,25 +924,62 @@ class ElectricksDocsCrawler {
 
 // Parse command line arguments
 $options = [];
-$mode = 'all';
+$mode = 'all'; // default: crawl both docs and sidebars
+$pages = []; // specific pages to crawl
 
 foreach (array_slice($argv, 1) as $arg) {
     if ($arg === '--help') {
         echo "Electricks Documentation Crawler\n\n";
         echo "Usage: php crawl-docs.php [options]\n\n";
         echo "Options:\n";
-        echo "  --docs-only        Only crawl documentation content\n";
-        echo "  --sidebars-only    Only extract sidebars\n";
+        echo "  --docs-only        Only crawl documentation content (skip sidebars)\n";
+        echo "  --sidebars-only    Only extract sidebars (skip content)\n";
+        echo "  --page=URL         Crawl a specific page (can be used multiple times)\n";
+        echo "                     Examples:\n";
+        echo "                       --page=peeksmith-3/glyphs\n";
+        echo "                       --page=https://electricks.info/docs/peeksmith-3/cognito/\n";
         echo "  --dry-run          Show what would be done\n";
         echo "  --help             Show this help\n\n";
         exit(0);
     }
 
-    if ($arg === '--docs-only') $mode = 'docs';
-    if ($arg === '--sidebars-only') $mode = 'sidebars';
-    if ($arg === '--dry-run') $options['dry-run'] = true;
+    if ($arg === '--dry-run') {
+        $options['dry-run'] = true;
+    } elseif ($arg === '--docs-only') {
+        $mode = 'docs';
+    } elseif ($arg === '--sidebars-only') {
+        $mode = 'sidebars';
+    } elseif (strpos($arg, '--page=') === 0) {
+        $page = substr($arg, 7); // Remove '--page=' prefix
+        // Normalize the page URL
+        $page = str_replace('https://electricks.info/docs/', '', $page);
+        $page = rtrim($page, '/');
+        $pages[] = $page;
+    }
 }
 
 // Run crawler
 $crawler = new ElectricksDocsCrawler($options);
-$crawler->run($mode);
+
+if (!empty($pages)) {
+    // Crawl specific pages
+    foreach ($pages as $page) {
+        $parts = explode('/', $page);
+        $product = $parts[0];
+        $slug = isset($parts[1]) ? $page : null;
+
+        echo "Crawling page: $page\n";
+        $url = "https://electricks.info/docs/$page/";
+        $html = $crawler->fetchPage($url);
+
+        if ($html) {
+            $crawler->extractPage($html, $product, $url, $slug);
+        } else {
+            echo "  ❌ Failed to fetch: $url\n";
+        }
+    }
+    $crawler->printStats();
+} else {
+    // Run normal crawl with specified mode
+    $crawler->run($mode);
+}
