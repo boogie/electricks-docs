@@ -1,0 +1,9 @@
+---
+title: Bluetooth Keyboard / Mouse
+updated: "2025-10-26"
+author: Electricks
+category: guides
+---
+
+# Bluetooth Keyboard / Mouse
+

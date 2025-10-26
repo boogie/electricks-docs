@@ -1,0 +1,51 @@
+# Electricks Help Center - Git Ignore
+
+# Logs
+*.log
+error.log
+server.log
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+
+# User uploads (if any)
+uploads/
+temp/
+
+# Database backups
+*.sql
+*.sqlite
+
+# Environment
+.env
+.env.local
+
+# Dependencies (if using composer)
+/vendor/
+composer.lock
+
+# Build files
+node_modules/
+package-lock.json
+
+# Generated files
+sitemap.xml
+robots.txt.backup
