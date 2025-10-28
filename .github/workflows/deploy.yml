@@ -54,7 +54,7 @@ jobs:
             "includes/markdown-parser.php"
             "includes/navigation.php"
             "assets/css/help-theme.css"
-            "vendor/parsedown/Parsedown.php"
+            "vendor/erusev/parsedown/Parsedown.php"
           )
 
           missing_files=()
@@ -80,7 +80,7 @@ jobs:
             "assets/css"
             "assets/js"
             "content/docs"
-            "vendor/parsedown"
+            "vendor/erusev/parsedown"
           )
 
           missing_dirs=()

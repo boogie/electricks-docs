@@ -4,7 +4,7 @@
  * Wraps Parsedown with custom features for code highlighting and navigation
  */
 
-require_once BASE_PATH . '/vendor/parsedown/Parsedown.php';
+require_once BASE_PATH . '/vendor/erusev/parsedown/Parsedown.php';
 
 class ElectricksMarkdownParser extends Parsedown {
 
