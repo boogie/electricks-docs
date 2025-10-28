@@ -1,0 +1,156 @@
+name: Deploy to help.electricks.info
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  deploy:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, xml, curl, json
+
+      - name: Validate PHP Syntax
+        run: |
+          echo "🔍 Checking PHP syntax..."
+          find . -type f -name "*.php" ! -path "*/vendor/*" ! -path "*/cache/*" ! -path "*/scripts/*" -exec php -l {} \; > /dev/null
+          if [ $? -eq 0 ]; then
+            echo "✅ All PHP files have valid syntax"
+          else
+            echo "❌ PHP syntax errors found"
+            exit 1
+          fi
+
+      - name: Check Required Files
+        run: |
+          echo "🔍 Checking required files..."
+          required_files=(
+            "index.php"
+            "docs.php"
+            "config.php"
+            ".htaccess"
+            "includes/header.php"
+            "includes/footer.php"
+            "includes/markdown-parser.php"
+            "includes/navigation.php"
+            "assets/css/help-theme.css"
+            "vendor/parsedown/Parsedown.php"
+          )
+
+          missing_files=()
+          for file in "${required_files[@]}"; do
+            if [ ! -f "$file" ]; then
+              missing_files+=("$file")
+            fi
+          done
+
+          if [ ${#missing_files[@]} -eq 0 ]; then
+            echo "✅ All required files present"
+          else
+            echo "❌ Missing required files:"
+            printf '%s\n' "${missing_files[@]}"
+            exit 1
+          fi
+
+      - name: Check Directory Structure
+        run: |
+          echo "🔍 Verifying directory structure..."
+          required_dirs=(
+            "includes"
+            "assets/css"
+            "assets/js"
+            "content/docs"
+            "vendor/parsedown"
+          )
+
+          missing_dirs=()
+          for dir in "${required_dirs[@]}"; do
+            if [ ! -d "$dir" ]; then
+              missing_dirs+=("$dir")
+            fi
+          done
+
+          if [ ${#missing_dirs[@]} -eq 0 ]; then
+            echo "✅ Directory structure is valid"
+          else
+            echo "❌ Missing required directories:"
+            printf '%s\n' "${missing_dirs[@]}"
+            exit 1
+          fi
+
+      - name: Display Deployment Info
+        run: |
+          echo "📦 Deployment Information"
+          echo "========================="
+          echo "Site: help.electricks.info"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit: ${{ github.sha }}"
+          echo "Author: ${{ github.actor }}"
+          echo "Message: ${{ github.event.head_commit.message }}"
+          echo "========================="
+
+      - name: Deploy to FTP Server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_SERVER_DIR_HELP }}
+          local-dir: ./
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/node_modules/**
+            **/cache/**
+            **/.DS_Store
+            **/.vscode/**
+            **/.idea/**
+            **/README.md
+            **/DEPLOYMENT.md
+            **/DESIGN_UPDATES.md
+            **/QUICK_START.md
+            **/READY_TO_TEST_V2.md
+            **/SCRAPER_AUTO_UPDATE.md
+            **/SIDEBAR_CRAWLER_COMPLETE.md
+            **/SIDEBARS_COMPLETE.md
+            **/SIDEBARS_IMPLEMENTED.md
+            **/NAVIGATION_IMPLEMENTED.md
+            **/NAVIGATION_PROPOSAL.md
+            **/UPDATES_V2.md
+            **/TEST_LOCALLY.txt
+            **/TEST_NOW.txt
+            **/.gitignore
+            **/*.log
+            **/*.backup
+            **/router.php
+            **/config-backup.php
+            **/config-navigation-new.php
+            **/scripts/**
+            **/.editorconfig
+
+      - name: Deployment Success
+        if: success()
+        run: |
+          echo "✅ Deployment completed successfully!"
+          echo "🚀 Site is now live at: https://help.electricks.info"
+          echo "📚 Documentation site deployed"
+          echo "⏰ Deployed at: $(date)"
+
+      - name: Deployment Failed
+        if: failure()
+        run: |
+          echo "❌ Deployment failed!"
+          echo "Please check the logs above for details"
+          exit 1
