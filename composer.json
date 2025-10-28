@@ -1,0 +1,13 @@
+{
+    "name": "electricks/help-site",
+    "description": "Electricks Help Documentation Site",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "erusev/parsedown": "^1.7"
+    },
+    "config": {
+        "vendor-dir": "vendor",
+        "optimize-autoloader": true
+    }
+}

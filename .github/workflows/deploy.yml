@@ -21,6 +21,15 @@ jobs:
           php-version: '8.2'
           extensions: mbstring, xml, curl, json
 
+      - name: Install Composer Dependencies
+        run: |
+          echo "📦 Installing Composer dependencies..."
+          if [ -f "composer.json" ]; then
+            composer install --no-dev --optimize-autoloader
+          else
+            echo "⚠️ No composer.json found, skipping..."
+          fi
+
       - name: Validate PHP Syntax
         run: |
           echo "🔍 Checking PHP syntax..."
