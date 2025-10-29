@@ -848,7 +848,7 @@ body {
 /* ===== Section Headers ===== */
 .section-header {
     text-align: left;
-    margin-bottom: 3rem;
+    margin-bottom: 48px;
 }
 
 .section-title {
