@@ -3,6 +3,39 @@
  * Pastel colors, white background, glassmorphism, liquid glass icons
  */
 
+/* ===== SF Pro Display Font ===== */
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('/assets/fonts/SF-Pro-Display-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: optional;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('/assets/fonts/SF-Pro-Display-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: optional;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('/assets/fonts/SF-Pro-Display-Semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: optional;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('/assets/fonts/SF-Pro-Display-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: optional;
+}
+
 /* ===== Color Variables (Pastel) ===== */
 :root {
     /* Pastel Primary Colors */
@@ -51,6 +84,7 @@
 
 /* ===== Global Styles ===== */
 body {
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
     color: var(--text-primary);
 }
