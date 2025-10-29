@@ -46,7 +46,9 @@ include __DIR__ . '/includes/header.php';
 <!-- Products Section -->
 <section class="products-section">
     <div class="container">
-        <h2 class="products-title">Get support for your Electricks product</h2>
+        <div class="section-header">
+            <h2 class="section-title">Get support.</h2>
+        </div>
         <div class="products-grid">
             <a href="/docs/devices/remote-control/atom-2" class="product-item">
                 <div class="product-icon">
