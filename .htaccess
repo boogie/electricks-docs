@@ -21,6 +21,10 @@ RewriteRule ^ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^api/(.+)$ api/$1.php [L,QSA]
 
+# Contact Page
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^contact$ contact.php [L]
+
 # Route documentation pages
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

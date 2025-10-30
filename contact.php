@@ -101,8 +101,9 @@ include __DIR__ . '/includes/header.php';
 
 <div class="contact-hero">
     <div class="container">
-        <h1 class="contact-hero-title">Contact Support</h1>
-        <p class="contact-hero-subtitle">We're here to help. Get in touch with our support team.</p>
+        <h1 class="contact-hero-title">We're Here to Help!</h1>
+        <p class="contact-hero-subtitle">We're here to support you every step of the way. Please share a few details, and we'll find the best solution for you.</p>
+        <p class="contact-hero-note">We typically respond within one business day, Central European Time.</p>
     </div>
 </div>
 
@@ -234,36 +235,61 @@ include __DIR__ . '/includes/header.php';
                     <div class="contact-info-icon">
                         <i class="ph-fill ph-envelope"></i>
                     </div>
-                    <h3 class="contact-info-title">Email Us</h3>
+                    <h3 class="contact-info-title">Email Support</h3>
                     <p class="contact-info-text">
                         <a href="mailto:support@electricks.info">support@electricks.info</a>
                     </p>
-                    <p class="contact-info-description">We typically respond within 24 hours</p>
+                    <p class="contact-info-description">Hardware, firmware, or order-related issues</p>
                 </div>
                 
                 <div class="contact-info-card">
                     <div class="contact-info-icon">
-                        <i class="ph-fill ph-book-open"></i>
+                        <i class="ph-fill ph-messenger-logo"></i>
                     </div>
-                    <h3 class="contact-info-title">Help Center</h3>
+                    <h3 class="contact-info-title">Facebook Messenger</h3>
                     <p class="contact-info-text">
-                        Browse our documentation and guides for quick answers
+                        <a href="https://m.me/electricks.magic" target="_blank">m.me/electricks.magic</a>
                     </p>
-                    <a href="/" class="btn btn-secondary btn-small">
-                        View Help Articles
-                        <i class="ph ph-arrow-right"></i>
-                    </a>
+                    <p class="contact-info-description">Quick responses via Messenger</p>
                 </div>
                 
                 <div class="contact-info-card">
                     <div class="contact-info-icon">
-                        <i class="ph-fill ph-chat-circle-dots"></i>
+                        <i class="ph-fill ph-device-mobile"></i>
                     </div>
-                    <h3 class="contact-info-title">Live Chat</h3>
+                    <h3 class="contact-info-title">App Support</h3>
                     <p class="contact-info-text">
-                        Chat with our support team in real-time
+                        For app-related issues, contact <strong>Benke Smith</strong>
                     </p>
-                    <p class="contact-info-description">Monday - Friday, 9am - 5pm PST</p>
+                    <p class="contact-info-description">
+                        <a href="mailto:benke.smith@gmail.com">benke.smith@gmail.com</a><br>
+                        <a href="https://m.me/benke.smith" target="_blank">m.me/benke.smith</a>
+                    </p>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <i class="ph-fill ph-users-three"></i>
+                    </div>
+                    <h3 class="contact-info-title">Join Our Communities</h3>
+                    <p class="contact-info-text">
+                        Connect with thousands of like-minded magicians
+                    </p>
+                    <div style="margin-top: 12px;">
+                        <p style="font-size: 0.875rem; color: var(--gray-700); margin-bottom: 8px;"><strong>Generic Groups:</strong></p>
+                        <p style="font-size: 0.875rem; margin-bottom: 4px;">
+                            <a href="https://www.facebook.com/groups/electricks" target="_blank" style="color: var(--primary-600);">Electricks</a> • 
+                            <a href="https://www.facebook.com/groups/740424130239118" target="_blank" style="color: var(--primary-600);">Magic Apps by Benke</a>
+                        </p>
+                        
+                        <p style="font-size: 0.875rem; color: var(--gray-700); margin: 12px 0 8px;"><strong>Product Groups:</strong></p>
+                        <p style="font-size: 0.875rem; line-height: 1.6;">
+                            <a href="https://www.facebook.com/groups/peeksmith/" target="_blank" style="color: var(--primary-600);">PeekSmith</a> • 
+                            <a href="https://www.facebook.com/groups/timesmith" target="_blank" style="color: var(--primary-600);">SBWatch & TimeSmith</a> • 
+                            <a href="https://www.facebook.com/groups/atomremote/" target="_blank" style="color: var(--primary-600);">Atom</a> • 
+                            <a href="https://www.facebook.com/groups/magiscript/" target="_blank" style="color: var(--primary-600);">MagiScript</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -288,7 +314,15 @@ include __DIR__ . '/includes/header.php';
 .contact-hero-subtitle {
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.8);
-    max-width: 600px;
+    max-width: 700px;
+    margin-bottom: 12px;
+}
+
+.contact-hero-note {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 700px;
+    font-style: italic;
 }
 
 .contact-section {
