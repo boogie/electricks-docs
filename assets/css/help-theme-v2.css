@@ -1810,7 +1810,8 @@ body {
     background: rgba(255, 255, 255, 0.1) !important;
 }
 
-.search-shortcut {
+.header-search-trigger .search-shortcut {
+    position: static;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1822,6 +1823,7 @@ body {
     color: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.1);
     min-width: 24px;
+    transform: none;
 }
 
 /* ===== Search Modal ===== */
@@ -2058,7 +2060,7 @@ body {
         max-height: 80vh;
     }
 
-    .search-shortcut {
+    .header-search-trigger .search-shortcut {
         display: none;
     }
 }
