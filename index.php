@@ -43,53 +43,6 @@ include __DIR__ . '/includes/header.php';
     </div>
 </div>
 
-<!-- Products Section -->
-<section class="products-section">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Get support.</h2>
-        </div>
-        <div class="products-grid">
-            <a href="/docs/devices/remote-control/atom-2" class="product-item">
-                <div class="product-icon">
-                    <img src="https://electricks.info/wp-content/uploads/2023/01/atom2-300x300.png" alt="Atom 2">
-                </div>
-                <span class="product-name">Atom 2</span>
-            </a>
-            <a href="/docs/devices/peeking/peeksmith-3" class="product-item">
-                <div class="product-icon">
-                    <img src="https://electricks.info/wp-content/uploads/2021/10/ps3_featured-300x300.png" alt="PeekSmith 3">
-                </div>
-                <span class="product-name">PeekSmith 3</span>
-            </a>
-            <a href="/docs/devices/remote-control/bond" class="product-item">
-                <div class="product-icon">
-                    <img src="https://electricks.info/wp-content/uploads/2024/10/bond-anim-300x300.gif" alt="Bond">
-                </div>
-                <span class="product-name">Bond</span>
-            </a>
-            <a href="/docs/devices/wearables/sb-watch-2" class="product-item">
-                <div class="product-icon">
-                    <img src="https://electricks.info/wp-content/uploads/2024/02/sbw2_-300x300.png" alt="SB Watch 2">
-                </div>
-                <span class="product-name">SB Watch 2</span>
-            </a>
-            <a href="/docs/devices/calculators/quantum-calculator" class="product-item">
-                <div class="product-icon">
-                    <img src="https://electricks.info/wp-content/uploads/2025/02/67EB80C5-BE05-4826-8FE7-BACB1838B4BC-300x300.png" alt="Quantum Calculator">
-                </div>
-                <span class="product-name">Quantum</span>
-            </a>
-            <a href="/docs/devices/remote-control/teleport" class="product-item">
-                <div class="product-icon">
-                    <img src="https://electricks.info/wp-content/uploads/2025/01/teleport-QD-300x300.png" alt="Teleport">
-                </div>
-                <span class="product-name">Teleport</span>
-            </a>
-        </div>
-    </div>
-</section>
-
 <section class="categories">
     <div class="container">
         <div class="section-header">
