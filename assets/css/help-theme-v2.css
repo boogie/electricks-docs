@@ -385,7 +385,7 @@ body {
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
-    min-width: 500px;
+    min-width: 720px;
 }
 
 .nav-dropdown:hover .nav-dropdown-menu {
@@ -443,6 +443,10 @@ body {
     font-size: 0.75rem;
     color: var(--gray-600);
     line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 500;
+    white-space: nowrap;
 }
 
 .categories {
