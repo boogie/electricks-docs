@@ -59,7 +59,7 @@ $currentPage = isset($currentPage) ? $currentPage : 'home';
                 <a href="/" class="nav-link <?php echo $currentPage === 'home' ? 'active' : ''; ?>">
                     Home
                 </a>
-                <a href="/docs/getting-started/index" class="nav-link">
+                <a href="/docs/getting-started" class="nav-link">
                     Getting Started
                 </a>
                 <div class="nav-dropdown">
@@ -114,6 +114,10 @@ $currentPage = isset($currentPage) ? $currentPage : 'home';
             </nav>
 
             <div class="header-actions">
+                <button class="header-btn header-search-trigger" id="headerSearchBtn">
+                    <i class="ph ph-magnifying-glass" style="font-size: 18px;"></i>
+                    <span class="search-shortcut" id="searchShortcut">⌘K</span>
+                </button>
                 <a href="https://electricks.info" class="header-btn">
                     <i class="ph ph-storefront" style="font-size: 18px; margin-right: 4px;"></i>
                     Shop
@@ -124,5 +128,45 @@ $currentPage = isset($currentPage) ? $currentPage : 'home';
             </div>
         </div>
     </header>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-overlay"></div>
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <div class="search-input-wrapper">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input
+                        type="text"
+                        id="searchModalInput"
+                        placeholder="Search documentation..."
+                        autocomplete="off"
+                    >
+                    <button class="search-close-btn" id="searchCloseBtn">
+                        <i class="ph ph-x"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="search-modal-body">
+                <div class="search-results" id="searchResults">
+                    <div class="search-empty-state">
+                        <i class="ph ph-magnifying-glass"></i>
+                        <p>Start typing to search...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="search-modal-footer">
+                <span class="search-hint">
+                    <kbd>↑</kbd><kbd>↓</kbd> Navigate
+                </span>
+                <span class="search-hint">
+                    <kbd>↵</kbd> Open
+                </span>
+                <span class="search-hint">
+                    <kbd>Esc</kbd> Close
+                </span>
+            </div>
+        </div>
+    </div>
 
     <main class="site-main">

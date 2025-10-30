@@ -1,208 +1,144 @@
 ---
 title: Getting Started with Electricks
 category: Getting Started
-updated: 2025-01-25
+updated: 2025-01-30
 ---
 
 # Getting Started with Electricks
 
-Welcome to Electricks! This guide will help you get started with your new magic device and make the most of its features.
+Welcome to the Electricks Help Center! This guide will help you navigate our documentation and find the information you need to get the most out of your Electricks devices.
+
+## What You'll Find Here
+
+Our documentation is organized to help you quickly find answers, learn features, and troubleshoot issues. Whether you're setting up your first device or exploring advanced capabilities, we've got you covered.
+
+## How to Use This Documentation
+
+### By Device Type
+
+Our documentation is organized by device categories. Find your device and explore its full capabilities:
+
+**Peeking Devices** - Secretly receive information during performances
+- [PeekSmith 3](/docs/devices/peeking/peeksmith-3) - Advanced peek display with multiple input methods
+- [Bond](/docs/devices/remote-control/bond) - Smartwatch-style peek and remote control
+- Other peek devices and accessories
+
+**Wearables & Watches** - Time predictions and wearable magic
+- [SB Watch 2](/docs/devices/wearables/sb-watch-2) - The ultimate time prediction watch
+- Pocket watches and other wearable devices
+
+**Remote Controls** - Wireless control of apps and devices
+- [Atom 2](/docs/devices/remote-control/atom-2) - Programmable smart remote with 12 buttons
+- [Teleport](/docs/devices/teleport/teleport) - Card and word revelation device
+- Other remote control options
+
+**Calculators & Specialty** - Unique props for specific effects
+- [Quantum Calculator](/docs/devices/calculators/quantum-calculator) - Smart calculator with hidden display
+- Dice, cubes, and other specialty props
+
+### By Task
+
+Looking to accomplish something specific? These guides help you with common tasks:
+
+**Setup & Configuration**
+- [Firmware Updates](/docs/guides/firmware-updates) - Keep your device up to date
+- [Troubleshooting Common Issues](/docs/guides/troubleshooting-common-issues) - Solve problems quickly
+- Bluetooth pairing and connectivity
+- App installation and setup
 
-## What is Electricks?
+**Learning & Techniques**
+- Device-specific tutorials and routines
+- Tips for better performance
+- Advanced features and customization
+- Integration with multiple devices
 
-Electricks creates innovative electronic devices specifically designed for magicians and mentalists. Our products combine cutting-edge technology with practical performance needs, allowing you to create impossible effects and elevate your magic.
+## What You'll Gain from Our Documentation
 
-## Quick Start Guide
+### Complete Product Knowledge
+Each device page includes:
+- **Setup instructions** - Get up and running quickly
+- **Feature explanations** - Understand what your device can do
+- **Configuration options** - Customize to your preferences
+- **Performance tips** - Get the most out of your device
+- **Troubleshooting** - Solve issues independently
 
-### 1. Unbox Your Device
+### Practical Examples
+Learn through real-world applications:
+- Step-by-step tutorials for common effects
+- Integration examples with other devices
+- Best practices from experienced users
+- Creative routine ideas
 
-When you receive your Electricks device, carefully unbox it and check that you have:
+### Stay Updated
+- Latest firmware update notes
+- New feature announcements
+- App compatibility information
+- Known issues and workarounds
 
-- Your Electricks device
-- USB charging cable
-- User manual (if included)
-- Any accessories specific to your product
+## How to Navigate Documentation
 
-### 2. Charge Your Device
+### Search Function
+Use the search bar at the top of any page to quickly find:
+- Specific features or settings
+- Error messages or problems
+- Device names or model numbers
+- Technical terms or concepts
 
-Before first use, fully charge your device:
+### Sidebar Navigation
+On documentation pages, use the sidebar to:
+- Browse related articles
+- Jump between sections
+- See the full documentation structure
+- Find device-specific content
 
-1. Connect the USB charging cable to your device
-2. Plug the other end into a USB power adapter or computer
-3. Allow 2-3 hours for a full charge
-4. The LED indicator will show charging status
+### Cross-References
+Look for linked text throughout articles that:
+- Connect related topics
+- Reference prerequisite knowledge
+- Link to detailed explanations
+- Point to related devices or features
 
-**Tip**: For best battery longevity, avoid letting the battery completely drain regularly.
+## Quick Links
 
-### 3. Download the App
+### Most Popular Pages
+- [PeekSmith 3 Documentation](/docs/devices/peeking/peeksmith-3)
+- [Troubleshooting Bluetooth Issues](/docs/guides/troubleshooting-common-issues)
+- [How to Update Firmware](/docs/guides/firmware-updates)
+- [Atom 2 Remote Setup](/docs/devices/remote-control/atom-2)
 
-Most Electricks devices work with companion mobile apps:
+### Support Resources
+- [Contact Support](/contact) - Get help from our team
+- [Join Facebook Groups](https://www.facebook.com/groups/electricks) - Connect with the community
+- [Developer Documentation](https://developers.electricks.info) - For programmers and advanced users
+- [Video Tutorials](https://watch.electricks.info) - Visual learning resources
 
-- **iOS**: Search for the app name in the Apple App Store
-- **Android**: Find it on Google Play Store
+## Tips for Getting Started
 
-Popular Electricks apps:
-- PeekSmith App
-- TimeSmith App
-- DiceSmith App
-- ScaleSmith App
-- MagiScript Editor
+[alert:info]Quick Start Tip | Start with your specific device page to learn the basics, then explore guides for advanced techniques and troubleshooting.[/alert]
 
-### 4. Pair via Bluetooth
+**New to Electricks?**
+1. Find your device in the navigation menu
+2. Read the setup section to get connected
+3. Explore the features section to understand capabilities
+4. Check troubleshooting if you encounter issues
+5. Join the community to learn from other users
 
-To connect your device to your phone:
+**Experienced User?**
+- Use search to find specific features
+- Check firmware update notes for new capabilities
+- Explore integration options between devices
+- Share your knowledge in the community
 
-1. Turn on your Electricks device
-2. Open the companion app on your phone
-3. Enable Bluetooth if not already on
-4. Tap "Connect" or "Pair Device"
-5. Select your device from the list
-6. Wait for connection confirmation
+## Need Help?
 
-**Troubleshooting**: If your device doesn't appear, try:
-- Moving your phone closer to the device
-- Turning the device off and on again
-- Restarting the app
-- Checking that no other device is connected to it
+Can't find what you're looking for?
 
-### 5. Configure Settings
+- **Search the documentation** - Use the search bar above
+- **Contact support** - We respond within 1 business day
+- **Ask the community** - Thousands of users ready to help
 
-Once connected, configure your device settings:
+[Contact Support →](/contact)
 
-- **Brightness**: Adjust display brightness for your environment
-- **Vibration**: Set vibration strength and patterns
-- **Auto-sleep**: Configure power-saving options
-- **Updates**: Check for firmware updates
+---
 
-## Which Device Do You Have?
-
-Find detailed instructions for your specific device:
-
-### Peeking Devices
-
-Perfect for secretly receiving information during your performance:
-
-- [PeekSmith 3](/docs/devices/peeking/peeksmith-3) - Advanced display peek device
-- [Bond](/docs/devices/peeking/bond) - Smartwatch-style peek
-- [MrCard](/docs/devices/peeking/mrcard) - Access card peek & remote
-- [SuperPeek](/docs/devices/peeking/superpeek) - Compact peek solution
-- [Sharpeek](/docs/devices/peeking/sharpeek) - Concealed peek device
-
-### Prediction Watches
-
-Make impossible time predictions:
-
-- [SB Watch](/docs/devices/watches/sb-watch) - Original SB Watch
-- [SB Watch 2](/docs/devices/watches/sb-watch-2) - Enhanced with peek display
-- [SB Watch Pocket](/docs/devices/watches/sb-watch-pocket) - Pocket watch style
-- [SB Watch Steel](/docs/devices/watches/sb-watch-steel) - Premium steel version
-
-### Remote Controls
-
-Wirelessly control apps and devices:
-
-- [Atom Smart Remote](/docs/devices/remotes/atom-smart-remote) - Programmable 12-button remote
-- [ATC Thumbtip Remote](/docs/devices/remotes/atc-thumbtip) - Concealed thumbtip control
-- [SB Mote](/docs/devices/remotes/sb-mote) - Compact action trigger
-
-### Specialty Devices
-
-Unique props for specific effects:
-
-- [Teleport](/docs/devices/specialty/teleport) - Card and word revelation
-- [Quantum Calculator](/docs/devices/specialty/quantum) - Smart calculator
-- [Spotted Dice](/docs/devices/specialty/spotted-dice) - Electronic dice detection
-- [CubeSmith](/docs/devices/specialty/cubesmith) - Rubik's cube solution
-- And more...
-
-## Common First Steps
-
-### Update Firmware
-
-Keeping your device updated ensures you have the latest features and bug fixes:
-
-1. Connect to the companion app
-2. Go to Settings > About
-3. Tap "Check for Updates"
-4. If available, tap "Update Now"
-5. Keep device close during update (5-10 minutes)
-
-**Important**: Don't disconnect during firmware updates!
-
-[Learn more about firmware updates →](/docs/guides/firmware-updates)
-
-### Customize Settings
-
-Each device has customizable settings:
-
-- **Display Settings**: Brightness, rotation, inversion
-- **Vibration Patterns**: Create custom haptic feedback
-- **Button Actions**: Program button functions
-- **Power Management**: Auto-sleep, battery saving
-
-### Learn Your Device
-
-- **Practice in private** before using in performance
-- **Test Bluetooth range** in your performance environment
-- **Prepare backup routines** in case of technical issues
-- **Join the community** on Facebook for tips and tricks
-
-## Getting Help
-
-### Documentation
-
-Browse our comprehensive help documentation:
-
-- [Device-specific guides](/docs/devices/peeking/peeksmith-3)
-- [Troubleshooting common issues](/docs/guides/troubleshooting-common-issues)
-- [Firmware update instructions](/docs/guides/firmware-updates)
-- [Battery care tips](/docs/guides/battery-care)
-
-### Support Channels
-
-Need assistance? We're here to help:
-
-- **Email**: [support@electricks.info](mailto:support@electricks.info)
-- **Facebook Groups**: Device-specific communities
-- **Response Time**: Within 1 business day (CET)
-
-[Contact us →](/docs/support/contact)
-
-### Community
-
-Join thousands of magicians using Electricks:
-
-- Share your routines and ideas
-- Get tips from experienced users
-- Learn new techniques
-- Provide feedback on products
-
-[Join our Facebook groups →](https://www.facebook.com/groups/electricks)
-
-## Developer Resources
-
-Are you a developer or interested in programming?
-
-- **MagiScript**: Program custom routines on Atom devices
-- **Bluetooth API**: Build custom mobile apps
-- **Developer Portal**: Technical documentation
-
-[Visit developers.electricks.info →](https://developers.electricks.info)
-
-## What's Next?
-
-Now that you're set up:
-
-1. **Read your device guide** - Learn all the features
-2. **Practice your routines** - Get comfortable with the device
-3. **Join the community** - Connect with other users
-4. **Explore possibilities** - Experiment with new effects
-
-## Need More Help?
-
-- [Browse all documentation](/docs/devices/peeking/peeksmith-3)
-- [Common troubleshooting](/docs/guides/troubleshooting-common-issues)
-- [Contact support](/docs/support/contact)
-- [Shipping & returns info](/docs/support/shipping)
-
-Welcome to the Electricks family! We're excited to see what magic you create.
+*Welcome to Electricks! We're excited to help you create impossible magic.*

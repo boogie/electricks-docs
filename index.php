@@ -257,14 +257,14 @@ include __DIR__ . '/includes/header.php';
                 </div>
             </a>
 
-            <a href="/docs/getting-started/index" class="article-card glass-card">
+            <a href="/docs/getting-started" class="article-card glass-card">
                 <div class="article-card-header">
                     <div class="liquid-glass-icon-container article-icon-liquid" data-liquid-glass="green" data-size="56" data-id="art-start">
                         <i class="ph-fill ph-rocket-launch"></i>
                     </div>
                 </div>
                 <h3 class="article-title">Getting Started Guide</h3>
-                <p class="article-excerpt">New to Electricks? Start your journey here.</p>
+                <p class="article-excerpt">Learn how to navigate and use our documentation effectively.</p>
                 <div class="article-footer">
                     <span class="article-meta">
                         <i class="ph ph-clock"></i>

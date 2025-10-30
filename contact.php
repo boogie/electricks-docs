@@ -10,17 +10,22 @@ $error = null;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'] ?? '';
+    $stage_name = $_POST['stage_name'] ?? '';
     $email = $_POST['email'] ?? '';
-    $subject = $_POST['subject'] ?? '';
+    $subject_category = $_POST['subject_category'] ?? '';
     $message = $_POST['message'] ?? '';
-    $product = $_POST['product'] ?? '';
     $order_number = $_POST['order_number'] ?? '';
+    $device_info = $_POST['device_info'] ?? '';
+    $firmware_version = $_POST['firmware_version'] ?? '';
+    $app_version = $_POST['app_version'] ?? '';
     
     // Validate
-    if (empty($name) || empty($email) || empty($subject) || empty($message)) {
+    if (empty($name) || empty($email) || empty($subject_category) || empty($message)) {
         $error = 'Please fill in all required fields.';
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = 'Please enter a valid email address.';
+    } elseif (in_array($subject_category, ['order', 'shipping']) && empty($order_number)) {
+        $error = 'Order ID is required for order and shipping related questions.';
     } else {
         // Send to Gorgias via their API
         $gorgias_domain = 'electricks'; // Your Gorgias subdomain
@@ -48,10 +53,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 ]
                             ]
                         ],
-                        'body_text' => "Product: $product\nOrder Number: $order_number\n\n$message"
+                        'body_text' => "Name: $name\nStage Name: $stage_name\nOrder Number: $order_number\nDevice Info: $device_info\nFirmware Version: $firmware_version\nApp Version: $app_version\n\n$message"
                     ]
                 ],
-                'subject' => $subject
+                'subject' => $subject_category . ($order_number ? " - Order #$order_number" : '')
             ];
             
             $ch = curl_init("https://{$gorgias_domain}.gorgias.com/api/tickets");
@@ -81,10 +86,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             $email_body = "New Support Request\n\n";
             $email_body .= "Name: $name\n";
+            $email_body .= "Stage Name: $stage_name\n";
             $email_body .= "Email: $email\n";
-            $email_body .= "Product: $product\n";
-            $email_body .= "Order Number: $order_number\n\n";
-            $email_body .= "Subject: $subject\n\n";
+            $email_body .= "Subject: $subject_category\n";
+            $email_body .= "Order Number: $order_number\n";
+            $email_body .= "Device Info: $device_info\n";
+            $email_body .= "Firmware Version: $firmware_version\n";
+            $email_body .= "App Version: $app_version\n\n";
             $email_body .= "Message:\n$message\n";
             
             if (mail($to, "Support Request: $subject", $email_body, $headers)) {
@@ -137,90 +145,202 @@ include __DIR__ . '/includes/header.php';
                         </div>
                     <?php endif; ?>
                     
-                    <form method="POST" class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name" class="form-label">
-                                Name <span class="required">*</span>
-                            </label>
-                            <input 
-                                type="text" 
-                                id="name" 
-                                name="name" 
-                                class="form-input" 
-                                required
-                                value="<?php echo htmlspecialchars($_POST['name'] ?? ''); ?>"
-                            >
+                    <form method="POST" class="contact-form glass-form" id="contactForm">
+                        <div class="form-field">
+                            <div class="form-group">
+                                <label for="subject_category" class="form-label">
+                                    Subject <span class="required">*</span>
+                                </label>
+                                <select id="subject_category" name="subject_category" class="form-select" required onchange="toggleOrderField()">
+                                    <option value="">Select a subject</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="app">App Issue</option>
+                                    <option value="firmware">Firmware Issue</option>
+                                    <option value="bluetooth">Bluetooth Connection</option>
+                                    <option value="order">Order Question</option>
+                                    <option value="shipping">Shipping Question</option>
+                                    <option value="warranty">Warranty</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-tip">
+                                <i class="ph-fill ph-info"></i>
+                                Select the category that best describes your issue
+                            </div>
+                        </div>
+
+                        <div class="form-field" id="orderField" style="display: none;">
+                            <div class="form-group">
+                                <label for="order_number" class="form-label">
+                                    Order ID <span class="required" id="orderRequired">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="order_number" 
+                                    name="order_number" 
+                                    class="form-input"
+                                    placeholder="e.g., #12345"
+                                    value="<?php echo htmlspecialchars($_POST['order_number'] ?? ''); ?>"
+                                >
+                            </div>
+                            <div class="form-tip">
+                                <i class="ph-fill ph-lightbulb"></i>
+                                <strong>Why do we need your Order ID?</strong> It helps us check your order status, warranty period, and what exactly you ordered. You can find your Order ID in your order confirmation email.
+                            </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="email" class="form-label">
-                                Email <span class="required">*</span>
-                            </label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                class="form-input" 
-                                required
-                                value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>"
-                            >
+                        <div class="form-field">
+                            <div class="form-group">
+                                <label for="name" class="form-label">
+                                    Name (used for ordering) <span class="required">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    class="form-input" 
+                                    required
+                                    placeholder="Full name"
+                                    value="<?php echo htmlspecialchars($_POST['name'] ?? ''); ?>"
+                                >
+                            </div>
+                            <div class="form-tip">
+                                <i class="ph-fill ph-user"></i>
+                                Use the name you used when ordering. We cannot search based on stage names alone.
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <div class="form-group">
+                                <label for="stage_name" class="form-label">
+                                    Stage Name / Artist Name
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="stage_name" 
+                                    name="stage_name" 
+                                    class="form-input"
+                                    placeholder="Optional"
+                                    value="<?php echo htmlspecialchars($_POST['stage_name'] ?? ''); ?>"
+                                >
+                            </div>
+                            <div class="form-tip">
+                                <i class="ph-fill ph-star"></i>
+                                If you perform under a stage name, add it here
+                            </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="product" class="form-label">
-                                Product
-                            </label>
-                            <select id="product" name="product" class="form-select">
-                                <option value="">Select a product</option>
-                                <option value="atom2">Atom 2</option>
-                                <option value="peeksmith3">PeekSmith 3</option>
-                                <option value="bond">Bond</option>
-                                <option value="sbwatch2">SB Watch 2</option>
-                                <option value="quantum">Quantum Calculator</option>
-                                <option value="teleport">Teleport</option>
-                                <option value="other">Other</option>
-                            </select>
+                        <div class="form-field">
+                            <div class="form-group">
+                                <label for="email" class="form-label">
+                                    Email <span class="required">*</span>
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    class="form-input" 
+                                    required
+                                    value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>"
+                                >
+                            </div>
+                            <div class="form-tip">
+                                <i class="ph-fill ph-warning"></i>
+                                <strong>Please double-check your email address!</strong> Mistyped emails mean we cannot reply to you.
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <div class="form-group">
+                                <label for="device_info" class="form-label">
+                                    Device & Phone Info
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="device_info" 
+                                    name="device_info" 
+                                    class="form-input"
+                                    placeholder="e.g., PeekSmith 3 + iPhone 13 Pro, iOS 17.4"
+                                    value="<?php echo htmlspecialchars($_POST['device_info'] ?? ''); ?>"
+                                >
+                            </div>
+                            <div class="form-tip">
+                                <i class="ph-fill ph-devices"></i>
+                                Include your device model and phone model with OS version
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <div class="form-group">
+                                <label for="firmware_version" class="form-label">
+                                    Firmware Version
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="firmware_version" 
+                                    name="firmware_version" 
+                                    class="form-input"
+                                    placeholder="e.g., 1.4.2 - NOT 'latest'"
+                                    value="<?php echo htmlspecialchars($_POST['firmware_version'] ?? ''); ?>"
+                                >
+                            </div>
+                            <div class="form-tip">
+                                <i class="ph-fill ph-chip"></i>
+                                <strong>Important:</strong> Write the exact version number, not "latest". Saying "latest" doesn't help us - you might think you have the latest but don't.
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <div class="form-group">
+                                <label for="app_version" class="form-label">
+                                    App Version
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="app_version" 
+                                    name="app_version" 
+                                    class="form-input"
+                                    placeholder="e.g., 2.1.5 - NOT 'latest'"
+                                    value="<?php echo htmlspecialchars($_POST['app_version'] ?? ''); ?>"
+                                >
+                            </div>
+                            <div class="form-tip">
+                                <i class="ph-fill ph-app-window"></i>
+                                <strong>Important:</strong> Check your app's "About" or "Settings" for the exact version number
+                            </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="order_number" class="form-label">
-                                Order Number
-                            </label>
-                            <input 
-                                type="text" 
-                                id="order_number" 
-                                name="order_number" 
-                                class="form-input"
-                                placeholder="Optional"
-                                value="<?php echo htmlspecialchars($_POST['order_number'] ?? ''); ?>"
-                            >
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject" class="form-label">
-                                Subject <span class="required">*</span>
-                            </label>
-                            <input 
-                                type="text" 
-                                id="subject" 
-                                name="subject" 
-                                class="form-input" 
-                                required
-                                value="<?php echo htmlspecialchars($_POST['subject'] ?? ''); ?>"
-                            >
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" class="form-label">
-                                Message <span class="required">*</span>
-                            </label>
-                            <textarea 
-                                id="message" 
-                                name="message" 
-                                class="form-textarea" 
-                                rows="8" 
-                                required
-                            ><?php echo htmlspecialchars($_POST['message'] ?? ''); ?></textarea>
+                        <div class="form-field">
+                            <div class="form-group">
+                                <label for="message" class="form-label">
+                                    Describe Your Issue <span class="required">*</span>
+                                </label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    class="form-textarea" 
+                                    rows="10" 
+                                    required
+                                    placeholder="Please be as detailed as possible..."
+                                ><?php echo htmlspecialchars($_POST['message'] ?? ''); ?></textarea>
+                            </div>
+                            <div class="form-tip form-tip-detailed">
+                                <i class="ph-fill ph-check-circle"></i>
+                                <div>
+                                    <strong>To help us solve your problem quickly, include:</strong>
+                                    <ul>
+                                        <li>A clear description of what happens vs. what you expected</li>
+                                        <li>Steps to reproduce the issue</li>
+                                        <li>What you've already tried (rebooting, updating, etc.)</li>
+                                        <li>Screenshots or error messages</li>
+                                        <li>For video issues: Upload a video to YouTube/Dropbox and share the link</li>
+                                    </ul>
+                                    <p style="margin-top: 8px; font-style: italic;">
+                                        ❌ Bad: "It's not working"<br>
+                                        ✅ Good: "PeekSmith 3 won't connect to my iPhone 13. Bluetooth is on, device shows in app but connection fails. Tried restarting both devices."
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                         
                         <button type="submit" class="btn btn-primary btn-large">
@@ -303,7 +423,7 @@ include __DIR__ . '/includes/header.php';
 .hero-compact {
     position: relative;
     padding: 60px 0 50px;
-    margin-top: 60px;
+    margin-top: 0;
     overflow: hidden;
 }
 
@@ -369,53 +489,131 @@ include __DIR__ . '/includes/header.php';
     background: white;
 }
 
+.glass-form {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(192, 132, 252, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 32px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    flex: 1;
+}
+
+.form-tip {
+    display: flex;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 0.8125rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.form-tip i {
+    color: #9ca3af;
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.form-tip strong {
+    color: #111827;
+}
+
+.form-tip a {
+    color: #9333ea;
+    text-decoration: none;
+}
+
+.form-tip a:hover {
+    text-decoration: underline;
+}
+
+.form-tip-detailed {
+    background: #f9fafb;
+    border-color: #e5e7eb;
+    flex-direction: column;
+}
+
+.form-tip-detailed i {
+    color: #9ca3af;
+}
+
+.form-tip-detailed ul {
+    margin: 8px 0 0 20px;
+    padding: 0;
+}
+
+.form-tip-detailed li {
+    margin-bottom: 4px;
 }
 
 .form-label {
     font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--gray-900);
+    font-weight: 700;
+    color: #111827;
 }
 
 .required {
-    color: var(--orange-600);
+    color: #ea580c;
 }
 
 .form-input,
 .form-select,
 .form-textarea {
     padding: 12px 16px;
-    border: 1px solid var(--gray-300);
+    border: 1px solid #d1d5db;
     border-radius: 8px;
     font-size: 1rem;
     font-family: inherit;
     transition: all 0.2s;
     background: white;
-    color: var(--gray-900);
+    color: #111827;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.form-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23374151' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
+    padding-right: 40px;
 }
 
 .form-input:hover,
 .form-select:hover,
 .form-textarea:hover {
-    border-color: var(--gray-400);
+    border-color: #9ca3af;
 }
 
 .form-input:focus,
 .form-select:focus,
 .form-textarea:focus {
     outline: none;
-    border-color: var(--primary-500);
-    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+    border-color: #a855f7;
+    box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.15);
 }
 
 .form-textarea {
@@ -437,23 +635,23 @@ include __DIR__ . '/includes/header.php';
 }
 
 .alert-success {
-    background: var(--green-50);
-    color: var(--green-900);
-    border: 1px solid var(--green-200);
+    background: #d1fae5;
+    color: #14532d;
+    border: 1px solid #86efac;
 }
 
 .alert-success i {
-    color: var(--green-600);
+    color: #16a34a;
 }
 
 .alert-error {
-    background: var(--red-50);
-    color: var(--red-900);
-    border: 1px solid var(--red-200);
+    background: #fee2e2;
+    color: #7f1d1d;
+    border: 1px solid #fca5a5;
 }
 
 .alert-error i {
-    color: var(--red-600);
+    color: #dc2626;
 }
 
 .alert strong {
@@ -469,25 +667,25 @@ include __DIR__ . '/includes/header.php';
 .contact-sidebar {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
 }
 
 .contact-info-card {
-    background: var(--gray-50);
-    padding: 32px;
+    background: #f9fafb;
+    padding: 24px;
     border-radius: 16px;
-    border: 1px solid var(--gray-200);
+    border: 1px solid #e5e7eb;
 }
 
 .contact-info-icon {
     width: 48px;
     height: 48px;
-    background: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-600) 100%);
+    background: linear-gradient(135deg, #c084fc 0%, #a855f7 100%);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .contact-info-icon i {
@@ -496,20 +694,20 @@ include __DIR__ . '/includes/header.php';
 }
 
 .contact-info-title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 700;
-    color: var(--gray-900);
+    color: #111827;
     margin-bottom: 8px;
 }
 
 .contact-info-text {
-    font-size: 1rem;
-    color: var(--gray-700);
+    font-size: 0.9375rem;
+    color: #374151;
     margin-bottom: 8px;
 }
 
 .contact-info-text a {
-    color: var(--primary-600);
+    color: #9333ea;
     text-decoration: none;
     font-weight: 600;
 }
@@ -520,8 +718,8 @@ include __DIR__ . '/includes/header.php';
 
 .contact-info-description {
     font-size: 0.875rem;
-    color: var(--gray-600);
-    margin-top: 8px;
+    color: #6b7280;
+    margin-top: 4px;
 }
 
 @media (max-width: 1024px) {
@@ -538,6 +736,102 @@ include __DIR__ . '/includes/header.php';
 
 </style>
 
-<script src="/assets/js/mesh-gradient.js"></script>
+<script>
+// Static mesh gradient (no animation)
+(function() {
+    const canvas = document.getElementById('meshGradientCanvas');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d', { alpha: false });
+
+    function resize() {
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.getBoundingClientRect();
+        const width = rect.width;
+        const height = rect.height;
+
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        ctx.scale(dpr, dpr);
+
+        // Draw static background
+        ctx.fillStyle = '#2e1065';
+        ctx.fillRect(0, 0, width, height);
+
+        // Purple gradient colors (static positions)
+        const colors = [
+            { r: 46, g: 16, b: 101, x: 0.2, y: 0.3, radius: 0.6 },
+            { r: 59, g: 26, b: 111, x: 0.8, y: 0.2, radius: 0.5 },
+            { r: 139, g: 92, b: 246, x: 0.3, y: 0.7, radius: 0.7 },
+            { r: 168, g: 85, b: 247, x: 0.7, y: 0.8, radius: 0.6 }
+        ];
+
+        // Draw gradient clouds
+        colors.forEach(color => {
+            const gradient = ctx.createRadialGradient(
+                color.x * width, color.y * height, 0,
+                color.x * width, color.y * height,
+                color.radius * Math.max(width, height)
+            );
+            gradient.addColorStop(0, `rgba(${color.r}, ${color.g}, ${color.b}, 0.4)`);
+            gradient.addColorStop(0.3, `rgba(${color.r}, ${color.g}, ${color.b}, 0.25)`);
+            gradient.addColorStop(0.7, `rgba(${color.r}, ${color.g}, ${color.b}, 0.12)`);
+            gradient.addColorStop(1, `rgba(${color.r}, ${color.g}, ${color.b}, 0)`);
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, width, height);
+        });
+
+        // Draw rotated grid
+        ctx.save();
+        ctx.translate(width / 2, height / 2);
+        ctx.rotate(15 * Math.PI / 180);
+        ctx.translate(-width / 2, -height / 2);
+
+        ctx.strokeStyle = 'rgba(192, 132, 252, 0.18)';
+        ctx.lineWidth = 1;
+
+        const gridSpacing = 100;
+        const extendedSize = Math.max(width, height) * 1.5;
+
+        for (let x = -extendedSize; x < extendedSize; x += gridSpacing) {
+            ctx.beginPath();
+            ctx.moveTo(x, -extendedSize);
+            ctx.lineTo(x, extendedSize);
+            ctx.stroke();
+        }
+
+        for (let y = -extendedSize; y < extendedSize; y += gridSpacing) {
+            ctx.beginPath();
+            ctx.moveTo(-extendedSize, y);
+            ctx.lineTo(extendedSize, y);
+            ctx.stroke();
+        }
+
+        ctx.restore();
+    }
+
+    resize();
+    window.addEventListener('resize', resize);
+})();
+
+function toggleOrderField() {
+    const subjectSelect = document.getElementById('subject_category');
+    const orderField = document.getElementById('orderField');
+    const orderInput = document.getElementById('order_number');
+    
+    if (subjectSelect.value === 'order' || subjectSelect.value === 'shipping') {
+        orderField.style.display = 'flex';
+        orderInput.required = true;
+    } else {
+        orderField.style.display = 'none';
+        orderInput.required = false;
+    }
+}
+
+// Check on page load if form was submitted with errors
+document.addEventListener('DOMContentLoaded', function() {
+    toggleOrderField();
+});
+</script>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>

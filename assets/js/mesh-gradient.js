@@ -8,9 +8,14 @@ class MeshGradient {
         this.canvas = document.getElementById(canvasId);
         if (!this.canvas) return;
 
-        this.ctx = this.canvas.getContext('2d', { alpha: false });
+        this.ctx = this.canvas.getContext('2d', { alpha: false, desynchronized: true });
         this.width = 0;
         this.height = 0;
+        this.isVisible = true;
+        this.animationId = null;
+        this.lastFrameTime = 0;
+        this.targetFPS = 30; // Reduced from ~60fps
+        this.frameInterval = 1000 / this.targetFPS;
 
         // Performance optimization
         this.canvas.style.willChange = 'contents';
@@ -33,6 +38,20 @@ class MeshGradient {
 
         this.resize();
         window.addEventListener('resize', () => this.resize());
+
+        // Pause animation when tab is not visible
+        document.addEventListener('visibilitychange', () => {
+            this.isVisible = !document.hidden;
+            if (this.isVisible) {
+                this.lastFrameTime = performance.now();
+                this.animate();
+            } else {
+                if (this.animationId) {
+                    cancelAnimationFrame(this.animationId);
+                    this.animationId = null;
+                }
+            }
+        });
 
         this.init();
         this.animate();
@@ -72,10 +91,19 @@ class MeshGradient {
         this.ctx.scale(dpr, dpr);
     }
 
-    animate() {
-        this.update();
-        this.draw();
-        requestAnimationFrame(() => this.animate());
+    animate(currentTime = 0) {
+        if (!this.isVisible) return;
+
+        // Throttle to target FPS
+        const elapsed = currentTime - this.lastFrameTime;
+
+        if (elapsed >= this.frameInterval) {
+            this.lastFrameTime = currentTime - (elapsed % this.frameInterval);
+            this.update();
+            this.draw();
+        }
+
+        this.animationId = requestAnimationFrame((time) => this.animate(time));
     }
 
     update() {

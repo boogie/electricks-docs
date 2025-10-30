@@ -291,7 +291,7 @@ Sign up at [electricks.info](https://electricks.info)
 
 ### Help Documentation
 
-- [Getting Started Guide](/docs/getting-started/index)
+- [Getting Started Guide](/docs/getting-started)
 - [Device Manuals](/docs/devices/peeking/peeksmith-3)
 - [Troubleshooting](/docs/guides/troubleshooting-common-issues)
 - [FAQs](/docs/guides/troubleshooting-common-issues)

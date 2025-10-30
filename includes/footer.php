@@ -16,9 +16,9 @@
                 <div class="footer-section">
                     <h3>Support</h3>
                     <ul>
-                        <li><a href="/docs/getting-started/index">Getting Started</a></li>
+                        <li><a href="/docs/getting-started">Getting Started</a></li>
                         <li><a href="/docs/guides/troubleshooting-common-issues">Troubleshooting</a></li>
-                        <li><a href="/docs/support/contact">Contact Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
                         <li><a href="/docs/support/warranty">Warranty</a></li>
                     </ul>
                 </div>
@@ -53,6 +53,7 @@
 
     <!-- Scripts -->
     <script src="/assets/js/main.js?v=<?php echo ASSET_VERSION; ?>"></script>
+    <script src="/assets/js/header-search.js?v=<?php echo ASSET_VERSION; ?>"></script>
     <?php if (isset($additionalScripts)): ?>
         <?php foreach ($additionalScripts as $script): ?>
             <script src="<?php echo htmlspecialchars($script); ?>?v=<?php echo ASSET_VERSION; ?>"></script>
