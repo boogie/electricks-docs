@@ -99,17 +99,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 include __DIR__ . '/includes/header.php';
 ?>
 
-<div class="hero">
+<div class="hero-compact">
     <canvas id="meshGradientCanvas"></canvas>
     <div class="container">
         <div class="hero-content-center">
-            <h1 class="hero-title">
+            <h1 class="hero-title-compact">
                 We're here to <span class="gradient-text">help!</span>
             </h1>
-            <p class="hero-subtitle">
-                We're here to support you every step of the way. Please share a few details, and we'll find the best solution for you.
-            </p>
-            <p class="hero-note">
+            <p class="hero-subtitle-compact">
                 We typically respond within one business day, Central European Time.
             </p>
         </div>
@@ -306,12 +303,54 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <style>
-.hero-note {
+/* Compact Hero for Subpages */
+.hero-compact {
+    position: relative;
+    padding: 60px 0 50px;
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+.hero-compact canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-compact .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title-compact {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 12px;
+    line-height: 1.1;
+}
+
+.hero-subtitle-compact {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7);
-    max-width: 700px;
-    font-style: italic;
-    margin-top: 12px;
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .hero-compact {
+        padding: 50px 0 40px;
+    }
+    
+    .hero-title-compact {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle-compact {
+        font-size: 0.9rem;
+    }
 }
 
 .contact-section {
