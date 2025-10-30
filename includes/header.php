@@ -69,37 +69,37 @@ $currentPage = isset($currentPage) ? $currentPage : 'home';
                     </button>
                     <div class="nav-dropdown-menu">
                         <div class="nav-dropdown-grid">
-                            <a href="/docs/devices/remote-control/atom-2" class="nav-dropdown-item">
+                            <a href="/docs/atom-remote" class="nav-dropdown-item">
                                 <div class="nav-dropdown-icon">
                                     <img src="https://electricks.info/wp-content/uploads/2023/01/atom2-300x300.png" alt="Atom 2">
                                 </div>
                                 <span class="nav-dropdown-name">Atom 2</span>
                             </a>
-                            <a href="/docs/devices/peeking/peeksmith-3" class="nav-dropdown-item">
+                            <a href="/docs/peeksmith-3" class="nav-dropdown-item">
                                 <div class="nav-dropdown-icon">
                                     <img src="https://electricks.info/wp-content/uploads/2021/10/ps3_featured-300x300.png" alt="PeekSmith 3">
                                 </div>
                                 <span class="nav-dropdown-name">PeekSmith 3</span>
                             </a>
-                            <a href="/docs/devices/remote-control/bond" class="nav-dropdown-item">
+                            <a href="/docs/bond" class="nav-dropdown-item">
                                 <div class="nav-dropdown-icon">
                                     <img src="https://electricks.info/wp-content/uploads/2024/10/bond-anim-300x300.gif" alt="Bond">
                                 </div>
                                 <span class="nav-dropdown-name">Bond</span>
                             </a>
-                            <a href="/docs/devices/wearables/sb-watch-2" class="nav-dropdown-item">
+                            <a href="/docs/sb-watch-2" class="nav-dropdown-item">
                                 <div class="nav-dropdown-icon">
                                     <img src="https://electricks.info/wp-content/uploads/2024/02/sbw2_-300x300.png" alt="SB Watch 2">
                                 </div>
                                 <span class="nav-dropdown-name">SB Watch 2</span>
                             </a>
-                            <a href="/docs/devices/calculators/quantum-calculator" class="nav-dropdown-item">
+                            <a href="/docs/quantum" class="nav-dropdown-item">
                                 <div class="nav-dropdown-icon">
-                                    <img src="https://electricks.info/wp-content/uploads/2025/02/67EB80C5-BE05-4826-8FE7-BACB1838B4BC-300x300.png" alt="Quantum Calculator">
+                                    <img src="https://electricks.info/wp-content/uploads/2025/02/67EB80C5-BE05-4826-8FE7-BACB1838B4BC-300x300.png" alt="Quantum">
                                 </div>
                                 <span class="nav-dropdown-name">Quantum</span>
                             </a>
-                            <a href="/docs/devices/remote-control/teleport" class="nav-dropdown-item">
+                            <a href="/docs/teleport" class="nav-dropdown-item">
                                 <div class="nav-dropdown-icon">
                                     <img src="https://electricks.info/wp-content/uploads/2025/01/teleport-QD-300x300.png" alt="Teleport">
                                 </div>
