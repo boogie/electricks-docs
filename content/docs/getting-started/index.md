@@ -1,5 +1,6 @@
 ---
 title: Getting Started
+description: Find your device and explore documentation to get the most out of Electricks
 category: Getting Started
 updated: 2025-01-30
 ---

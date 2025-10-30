@@ -142,6 +142,22 @@ $pageNav = getPageNavigation($requestedPath);
 include __DIR__ . '/includes/header.php';
 ?>
 
+<div class="hero-compact">
+    <canvas id="meshGradientCanvas"></canvas>
+    <div class="container">
+        <div class="hero-content-center">
+            <h1 class="hero-title-compact">
+                <?php echo htmlspecialchars($pageTitle); ?>
+            </h1>
+            <?php if (isset($frontMatter['description']) && !empty($frontMatter['description'])): ?>
+            <p class="hero-subtitle-compact">
+                <?php echo htmlspecialchars($frontMatter['description']); ?>
+            </p>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+
 <div class="docs-layout">
     <!-- Sidebar Navigation -->
     <?php echo buildNavigation($requestedPath); ?>
@@ -204,6 +220,6 @@ include __DIR__ . '/includes/header.php';
 </div>
 
 <?php
-$additionalScripts = ['/assets/js/docs.js'];
+$additionalScripts = ['/assets/js/docs.js', '/assets/js/mesh-gradient.js'];
 include __DIR__ . '/includes/footer.php';
 ?>

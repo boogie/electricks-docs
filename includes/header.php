@@ -149,7 +149,7 @@ $currentPage = isset($currentPage) ? $currentPage : 'home';
                         </div>
                     </div>
                 </div>
-                <a href="/docs/guides/troubleshooting-common-issues" class="nav-link">
+                <a href="/docs/guides" class="nav-link">
                     Guides
                 </a>
             </nav>
