@@ -138,66 +138,62 @@ include __DIR__ . '/includes/header.php';
                     <?php endif; ?>
                     
                     <form method="POST" class="contact-form" id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name" class="form-label">
-                                    Name <span class="required">*</span>
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="name" 
-                                    name="name" 
-                                    class="form-input" 
-                                    required
-                                    value="<?php echo htmlspecialchars($_POST['name'] ?? ''); ?>"
-                                >
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email" class="form-label">
-                                    Email <span class="required">*</span>
-                                </label>
-                                <input 
-                                    type="email" 
-                                    id="email" 
-                                    name="email" 
-                                    class="form-input" 
-                                    required
-                                    value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>"
-                                >
-                            </div>
+                        <div class="form-group">
+                            <label for="name" class="form-label">
+                                Name <span class="required">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="form-input" 
+                                required
+                                value="<?php echo htmlspecialchars($_POST['name'] ?? ''); ?>"
+                            >
                         </div>
                         
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="product" class="form-label">
-                                    Product
-                                </label>
-                                <select id="product" name="product" class="form-select">
-                                    <option value="">Select a product</option>
-                                    <option value="atom2">Atom 2</option>
-                                    <option value="peeksmith3">PeekSmith 3</option>
-                                    <option value="bond">Bond</option>
-                                    <option value="sbwatch2">SB Watch 2</option>
-                                    <option value="quantum">Quantum Calculator</option>
-                                    <option value="teleport">Teleport</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="order_number" class="form-label">
-                                    Order Number
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="order_number" 
-                                    name="order_number" 
-                                    class="form-input"
-                                    placeholder="Optional"
-                                    value="<?php echo htmlspecialchars($_POST['order_number'] ?? ''); ?>"
-                                >
-                            </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                Email <span class="required">*</span>
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                required
+                                value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>"
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="product" class="form-label">
+                                Product
+                            </label>
+                            <select id="product" name="product" class="form-select">
+                                <option value="">Select a product</option>
+                                <option value="atom2">Atom 2</option>
+                                <option value="peeksmith3">PeekSmith 3</option>
+                                <option value="bond">Bond</option>
+                                <option value="sbwatch2">SB Watch 2</option>
+                                <option value="quantum">Quantum Calculator</option>
+                                <option value="teleport">Teleport</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="order_number" class="form-label">
+                                Order Number
+                            </label>
+                            <input 
+                                type="text" 
+                                id="order_number" 
+                                name="order_number" 
+                                class="form-input"
+                                placeholder="Optional"
+                                value="<?php echo htmlspecialchars($_POST['order_number'] ?? ''); ?>"
+                            >
                         </div>
                         
                         <div class="form-group">
@@ -379,12 +375,6 @@ include __DIR__ . '/includes/header.php';
     gap: 24px;
 }
 
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
 .form-group {
     display: flex;
     flex-direction: column;
@@ -405,12 +395,19 @@ include __DIR__ . '/includes/header.php';
 .form-select,
 .form-textarea {
     padding: 12px 16px;
-    border: 2px solid var(--gray-200);
-    border-radius: 12px;
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
     font-size: 1rem;
     font-family: inherit;
     transition: all 0.2s;
     background: white;
+    color: var(--gray-900);
+}
+
+.form-input:hover,
+.form-select:hover,
+.form-textarea:hover {
+    border-color: var(--gray-400);
 }
 
 .form-input:focus,
@@ -418,7 +415,7 @@ include __DIR__ . '/includes/header.php';
 .form-textarea:focus {
     outline: none;
     border-color: var(--primary-500);
-    box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
 }
 
 .form-textarea {
@@ -538,11 +535,7 @@ include __DIR__ . '/includes/header.php';
     }
 }
 
-@media (max-width: 768px) {
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-}
+
 </style>
 
 <script src="/assets/js/mesh-gradient.js"></script>
