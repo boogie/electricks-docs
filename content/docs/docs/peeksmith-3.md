@@ -1,5 +1,6 @@
 ---
 title: PeekSmith 3 / SuperPeek
+description: Card box and pocket peek display with multiple input methods
 updated: "2025-10-26"
 author: Electricks
 category: guides

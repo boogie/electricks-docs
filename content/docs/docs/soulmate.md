@@ -1,5 +1,6 @@
 ---
 title: SoulMate – the Smart Scale for Magicians
+description: "Sense the number of cards"
 updated: "2025-10-26"
 author: Electricks
 category: guides

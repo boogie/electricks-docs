@@ -139,6 +139,23 @@ $currentPage = 'docs';
 $breadcrumbs = getBreadcrumbs($requestedPath, $frontMatter);
 $pageNav = getPageNavigation($requestedPath);
 
+// Determine hero title - use device/section name for subpages
+$heroTitle = $pageTitle;
+$heroDescription = isset($frontMatter['description']) ? $frontMatter['description'] : '';
+
+// Extract device/section name from path for subpages
+$pathParts = explode('/', $requestedPath);
+if (count($pathParts) > 1) {
+    // This is a subpage, find the parent device in navigation
+    $parentSlug = 'docs/' . $pathParts[0];
+    if (isset($NAVIGATION[$parentSlug]) && isset($NAVIGATION[$parentSlug]['title'])) {
+        $heroTitle = $NAVIGATION[$parentSlug]['title'];
+        if (isset($NAVIGATION[$parentSlug]['description'])) {
+            $heroDescription = $NAVIGATION[$parentSlug]['description'];
+        }
+    }
+}
+
 include __DIR__ . '/includes/header.php';
 ?>
 
@@ -147,11 +164,11 @@ include __DIR__ . '/includes/header.php';
     <div class="container">
         <div class="hero-content-center">
             <h1 class="hero-title-compact">
-                <?php echo htmlspecialchars($pageTitle); ?>
+                <?php echo htmlspecialchars($heroTitle); ?>
             </h1>
-            <?php if (isset($frontMatter['description']) && !empty($frontMatter['description'])): ?>
+            <?php if (!empty($heroDescription)): ?>
             <p class="hero-subtitle-compact">
-                <?php echo htmlspecialchars($frontMatter['description']); ?>
+                <?php echo htmlspecialchars($heroDescription); ?>
             </p>
             <?php endif; ?>
         </div>

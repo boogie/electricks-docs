@@ -1,5 +1,6 @@
 ---
 title: SB Watch
+description: "Predict the time"
 updated: "2025-10-26"
 author: Electricks
 category: guides

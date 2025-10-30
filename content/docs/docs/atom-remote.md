@@ -1,5 +1,6 @@
 ---
 title: Atom 2 Smart Remote
+description: "Control apps and devices"
 updated: "2025-10-26"
 author: Electricks
 category: guides
