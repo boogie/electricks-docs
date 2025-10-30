@@ -99,11 +99,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 include __DIR__ . '/includes/header.php';
 ?>
 
-<div class="contact-hero">
+<div class="hero">
+    <canvas id="meshGradientCanvas"></canvas>
     <div class="container">
-        <h1 class="contact-hero-title">We're Here to Help!</h1>
-        <p class="contact-hero-subtitle">We're here to support you every step of the way. Please share a few details, and we'll find the best solution for you.</p>
-        <p class="contact-hero-note">We typically respond within one business day, Central European Time.</p>
+        <div class="hero-content-center">
+            <h1 class="hero-title">
+                We're here to <span class="gradient-text">help!</span>
+            </h1>
+            <p class="hero-subtitle">
+                We're here to support you every step of the way. Please share a few details, and we'll find the best solution for you.
+            </p>
+            <p class="hero-note">
+                We typically respond within one business day, Central European Time.
+            </p>
+        </div>
     </div>
 </div>
 
@@ -297,32 +306,12 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <style>
-.contact-hero {
-    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
-    padding: 80px 0 60px;
-    margin-top: 60px;
-}
-
-.contact-hero-title {
-    font-size: 3rem;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 16px;
-    line-height: 1.1;
-}
-
-.contact-hero-subtitle {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.8);
-    max-width: 700px;
-    margin-bottom: 12px;
-}
-
-.contact-hero-note {
+.hero-note {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.7);
     max-width: 700px;
     font-style: italic;
+    margin-top: 12px;
 }
 
 .contact-section {
@@ -508,14 +497,12 @@ include __DIR__ . '/includes/header.php';
 }
 
 @media (max-width: 768px) {
-    .contact-hero-title {
-        font-size: 2rem;
-    }
-    
     .form-row {
         grid-template-columns: 1fr;
     }
 }
 </style>
+
+<script src="/assets/js/mesh-gradient.js"></script>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>
