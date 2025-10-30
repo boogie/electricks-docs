@@ -331,12 +331,15 @@ include __DIR__ . '/includes/header.php';
     color: white;
     margin-bottom: 12px;
     line-height: 1.1;
+    text-align: center;
 }
 
 .hero-subtitle-compact {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.75);
     max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
