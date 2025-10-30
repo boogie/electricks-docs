@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         // Send to Gorgias via their API
         $gorgias_domain = 'electricks'; // Your Gorgias subdomain
-        $gorgias_api_key = getenv('GORGIAS_API_KEY') ?: ''; // Set in environment
+        $gorgias_api_key = 'info@electricks.info:4e4a6b385cb62a484893d43ca1e93befb2d2a039c30a4d5f08fd6d15766b1c0c';
         
         if (!empty($gorgias_api_key)) {
             $ticket_data = [
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             ],
                             'to' => [
                                 [
-                                    'address' => 'support@electricks.info'
+                                    'address' => 'info@electricks.info'
                                 ]
                             ]
                         ],
@@ -70,11 +70,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($http_code >= 200 && $http_code < 300) {
                 $success = true;
             } else {
-                $error = 'Unable to submit your request. Please try again or email us directly at support@electricks.info';
+                $error = 'Unable to submit your request. Please try again or email us directly at info@electricks.info';
             }
         } else {
             // Fallback: Send via email
-            $to = 'support@electricks.info';
+            $to = 'info@electricks.info';
             $headers = "From: $name <$email>\r\n";
             $headers .= "Reply-To: $email\r\n";
             $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (mail($to, "Support Request: $subject", $email_body, $headers)) {
                 $success = true;
             } else {
-                $error = 'Unable to send your message. Please email us directly at support@electricks.info';
+                $error = 'Unable to send your message. Please email us directly at info@electricks.info';
             }
         }
     }
@@ -236,7 +236,7 @@ include __DIR__ . '/includes/header.php';
                     </div>
                     <h3 class="contact-info-title">Email Us</h3>
                     <p class="contact-info-text">
-                        <a href="mailto:support@electricks.info">support@electricks.info</a>
+                        <a href="mailto:info@electricks.info">info@electricks.info</a>
                     </p>
                     <p class="contact-info-description">We typically respond within 24 hours</p>
                 </div>
