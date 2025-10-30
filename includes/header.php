@@ -69,41 +69,82 @@ $currentPage = isset($currentPage) ? $currentPage : 'home';
                     </button>
                     <div class="nav-dropdown-menu">
                         <div class="nav-dropdown-grid">
-                            <a href="/docs/atom-remote" class="nav-dropdown-item">
-                                <div class="nav-dropdown-icon">
-                                    <img src="https://electricks.info/wp-content/uploads/2023/01/atom2-300x300.png" alt="Atom 2">
-                                </div>
-                                <span class="nav-dropdown-name">Atom 2</span>
-                            </a>
                             <a href="/docs/peeksmith-3" class="nav-dropdown-item">
-                                <div class="nav-dropdown-icon">
-                                    <img src="https://electricks.info/wp-content/uploads/2021/10/ps3_featured-300x300.png" alt="PeekSmith 3">
+                                <img src="https://electricks.info/wp-content/uploads/2021/10/ps3_featured-300x300.png" alt="PeekSmith 3" class="nav-dropdown-image">
+                                <div class="nav-dropdown-content">
+                                    <span class="nav-dropdown-name">PeekSmith 3</span>
+                                    <span class="nav-dropdown-desc">Card box and pocket peek</span>
                                 </div>
-                                <span class="nav-dropdown-name">PeekSmith 3</span>
                             </a>
                             <a href="/docs/bond" class="nav-dropdown-item">
-                                <div class="nav-dropdown-icon">
-                                    <img src="https://electricks.info/wp-content/uploads/2024/10/bond-anim-300x300.gif" alt="Bond">
+                                <img src="https://electricks.info/wp-content/uploads/2024/10/bond-anim-300x300.gif" alt="Bond" class="nav-dropdown-image">
+                                <div class="nav-dropdown-content">
+                                    <span class="nav-dropdown-name">Bond</span>
+                                    <span class="nav-dropdown-desc">Smartwatch peek</span>
                                 </div>
-                                <span class="nav-dropdown-name">Bond</span>
+                            </a>
+                            <a href="/docs/mrcard" class="nav-dropdown-item">
+                                <img src="https://electricks.info/wp-content/uploads/2025/03/MrCard-Final-300x300.png" alt="MrCard" class="nav-dropdown-image">
+                                <div class="nav-dropdown-content">
+                                    <span class="nav-dropdown-name">MrCard</span>
+                                    <span class="nav-dropdown-desc">Access card peek & remote</span>
+                                </div>
+                            </a>
+                            <a href="/docs/sbwatch" class="nav-dropdown-item">
+                                <img src="https://electricks.info/wp-content/uploads/2022/05/sb_white_simple-300x300.png" alt="SB Watch" class="nav-dropdown-image">
+                                <div class="nav-dropdown-content">
+                                    <span class="nav-dropdown-name">SB Watch</span>
+                                    <span class="nav-dropdown-desc">Predict the time</span>
+                                </div>
                             </a>
                             <a href="/docs/sb-watch-2" class="nav-dropdown-item">
-                                <div class="nav-dropdown-icon">
-                                    <img src="https://electricks.info/wp-content/uploads/2024/02/sbw2_-300x300.png" alt="SB Watch 2">
+                                <img src="https://electricks.info/wp-content/uploads/2024/02/sbw2_-300x300.png" alt="SB Watch 2" class="nav-dropdown-image">
+                                <div class="nav-dropdown-content">
+                                    <span class="nav-dropdown-name">SB Watch 2</span>
+                                    <span class="nav-dropdown-desc">Predict time & peek</span>
                                 </div>
-                                <span class="nav-dropdown-name">SB Watch 2</span>
                             </a>
-                            <a href="/docs/quantum" class="nav-dropdown-item">
-                                <div class="nav-dropdown-icon">
-                                    <img src="https://electricks.info/wp-content/uploads/2025/02/67EB80C5-BE05-4826-8FE7-BACB1838B4BC-300x300.png" alt="Quantum">
+                            <a href="/docs/atom-remote" class="nav-dropdown-item">
+                                <img src="https://electricks.info/wp-content/uploads/2023/01/atom2-300x300.png" alt="Atom 2" class="nav-dropdown-image">
+                                <div class="nav-dropdown-content">
+                                    <span class="nav-dropdown-name">Atom 2</span>
+                                    <span class="nav-dropdown-desc">Control apps and devices</span>
                                 </div>
-                                <span class="nav-dropdown-name">Quantum</span>
+                            </a>
+                            <a href="/docs/sbmote" class="nav-dropdown-item">
+                                <img src="https://electricks.info/wp-content/uploads/2022/12/sbmote-300x300.png" alt="SB Mote" class="nav-dropdown-image">
+                                <div class="nav-dropdown-content">
+                                    <span class="nav-dropdown-name">SB Mote</span>
+                                    <span class="nav-dropdown-desc">Trigger app actions</span>
+                                </div>
                             </a>
                             <a href="/docs/teleport" class="nav-dropdown-item">
-                                <div class="nav-dropdown-icon">
-                                    <img src="https://electricks.info/wp-content/uploads/2025/01/teleport-QD-300x300.png" alt="Teleport">
+                                <img src="https://electricks.info/wp-content/uploads/2025/01/teleport-QD-300x300.png" alt="Teleport" class="nav-dropdown-image">
+                                <div class="nav-dropdown-content">
+                                    <span class="nav-dropdown-name">Teleport</span>
+                                    <span class="nav-dropdown-desc">Reveal cards, words</span>
                                 </div>
-                                <span class="nav-dropdown-name">Teleport</span>
+                            </a>
+                            <a href="/docs/quantum" class="nav-dropdown-item">
+                                <img src="https://electricks.info/wp-content/uploads/2025/02/67EB80C5-BE05-4826-8FE7-BACB1838B4BC-300x300.png" alt="Quantum" class="nav-dropdown-image">
+                                <div class="nav-dropdown-content">
+                                    <span class="nav-dropdown-name">Quantum</span>
+                                    <span class="nav-dropdown-desc">Force numbers, peek</span>
+                                </div>
+                            </a>
+                            <a href="/docs/ghostmove" class="nav-dropdown-item">
+                                <img src="https://electricks.info/wp-content/uploads/2021/10/ghostmove_featured-300x300.png" alt="GhostMove" class="nav-dropdown-image">
+                                <div class="nav-dropdown-content">
+                                    <span class="nav-dropdown-name">GhostMove</span>
+                                    <span class="nav-dropdown-desc">Sense picked up object</span>
+                                </div>
+                            </a>
+                            <a href="/docs/vision" class="nav-dropdown-item">
+                                <img src="https://electricks.info/wp-content/uploads/2022/12/vision_glasses-1-300x300.png" alt="Vision Glasses" class="nav-dropdown-image">
+                                <div class="nav-dropdown-content">
+                                    <span class="nav-dropdown-name">Vision Glasses</span>
+                                    <span class="nav-dropdown-desc">Hear information</span>
+                                </div>
                             </a>
                         </div>
                     </div>
