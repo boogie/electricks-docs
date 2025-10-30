@@ -53,6 +53,11 @@ include __DIR__ . '/includes/header.php';
             <?php
             global $NAVIGATION;
             foreach ($NAVIGATION as $categorySlug => $category):
+                // Skip hidden categories
+                if (isset($category['hidden']) && $category['hidden']) {
+                    continue;
+                }
+
                 $iconColor = $category['icon_color'] ?? 'blue';
                 $iconName = $category['icon'] ?? 'folder';
                 $itemCount = isset($category['items']) ? count($category['items']) : 0;
@@ -95,10 +100,6 @@ include __DIR__ . '/includes/header.php';
                         <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
                             <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                    </span>
-                    <span class="category-count">
-                        <i class="ph ph-article"></i>
-                        <?php echo $itemCount; ?> article<?php echo $itemCount !== 1 ? 's' : ''; ?>
                     </span>
                 </div>
             </a>

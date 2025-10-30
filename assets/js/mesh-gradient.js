@@ -91,50 +91,21 @@ class MeshGradient {
         this.ctx.scale(dpr, dpr);
     }
 
-    animate(currentTime = 0) {
-        if (!this.isVisible) return;
-
-        // Throttle to target FPS
-        const elapsed = currentTime - this.lastFrameTime;
-
-        if (elapsed >= this.frameInterval) {
-            this.lastFrameTime = currentTime - (elapsed % this.frameInterval);
-            this.update();
-            this.draw();
-        }
-
-        this.animationId = requestAnimationFrame((time) => this.animate(time));
-    }
-
-    update() {
-        const time = Date.now() * 0.001;
-
-        // Update grid pulse
-        this.gridPulse = Math.sin(time * 0.5) * 0.5 + 0.5;
-
-        // Update gradient points with smooth wrapping
-        this.points.forEach((point, i) => {
-            point.x += point.vx + Math.sin(time * 0.5 + point.phase) * 0.0001;
-            point.y += point.vy + Math.cos(time * 0.3 + point.phase) * 0.0001;
-
-            // Smooth wrap around edges
-            if (point.x < -0.3) point.x += 1.6;
-            else if (point.x > 1.3) point.x -= 1.6;
-            if (point.y < -0.3) point.y += 1.6;
-            else if (point.y > 1.3) point.y -= 1.6;
-        });
+    animate() {
+        // Static render - draw once, no animation loop
+        this.draw();
     }
 
     draw() {
-        const time = Date.now() * 0.001;
+        // Static render - no time-based animations
 
         // Clear with base purple
         this.ctx.fillStyle = '#2e1065';
         this.ctx.fillRect(0, 0, this.width, this.height);
 
-        // Draw purple gradient clouds
+        // Draw purple gradient clouds (static, no pulsing)
         this.points.forEach(point => {
-            const pulse = 0.3 + Math.sin(time * point.pulseSpeed) * 0.15;
+            const pulse = 0.3; // Static opacity
             const gradient = this.ctx.createRadialGradient(
                 point.x * this.width,
                 point.y * this.height,
@@ -154,7 +125,7 @@ class MeshGradient {
             this.ctx.fillRect(0, 0, this.width, this.height);
         });
 
-        // Draw rotated grid overlay
+        // Draw rotated grid overlay (static, no pulsing)
         this.ctx.save();
 
         // Rotate grid by 15 degrees around center
@@ -164,7 +135,7 @@ class MeshGradient {
 
         // Add blur
         this.ctx.filter = 'blur(1.5px)';
-        this.ctx.strokeStyle = `rgba(192, 132, 252, ${0.15 + this.gridPulse * 0.05})`;
+        this.ctx.strokeStyle = `rgba(192, 132, 252, 0.15)`;
         this.ctx.lineWidth = 1;
 
         // Vertical grid lines

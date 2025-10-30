@@ -9,6 +9,7 @@ $NAVIGATION = array (
   'docs' =>
   array (
     'title' => 'Getting Started',
+    'description' => 'START YOUR JOURNEY',
     'icon' => 'rocket-launch',
     'icon_color' => 'green',
     'emoji' => '🚀',
@@ -20,6 +21,7 @@ $NAVIGATION = array (
   'docs/peeksmith-3' =>
   array (
     'title' => 'PeekSmith 3',
+    'description' => 'CARD BOX AND POCKET PEEK',
     'icon' => 'eye',
     'icon_color' => 'blue',
     'emoji' => '👁️',
@@ -161,9 +163,10 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/bond' => 
+  'docs/bond' =>
   array (
     'title' => 'Electricks Bond',
+    'description' => 'SMARTWATCH PEEK',
     'icon' => 'eye',
     'icon_color' => 'blue',
     'category' => 'Peeking Devices',
@@ -206,9 +209,10 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/mrcard' => 
+  'docs/mrcard' =>
   array (
     'title' => 'Electricks MrCard',
+    'description' => 'ACCESS CARD PEEK & REMOTE',
     'icon' => 'eye',
     'icon_color' => 'blue',
     'category' => 'Peeking Devices',
@@ -296,9 +300,10 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/sbwatch' => 
+  'docs/sbwatch' =>
   array (
     'title' => 'SB Watch',
+    'description' => 'PREDICT THE TIME',
     'icon' => 'watch',
     'icon_color' => 'purple',
     'category' => 'Prediction Watches',
@@ -417,9 +422,10 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/sb-watch-2' => 
+  'docs/sb-watch-2' =>
   array (
     'title' => 'SB Watch 2',
+    'description' => 'PREDICT THE TIME & PEEK',
     'icon' => 'watch',
     'icon_color' => 'purple',
     'category' => 'Prediction Watches',
@@ -473,9 +479,10 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/atom-remote' => 
+  'docs/atom-remote' =>
   array (
-    'title' => 'Atom Smart Remote',
+    'title' => 'Atom 2',
+    'description' => 'CONTROL APPS AND DEVICES',
     'icon' => 'game-controller',
     'icon_color' => 'orange',
     'category' => 'Remote Controls',
@@ -585,9 +592,10 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/sbmote' => 
+  'docs/sbmote' =>
   array (
     'title' => 'SB Mote',
+    'description' => 'TRIGGER APP ACTIONS',
     'icon' => 'game-controller',
     'icon_color' => 'orange',
     'category' => 'Remote Controls',
@@ -615,9 +623,10 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/teleport' => 
+  'docs/teleport' =>
   array (
-    'title' => 'Electricks Teleport',
+    'title' => 'Teleport',
+    'description' => 'REVEAL CARDS, WORDS',
     'icon' => 'cube',
     'icon_color' => 'pink',
     'category' => 'Specialty Devices',
@@ -691,9 +700,10 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/quantum' => 
+  'docs/quantum' =>
   array (
-    'title' => 'Quantum Calculator',
+    'title' => 'Quantum',
+    'description' => 'FORCE NUMBERS, PEEK',
     'icon' => 'cube',
     'icon_color' => 'pink',
     'category' => 'Specialty Devices',
@@ -759,9 +769,10 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/spotted-dice' => 
+  'docs/spotted-dice' =>
   array (
     'title' => 'Spotted Dice',
+    'description' => 'GET DICE VALUES',
     'icon' => 'cube',
     'icon_color' => 'pink',
     'category' => 'Specialty Devices',
@@ -793,9 +804,10 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/cubesmith' => 
+  'docs/cubesmith' =>
   array (
     'title' => 'CubeSmith',
+    'description' => 'SOLVE THE CUBE BLINDFOLDED',
     'icon' => 'cube',
     'icon_color' => 'pink',
     'category' => 'Specialty Devices',
@@ -868,9 +880,10 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/ghostmove' => 
+  'docs/ghostmove' =>
   array (
     'title' => 'GhostMove',
+    'description' => 'SENSE PICKED UP OBJECT',
     'icon' => 'cube',
     'icon_color' => 'pink',
     'category' => 'Specialty Devices',
@@ -913,9 +926,10 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/soulmate' => 
+  'docs/soulmate' =>
   array (
-    'title' => 'SoulMate Smart Scale',
+    'title' => 'Electricks SoulMate',
+    'description' => 'SENSE THE NUMBER OF CARDS',
     'icon' => 'cube',
     'icon_color' => 'pink',
     'category' => 'Specialty Devices',
@@ -981,9 +995,10 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/ray' => 
+  'docs/ray' =>
   array (
-    'title' => 'Ray Magnet Sensor',
+    'title' => 'Electricks Ray',
+    'description' => 'SENSE MAGNETIC COINS',
     'icon' => 'cube',
     'icon_color' => 'pink',
     'category' => 'Specialty Devices',
@@ -1015,9 +1030,10 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/vision' => 
+  'docs/vision' =>
   array (
     'title' => 'Vision Glasses',
+    'description' => 'HEAR INFORMATION',
     'icon' => 'speaker-high',
     'icon_color' => 'teal',
     'category' => 'Audio Devices',
@@ -1043,9 +1059,10 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/mental-wave' => 
+  'docs/mental-wave' =>
   array (
     'title' => 'Mental Wave',
+    'description' => 'PLANT THOUGHTS',
     'icon' => 'speaker-high',
     'icon_color' => 'teal',
     'category' => 'Audio Devices',
@@ -1092,10 +1109,11 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/lunacards' => 
+  'docs/lunacards' =>
   array (
     'title' => 'Luna Cards',
-    'icon' => 'identification-card',
+    'description' => 'PREMIUM CARDS',
+    'icon' => 'cards',
     'icon_color' => 'indigo',
     'category' => 'Cards & NFC',
     'items' => 
@@ -1149,9 +1167,10 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/nfc-rfid' => 
+  'docs/nfc-rfid' =>
   array (
-    'title' => 'NFC/RFID',
+    'title' => 'NFC/RFID Cards',
+    'description' => 'IDENTIFY THE SELECTED CARD',
     'icon' => 'identification-card',
     'icon_color' => 'indigo',
     'category' => 'Cards & NFC',
@@ -1299,12 +1318,13 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/magiscript' => 
+  'docs/magiscript' =>
   array (
     'title' => 'MagiScript',
     'icon' => 'device-mobile',
     'icon_color' => 'green',
     'category' => 'Mobile Apps',
+    'hidden' => true,
     'items' => 
     array (
       'magiscript' => 'MagiScript',
@@ -1460,11 +1480,12 @@ $NAVIGATION = array (
       ),
     ),
   ),
-  'docs/misc' => 
+  'docs/misc' =>
   array (
     'title' => 'Guides & Resources',
     'icon' => 'book-open',
     'icon_color' => 'indigo',
+    'hidden' => true,
     'items' => 
     array (
       'misc' => 'Additional Resources',
