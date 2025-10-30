@@ -118,7 +118,7 @@ $currentPage = isset($currentPage) ? $currentPage : 'home';
                     <i class="ph ph-storefront" style="font-size: 18px; margin-right: 4px;"></i>
                     Shop
                 </a>
-                <a href="/docs/support/contact" class="header-btn header-btn-primary">
+                <a href="/contact.php" class="header-btn header-btn-primary">
                     Contact Support
                 </a>
             </div>
