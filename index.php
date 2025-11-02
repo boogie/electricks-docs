@@ -28,7 +28,20 @@ include __DIR__ . '/includes/header.php';
                     <input type="text" id="heroSearchInput" placeholder="Search for help articles, guides, devices..." autocomplete="off">
                     <kbd class="search-shortcut">⌘ K</kbd>
                 </div>
-                <div id="heroSearchResults" class="search-results-dropdown"></div>
+                <div id="heroSearchResultsContainer" class="hero-search-results-container">
+                    <div id="heroSearchResults" class="hero-search-results-body"></div>
+                    <div class="hero-search-results-footer">
+                        <span class="search-hint">
+                            <kbd>↑</kbd><kbd>↓</kbd> Navigate
+                        </span>
+                        <span class="search-hint">
+                            <kbd>↵</kbd> Open
+                        </span>
+                        <span class="search-hint">
+                            <kbd>Esc</kbd> Close
+                        </span>
+                    </div>
+                </div>
             </div>
 
             <!-- Popular Searches -->

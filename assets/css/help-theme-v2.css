@@ -319,7 +319,7 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-#heroSearchResults {
+.hero-search-results-container {
     position: absolute;
     top: calc(100% + 12px);
     left: 50%;
@@ -329,19 +329,55 @@ body {
     background: white;
     border-radius: 16px;
     box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2);
-    max-height: 400px;
-    overflow-y: auto;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 100;
-    padding: 8px;
+    display: flex;
+    flex-direction: column;
 }
 
-#heroSearchResults.active {
+.hero-search-results-container.active {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
+}
+
+.hero-search-results-body {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 400px;
+    padding: 8px;
+}
+
+.hero-search-results-footer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 20px;
+    border-top: 1px solid var(--bg-tertiary);
+    background: var(--bg-secondary);
+    border-radius: 0 0 16px 16px;
+}
+
+.hero-search-results-footer .search-hint {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+}
+
+.hero-search-results-footer kbd {
+    padding: 4px 8px;
+    background: white;
+    border: 1px solid var(--bg-tertiary);
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-family: inherit;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    min-width: 24px;
+    text-align: center;
 }
 
 #heroSearchResults .search-result-item {

@@ -6,6 +6,7 @@ class HomeSearch {
     constructor() {
         this.searchInput = document.getElementById('heroSearchInput');
         this.searchResults = document.getElementById('heroSearchResults');
+        this.searchContainer = document.getElementById('heroSearchResultsContainer');
 
         if (!this.searchInput) return;
 
@@ -42,7 +43,7 @@ class HomeSearch {
             }
 
             // Arrow navigation
-            if (this.searchResults.classList.contains('active')) {
+            if (this.searchContainer && this.searchContainer.classList.contains('active')) {
                 if (e.key === 'ArrowDown') {
                     e.preventDefault();
                     this.navigateResults('down');
@@ -176,13 +177,15 @@ class HomeSearch {
     }
 
     showResults() {
-        if (this.searchResults.innerHTML.trim()) {
-            this.searchResults.classList.add('active');
+        if (this.searchResults.innerHTML.trim() && this.searchContainer) {
+            this.searchContainer.classList.add('active');
         }
     }
 
     hideResults() {
-        this.searchResults.classList.remove('active');
+        if (this.searchContainer) {
+            this.searchContainer.classList.remove('active');
+        }
         this.selectedIndex = -1;
     }
 }
