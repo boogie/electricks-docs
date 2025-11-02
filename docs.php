@@ -15,6 +15,7 @@ if (!file_exists(__DIR__ . '/includes/navigation.php')) {
 
 require_once __DIR__ . '/includes/markdown-parser.php';
 require_once __DIR__ . '/includes/navigation.php';
+require_once __DIR__ . '/includes/video-player.php';
 
 // Get the requested documentation path
 $requestedPath = isset($_GET['path']) ? $_GET['path'] : 'docs';
@@ -69,11 +70,6 @@ $markdownContent = ElectricksMarkdownParser::getContentWithoutFrontMatter($fileP
 
 // Apply typography and convert special syntax
 $markdownContent = ElectricksMarkdownParser::improveTypography($markdownContent);
-$markdownContent = preg_replace(
-    '/\[youtube:([a-zA-Z0-9_-]+)\]/',
-    '<div class="video-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/$1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
-    $markdownContent
-);
 
 // Convert kbd tags
 $markdownContent = preg_replace('/\[kbd:([^\]]+)\]/', '<kbd>$1</kbd>', $markdownContent);
@@ -114,6 +110,18 @@ $parser = new ElectricksMarkdownParser();
 $parser->setBreaksEnabled(true);
 $parser->setMarkupEscaped(false);
 $content = $parser->text($markdownContent);
+
+// Convert YouTube shortcodes to our video player (after HTML conversion)
+$content = preg_replace_callback(
+    '/\[youtube:([a-zA-Z0-9_-]+)\]/',
+    function($matches) {
+        $videoId = $matches[1];
+        ob_start();
+        render_help_video($videoId, ['max_width' => '800px']);
+        return ob_get_clean();
+    },
+    $content
+);
 
 // Post-process: unwrap alerts from <p> tags that Parsedown may have added
 $content = preg_replace(
