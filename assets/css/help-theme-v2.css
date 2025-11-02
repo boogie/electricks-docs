@@ -1988,6 +1988,8 @@ body {
 .search-result-item:hover,
 .search-result-item.active {
     background: var(--bg-secondary);
+    border: 2px solid var(--primary-500);
+    padding: 10px;
 }
 
 .search-result-icon {
