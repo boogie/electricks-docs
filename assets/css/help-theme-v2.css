@@ -1981,15 +1981,18 @@ body {
     border-radius: 8px;
     text-decoration: none;
     color: inherit;
-    transition: background 0.2s ease;
+    transition: all 0.2s ease;
     cursor: pointer;
+    border: 2px solid transparent;
 }
 
-.search-result-item:hover,
+.search-result-item:hover {
+    background: var(--bg-secondary);
+}
+
 .search-result-item.active {
     background: var(--bg-secondary);
-    border: 2px solid var(--primary-500);
-    padding: 10px;
+    border-color: var(--primary-600);
 }
 
 .search-result-icon {
