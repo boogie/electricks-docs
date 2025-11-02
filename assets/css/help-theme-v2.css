@@ -318,7 +318,8 @@ body {
 #heroSearchResults {
     position: absolute;
     top: calc(100% + 12px);
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
     width: 100%;
     max-width: 650px;
     background: white;
@@ -328,15 +329,15 @@ body {
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
     transition: all 0.3s ease;
     z-index: 100;
+    padding: 8px;
 }
 
 #heroSearchResults.active {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
 }
 
 /* ===== Popular Searches ===== */

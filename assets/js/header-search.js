@@ -35,8 +35,8 @@
      * Open search modal or focus hero search
      */
     function openSearch() {
-        if (isHomePage && heroSearchInput) {
-            // On homepage, focus the hero search field
+        if (heroSearchInput) {
+            // On homepage, focus the hero search field only (don't open modal)
             heroSearchInput.focus();
             heroSearchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else if (searchModal) {
