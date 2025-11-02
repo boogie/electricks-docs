@@ -25,7 +25,7 @@
 
     // Check if we're on homepage
     const isHomePage = document.body.classList.contains('home-page');
-    const heroSearchInput = document.getElementById('searchInput');
+    const heroSearchInput = document.getElementById('heroSearchInput');
 
     let currentResults = [];
     let selectedIndex = -1;

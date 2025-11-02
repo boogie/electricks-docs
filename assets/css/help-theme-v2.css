@@ -152,8 +152,8 @@ body {
 .hero {
     position: relative;
     min-height: 500px;
-    overflow: hidden;
-    padding: 60px 20px 60px 20px;
+    overflow: visible;
+    padding: 60px 20px 120px 20px;
     background: linear-gradient(180deg, #2e1065 0%, #3b1a6f 100%);
     display: flex;
     align-items: center;
@@ -313,6 +313,30 @@ body {
     font-size: 0.875rem;
     color: rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#heroSearchResults {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    width: 100%;
+    max-width: 650px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2);
+    max-height: 400px;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+#heroSearchResults.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 /* ===== Popular Searches ===== */
