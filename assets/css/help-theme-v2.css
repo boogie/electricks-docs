@@ -141,6 +141,11 @@ body {
     font-weight: 600;
 }
 
+.header-btn-primary:hover {
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+    box-shadow: none;
+}
+
 /* ===== Hero Section ===== */
 .hero {
     position: relative;
