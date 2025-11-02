@@ -420,6 +420,7 @@ body {
 .popular-tag:hover {
     background: rgba(255, 255, 255, 0.15);
     border-color: rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* ===== Sections ===== */

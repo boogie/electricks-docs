@@ -48,7 +48,7 @@ include __DIR__ . '/includes/header.php';
             <div class="popular-searches">
                 <span class="popular-label">Popular:</span>
                 <a href="/docs/devices/peeking/peeksmith-3" class="popular-tag">PeekSmith 3</a>
-                <a href="/docs/guides/bluetooth-pairing" class="popular-tag">Bluetooth Pairing</a>
+                <a href="/docs/guides/troubleshooting-common-issues#bluetooth-connection-problems" class="popular-tag">Bluetooth Pairing</a>
                 <a href="/docs/guides/firmware-updates" class="popular-tag">Firmware Updates</a>
                 <a href="/docs/guides/troubleshooting-common-issues" class="popular-tag">Troubleshooting</a>
             </div>
