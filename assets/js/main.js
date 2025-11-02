@@ -33,6 +33,14 @@
     // Keyboard shortcut: Cmd+K or Ctrl+K
     document.addEventListener('keydown', function(e) {
         if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+            // Don't handle if hero search exists (home page)
+            if (document.getElementById('heroSearchInput')) {
+                return;
+            }
+            // Don't handle if modal doesn't exist
+            if (!searchModal) {
+                return;
+            }
             e.preventDefault();
             if (searchModal.classList.contains('active')) {
                 closeSearchModal();
@@ -42,7 +50,7 @@
         }
 
         // ESC to close search
-        if (e.key === 'Escape' && searchModal.classList.contains('active')) {
+        if (searchModal && e.key === 'Escape' && searchModal.classList.contains('active')) {
             closeSearchModal();
         }
     });
@@ -64,11 +72,13 @@
     }
 
     function openSearchModal() {
+        if (!searchModal || !searchInput) return;
         searchModal.classList.add('active');
         searchInput.focus();
     }
 
     function closeSearchModal() {
+        if (!searchModal || !searchInput || !searchResults) return;
         searchModal.classList.remove('active');
         searchInput.value = '';
         searchResults.innerHTML = '';
