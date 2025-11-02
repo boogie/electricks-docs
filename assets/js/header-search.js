@@ -218,7 +218,9 @@
         // Cmd/Ctrl + K to open search
         if (e[modifierKey] && e.key === 'k') {
             // If hero search input exists, let home-search.js handle it
-            if (heroSearchInput) {
+            // Check dynamically in case DOM wasn't ready when script loaded
+            const heroInput = document.getElementById('heroSearchInput');
+            if (heroInput) {
                 return;
             }
             e.preventDefault();
