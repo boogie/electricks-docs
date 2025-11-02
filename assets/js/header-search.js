@@ -217,6 +217,10 @@
     document.addEventListener('keydown', (e) => {
         // Cmd/Ctrl + K to open search
         if (e[modifierKey] && e.key === 'k') {
+            // If hero search input exists, let home-search.js handle it
+            if (heroSearchInput) {
+                return;
+            }
             e.preventDefault();
             openSearch();
             return;

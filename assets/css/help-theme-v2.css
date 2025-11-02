@@ -340,6 +340,15 @@ body {
     transform: translateX(-50%) translateY(0);
 }
 
+#heroSearchResults .search-result-item {
+    text-align: left;
+}
+
+#heroSearchResults .search-result-title,
+#heroSearchResults .search-result-excerpt {
+    text-align: left;
+}
+
 /* ===== Popular Searches ===== */
 .popular-searches {
     display: flex;
