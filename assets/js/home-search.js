@@ -11,6 +11,8 @@ class HomeSearch {
 
         this.debounceTimer = null;
         this.minSearchLength = 2;
+        this.currentResults = [];
+        this.selectedIndex = -1;
 
         this.init();
     }
@@ -37,6 +39,30 @@ class HomeSearch {
             if (e.key === 'Escape') {
                 this.hideResults();
                 this.searchInput.blur();
+            }
+
+            // Arrow navigation
+            if (this.searchResults.classList.contains('active')) {
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    this.navigateResults('down');
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    this.navigateResults('up');
+                } else if (e.key === 'Enter' && this.selectedIndex >= 0) {
+                    e.preventDefault();
+                    this.openSelectedResult();
+                }
+            }
+        });
+
+        // Add hover listeners dynamically
+        this.searchResults.addEventListener('mouseover', (e) => {
+            const item = e.target.closest('.search-result-item');
+            if (item) {
+                this.clearSelection();
+                item.classList.add('active');
+                this.selectedIndex = parseInt(item.dataset.index);
             }
         });
     }
@@ -70,29 +96,29 @@ class HomeSearch {
     }
 
     displayResults(results) {
+        this.currentResults = results;
+        this.selectedIndex = -1;
+
         if (results.length === 0) {
             this.searchResults.innerHTML = `
-                <div class="search-no-results">
-                    <i class="ph-bold ph-magnifying-glass"></i>
+                <div class="search-empty-state">
+                    <i class="ph ph-magnifying-glass-minus"></i>
                     <p>No results found</p>
-                    <span>Try a different search term</span>
                 </div>
             `;
             this.showResults();
             return;
         }
 
-        const resultsHTML = results.map(result => `
-            <a href="${result.url}" class="search-result-item">
+        const resultsHTML = results.map((result, index) => `
+            <a href="${result.url}" class="search-result-item" data-index="${index}">
                 <div class="search-result-icon">
-                    <i class="ph ph-file-text"></i>
+                    <i class="ph-fill ph-file-text"></i>
                 </div>
                 <div class="search-result-content">
                     <div class="search-result-title">${this.highlightQuery(result.title, this.searchInput.value)}</div>
-                    <div class="search-result-excerpt">${result.excerpt || ''}</div>
-                </div>
-                <div class="search-result-arrow">
-                    <i class="ph ph-arrow-right"></i>
+                    ${result.excerpt ? `<div class="search-result-excerpt">${this.highlightQuery(result.excerpt, this.searchInput.value)}</div>` : ''}
+                    ${result.breadcrumb ? `<div class="search-result-breadcrumb">${result.breadcrumb}</div>` : ''}
                 </div>
             </a>
         `).join('');
@@ -103,10 +129,9 @@ class HomeSearch {
 
     displayError() {
         this.searchResults.innerHTML = `
-            <div class="search-error">
-                <i class="ph-bold ph-warning"></i>
-                <p>Search temporarily unavailable</p>
-                <span>Please try again later</span>
+            <div class="search-empty-state">
+                <i class="ph ph-warning-circle"></i>
+                <p>Search unavailable. Please try again.</p>
             </div>
         `;
         this.showResults();
@@ -115,8 +140,39 @@ class HomeSearch {
     highlightQuery(text, query) {
         if (!query) return text;
 
-        const regex = new RegExp(`(${query})`, 'gi');
+        const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
         return text.replace(regex, '<mark>$1</mark>');
+    }
+
+    navigateResults(direction) {
+        if (this.currentResults.length === 0) return;
+
+        this.clearSelection();
+
+        if (direction === 'down') {
+            this.selectedIndex = Math.min(this.selectedIndex + 1, this.currentResults.length - 1);
+        } else if (direction === 'up') {
+            this.selectedIndex = Math.max(this.selectedIndex - 1, -1);
+        }
+
+        if (this.selectedIndex >= 0) {
+            const items = this.searchResults.querySelectorAll('.search-result-item');
+            if (items[this.selectedIndex]) {
+                items[this.selectedIndex].classList.add('active');
+                items[this.selectedIndex].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            }
+        }
+    }
+
+    clearSelection() {
+        const items = this.searchResults.querySelectorAll('.search-result-item');
+        items.forEach(item => item.classList.remove('active'));
+    }
+
+    openSelectedResult() {
+        if (this.selectedIndex >= 0 && this.currentResults[this.selectedIndex]) {
+            window.location.href = this.currentResults[this.selectedIndex].url;
+        }
     }
 
     showResults() {
@@ -127,6 +183,7 @@ class HomeSearch {
 
     hideResults() {
         this.searchResults.classList.remove('active');
+        this.selectedIndex = -1;
     }
 }
 
