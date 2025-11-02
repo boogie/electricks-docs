@@ -9,7 +9,7 @@ $NAVIGATION = array (
   'docs' =>
   array (
     'title' => 'Getting Started. [Quick.]',
-    'description' => 'START YOUR JOURNEY',
+    'description' => 'Master your magic in minutes.',
     'icon' => 'rocket-launch',
     'icon_color' => 'green',
     'emoji' => '🚀',
@@ -21,7 +21,7 @@ $NAVIGATION = array (
   'docs/peeksmith-3' =>
   array (
     'title' => 'PeekSmith 3. [Card peek.]',
-    'description' => 'CARD BOX AND POCKET PEEK',
+    'description' => 'Know any card, instantly.',
     'icon' => 'eye',
     'icon_color' => 'blue',
     'emoji' => '👁️',
@@ -166,7 +166,7 @@ $NAVIGATION = array (
   'docs/bond' =>
   array (
     'title' => 'Electricks Bond. [Smartwatch.]',
-    'description' => 'SMARTWATCH PEEK',
+    'description' => 'Information on your wrist, naturally.',
     'icon' => 'eye',
     'icon_color' => 'blue',
     'category' => 'Peeking Devices',
@@ -212,7 +212,7 @@ $NAVIGATION = array (
   'docs/mrcard' =>
   array (
     'title' => 'Electricks MrCard. [Peek & remote.]',
-    'description' => 'ACCESS CARD PEEK & REMOTE',
+    'description' => 'Everyday carry, extraordinary secrets.',
     'icon' => 'eye',
     'icon_color' => 'blue',
     'category' => 'Peeking Devices',
@@ -303,7 +303,7 @@ $NAVIGATION = array (
   'docs/sbwatch' =>
   array (
     'title' => 'SB Watch. [Prediction watch.]',
-    'description' => 'PREDICT THE TIME',
+    'description' => 'Predict time with precision and style.',
     'icon' => 'watch',
     'icon_color' => 'purple',
     'category' => 'Prediction Watches',
@@ -425,7 +425,7 @@ $NAVIGATION = array (
   'docs/sb-watch-2' =>
   array (
     'title' => 'SB Watch 2. [Advanced.]',
-    'description' => 'PREDICT THE TIME & PEEK',
+    'description' => 'Time prediction meets powerful peeking.',
     'icon' => 'watch',
     'icon_color' => 'purple',
     'category' => 'Prediction Watches',
@@ -482,7 +482,7 @@ $NAVIGATION = array (
   'docs/atom-remote' =>
   array (
     'title' => 'Atom 2. [Smart remote.]',
-    'description' => 'CONTROL APPS AND DEVICES',
+    'description' => 'Wireless control, invisible to audiences.',
     'icon' => 'game-controller',
     'icon_color' => 'orange',
     'category' => 'Remote Controls',
@@ -703,7 +703,7 @@ $NAVIGATION = array (
   'docs/quantum' =>
   array (
     'title' => 'Quantum. [Force calculator.]',
-    'description' => 'FORCE NUMBERS, PEEK',
+    'description' => 'Force any number, reveal anything.',
     'icon' => 'cube',
     'icon_color' => 'pink',
     'category' => 'Specialty Devices',
