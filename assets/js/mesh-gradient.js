@@ -89,6 +89,9 @@ class MeshGradient {
         this.canvas.height = this.height * dpr;
 
         this.ctx.scale(dpr, dpr);
+
+        // Redraw after resize
+        this.draw();
     }
 
     animate() {
