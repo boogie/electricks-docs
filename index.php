@@ -98,7 +98,11 @@ include __DIR__ . '/includes/header.php';
                         <i class="ph-fill ph-<?php echo htmlspecialchars($iconName); ?>"></i>
                     </div>
                     <div class="category-card-title-wrapper">
-                        <h3 class="category-title"><?php echo htmlspecialchars($category['title']); ?></h3>
+                        <h3 class="category-title"><?php
+                            // Strip out dot and gradient text markers [text] for home page cards
+                            $cleanTitle = preg_replace('/\.\s*\[[^\]]+\]/', '', $category['title']);
+                            echo htmlspecialchars($cleanTitle);
+                        ?></h3>
                         <?php if (isset($category['description']) && $category['description']): ?>
                         <p class="category-subtitle">
                             <?php echo htmlspecialchars($category['description']); ?>

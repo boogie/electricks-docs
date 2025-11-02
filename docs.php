@@ -147,19 +147,31 @@ $currentPage = 'docs';
 $breadcrumbs = getBreadcrumbs($requestedPath, $frontMatter);
 $pageNav = getPageNavigation($requestedPath);
 
-// Determine hero title - use device/section name for subpages
+// Determine hero title - use device/section name from navigation
 $heroTitle = $pageTitle;
 $heroDescription = isset($frontMatter['description']) ? $frontMatter['description'] : '';
 
-// Extract device/section name from path for subpages
+// Check if this path has a navigation entry
 $pathParts = explode('/', $requestedPath);
-if (count($pathParts) > 1) {
-    // This is a subpage, find the parent device in navigation
-    $parentSlug = 'docs/' . $pathParts[0];
-    if (isset($NAVIGATION[$parentSlug]) && isset($NAVIGATION[$parentSlug]['title'])) {
-        $heroTitle = $NAVIGATION[$parentSlug]['title'];
-        if (isset($NAVIGATION[$parentSlug]['description'])) {
-            $heroDescription = $NAVIGATION[$parentSlug]['description'];
+
+// Try to find the navigation entry
+$navSlug = 'docs/' . $pathParts[0];
+$foundInNav = false;
+
+if (isset($NAVIGATION[$navSlug]) && isset($NAVIGATION[$navSlug]['title'])) {
+    $heroTitle = $NAVIGATION[$navSlug]['title'];
+    if (isset($NAVIGATION[$navSlug]['description'])) {
+        $heroDescription = $NAVIGATION[$navSlug]['description'];
+    }
+    $foundInNav = true;
+}
+
+// If not found and first part is a direct docs page (like "getting-started"), use "docs" entry
+if (!$foundInNav && ($requestedPath === 'docs' || $requestedPath === 'getting-started' || $pathParts[0] === 'getting-started')) {
+    if (isset($NAVIGATION['docs']) && isset($NAVIGATION['docs']['title'])) {
+        $heroTitle = $NAVIGATION['docs']['title'];
+        if (isset($NAVIGATION['docs']['description'])) {
+            $heroDescription = $NAVIGATION['docs']['description'];
         }
     }
 }
@@ -172,7 +184,11 @@ include __DIR__ . '/includes/header.php';
     <div class="container">
         <div class="hero-content-center">
             <h1 class="hero-title-compact">
-                <?php echo htmlspecialchars($heroTitle); ?>
+                <?php
+                // Parse gradient text markers [text] in title
+                $titleWithGradient = preg_replace('/\[([^\]]+)\]/', '<span class="gradient-text">$1</span>', $heroTitle);
+                echo $titleWithGradient;
+                ?>
             </h1>
             <?php if (!empty($heroDescription)): ?>
             <p class="hero-subtitle-compact">

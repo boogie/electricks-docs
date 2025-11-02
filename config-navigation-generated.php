@@ -8,7 +8,7 @@
 $NAVIGATION = array (
   'docs' =>
   array (
-    'title' => 'Getting Started',
+    'title' => 'Getting Started. [Quick.]',
     'description' => 'START YOUR JOURNEY',
     'icon' => 'rocket-launch',
     'icon_color' => 'green',
@@ -20,7 +20,7 @@ $NAVIGATION = array (
   ),
   'docs/peeksmith-3' =>
   array (
-    'title' => 'PeekSmith 3',
+    'title' => 'PeekSmith 3. [Card peek.]',
     'description' => 'CARD BOX AND POCKET PEEK',
     'icon' => 'eye',
     'icon_color' => 'blue',
@@ -165,7 +165,7 @@ $NAVIGATION = array (
   ),
   'docs/bond' =>
   array (
-    'title' => 'Electricks Bond',
+    'title' => 'Electricks Bond. [Smartwatch.]',
     'description' => 'SMARTWATCH PEEK',
     'icon' => 'eye',
     'icon_color' => 'blue',
@@ -211,7 +211,7 @@ $NAVIGATION = array (
   ),
   'docs/mrcard' =>
   array (
-    'title' => 'Electricks MrCard',
+    'title' => 'Electricks MrCard. [Peek & remote.]',
     'description' => 'ACCESS CARD PEEK & REMOTE',
     'icon' => 'eye',
     'icon_color' => 'blue',
@@ -302,7 +302,7 @@ $NAVIGATION = array (
   ),
   'docs/sbwatch' =>
   array (
-    'title' => 'SB Watch',
+    'title' => 'SB Watch. [Prediction watch.]',
     'description' => 'PREDICT THE TIME',
     'icon' => 'watch',
     'icon_color' => 'purple',
@@ -424,7 +424,7 @@ $NAVIGATION = array (
   ),
   'docs/sb-watch-2' =>
   array (
-    'title' => 'SB Watch 2',
+    'title' => 'SB Watch 2. [Advanced.]',
     'description' => 'PREDICT THE TIME & PEEK',
     'icon' => 'watch',
     'icon_color' => 'purple',
@@ -481,7 +481,7 @@ $NAVIGATION = array (
   ),
   'docs/atom-remote' =>
   array (
-    'title' => 'Atom 2',
+    'title' => 'Atom 2. [Smart remote.]',
     'description' => 'CONTROL APPS AND DEVICES',
     'icon' => 'game-controller',
     'icon_color' => 'orange',
@@ -702,7 +702,7 @@ $NAVIGATION = array (
   ),
   'docs/quantum' =>
   array (
-    'title' => 'Quantum',
+    'title' => 'Quantum. [Force calculator.]',
     'description' => 'FORCE NUMBERS, PEEK',
     'icon' => 'cube',
     'icon_color' => 'pink',

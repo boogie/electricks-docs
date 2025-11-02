@@ -2172,6 +2172,20 @@ body {
     padding: 60px 0 50px;
     margin-top: 0;
     overflow: hidden;
+    background: linear-gradient(180deg, #2e1065 0%, #3b1a6f 100%);
+}
+
+.hero-compact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .hero-compact canvas {
@@ -2181,24 +2195,34 @@ body {
     width: 100%;
     height: 100%;
     z-index: 0;
+    opacity: 1;
 }
 
 .hero-compact .container {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .hero-title-compact {
-    font-size: 2.5rem;
+    font-size: 2.8em;
     font-weight: 700;
     color: white;
     margin-bottom: 12px;
     line-height: 1.1;
     text-align: center;
+    letter-spacing: -0.015em;
+}
+
+.hero-title-compact .gradient-text {
+    background: linear-gradient(90deg, #f0abfc 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 8px rgba(192, 132, 252, 0.3));
 }
 
 .hero-subtitle-compact {
-    font-size: 1rem;
+    font-size: 1.1em;
     color: rgba(255, 255, 255, 0.75);
     max-width: 600px;
     text-align: center;
