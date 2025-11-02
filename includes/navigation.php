@@ -64,6 +64,9 @@ function renderNavSection($sectionSlug, $section, $currentPath, $isGrouped = fal
     $sectionActive = strpos($currentPath, $productSlug) === 0;
     $isActive = ($currentPath === $productSlug);
 
+    // Strip dot and gradient text markers from title for sidebar
+    $cleanTitle = preg_replace('/\.\s*\[[^\]]+\]/', '', $section['title']);
+
     if ($isGrouped) {
         // Grouped section - render as list item with icon
         $emoji = $section['emoji'] ?? '📄';
@@ -71,7 +74,7 @@ function renderNavSection($sectionSlug, $section, $currentPath, $isGrouped = fal
         $html = '<li' . ($isActive ? ' class="active"' : '') . '>';
         $html .= '<a href="/docs/' . htmlspecialchars($productSlug) . '">';
         $html .= '<span class="doc-link-icon">' . $emoji . '</span>';
-        $html .= '<span class="doc-link-text">' . htmlspecialchars($section['title']) . '</span>';
+        $html .= '<span class="doc-link-text">' . htmlspecialchars($cleanTitle) . '</span>';
         $html .= '</a>';
         $html .= '</li>';
     } else {
@@ -79,7 +82,7 @@ function renderNavSection($sectionSlug, $section, $currentPath, $isGrouped = fal
         $emoji = $section['emoji'] ?? '📄';
 
         $html = '<div class="nav-section">';
-        $html .= '<h4 class="doc-sidebar-heading">' . htmlspecialchars($section['title']) . '</h4>';
+        $html .= '<h4 class="doc-sidebar-heading">' . htmlspecialchars($cleanTitle) . '</h4>';
         $html .= '<ul class="doc-sidebar-links">';
         $html .= '<li' . ($isActive ? ' class="active"' : '') . '>';
         $html .= '<a href="/docs/' . htmlspecialchars($productSlug) . '">';

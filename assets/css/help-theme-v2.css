@@ -2169,7 +2169,7 @@ body {
 /* ===== Compact Hero ===== */
 .hero-compact {
     position: relative;
-    padding: 60px 0 50px;
+    padding: 40px 0 40px;
     margin-top: 0;
     overflow: hidden;
     background: linear-gradient(180deg, #2e1065 0%, #3b1a6f 100%);
@@ -2222,7 +2222,7 @@ body {
 }
 
 .hero-subtitle-compact {
-    font-size: 1.1em;
+    font-size: 1.4em;
     color: rgba(255, 255, 255, 0.75);
     max-width: 600px;
     text-align: center;

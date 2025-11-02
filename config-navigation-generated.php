@@ -211,7 +211,7 @@ $NAVIGATION = array (
   ),
   'docs/mrcard' =>
   array (
-    'title' => 'Electricks MrCard. [Peek & remote.]',
+    'title' => 'Electricks MrCard. [Peek and remote.]',
     'description' => 'Everyday carry, extraordinary secrets.',
     'icon' => 'eye',
     'icon_color' => 'blue',
