@@ -163,8 +163,8 @@ $currentPage = isset($currentPage) ? $currentPage : 'home';
                     <i class="ph ph-storefront" style="font-size: 18px; margin-right: 4px;"></i>
                     Shop
                 </a>
-                <a href="/contact" class="header-btn header-btn-primary">
-                    Contact Support
+                <a href="/contact" class="header-btn header-btn-primary" title="Contact Support">
+                    <i class="ph ph-headset" style="font-size: 20px;"></i>
                 </a>
             </div>
         </div>
