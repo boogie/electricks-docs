@@ -154,7 +154,7 @@ body {
     min-height: 500px;
     overflow: visible;
     padding: 60px 20px 120px 20px;
-    background: linear-gradient(180deg, #2e1065 0%, #3b1a6f 100%);
+    background: #2e1065;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,6 +1,6 @@
 /**
- * Purple Gradient Background with Rotated Grid
- * Simplified version for Help Center
+ * Static Purple Gradient Background with Rotated Grid
+ * Renders once on load and on resize (no animation to prevent video flickering)
  */
 
 class MeshGradient {
@@ -8,19 +8,9 @@ class MeshGradient {
         this.canvas = document.getElementById(canvasId);
         if (!this.canvas) return;
 
-        this.ctx = this.canvas.getContext('2d', { alpha: false, desynchronized: true });
+        this.ctx = this.canvas.getContext('2d', { alpha: false });
         this.width = 0;
         this.height = 0;
-        this.isVisible = true;
-        this.animationId = null;
-        this.lastFrameTime = 0;
-        this.targetFPS = 30; // Reduced from ~60fps
-        this.frameInterval = 1000 / this.targetFPS;
-
-        // Performance optimization
-        this.canvas.style.willChange = 'contents';
-        this.canvas.style.transform = 'translateZ(0)';
-        this.canvas.style.backfaceVisibility = 'hidden';
 
         // Purple gradient colors
         this.colors = [
@@ -33,28 +23,11 @@ class MeshGradient {
         // Gradient points
         this.points = [];
 
-        // Sensor grid
-        this.gridPulse = 0;
-
         this.resize();
         window.addEventListener('resize', () => this.resize());
 
-        // Pause animation when tab is not visible
-        document.addEventListener('visibilitychange', () => {
-            this.isVisible = !document.hidden;
-            if (this.isVisible) {
-                this.lastFrameTime = performance.now();
-                this.animate();
-            } else {
-                if (this.animationId) {
-                    cancelAnimationFrame(this.animationId);
-                    this.animationId = null;
-                }
-            }
-        });
-
         this.init();
-        this.animate();
+        this.draw(); // Render once only
     }
 
     init() {
@@ -63,17 +36,13 @@ class MeshGradient {
 
     initGradient() {
         this.points = [];
-        // Create 4 gradient points
+        // Create 4 gradient points at fixed positions
         for (let i = 0; i < 4; i++) {
             this.points.push({
                 x: Math.random(),
                 y: Math.random(),
-                vx: (Math.random() - 0.5) * 0.0002,
-                vy: (Math.random() - 0.5) * 0.0002,
                 radius: 0.4 + Math.random() * 0.4,
-                color: this.colors[i],
-                phase: Math.random() * Math.PI * 2,
-                pulseSpeed: 0.3 + Math.random() * 0.5
+                color: this.colors[i]
             });
         }
     }
@@ -89,26 +58,16 @@ class MeshGradient {
         this.canvas.height = this.height * dpr;
 
         this.ctx.scale(dpr, dpr);
-
-        // Redraw after resize
-        this.draw();
-    }
-
-    animate() {
-        // Static render - draw once, no animation loop
-        this.draw();
+        this.draw(); // Re-render on resize
     }
 
     draw() {
-        // Static render - no time-based animations
-
         // Clear with base purple
         this.ctx.fillStyle = '#2e1065';
         this.ctx.fillRect(0, 0, this.width, this.height);
 
-        // Draw purple gradient clouds (static, no pulsing)
+        // Draw purple gradient clouds (static, no animation)
         this.points.forEach(point => {
-            const pulse = 0.3; // Static opacity
             const gradient = this.ctx.createRadialGradient(
                 point.x * this.width,
                 point.y * this.height,
@@ -119,16 +78,16 @@ class MeshGradient {
             );
 
             const color = point.color;
-            gradient.addColorStop(0, `rgba(${color.r}, ${color.g}, ${color.b}, ${pulse * 0.5})`);
-            gradient.addColorStop(0.3, `rgba(${color.r}, ${color.g}, ${color.b}, ${pulse * 0.3})`);
-            gradient.addColorStop(0.7, `rgba(${color.r}, ${color.g}, ${color.b}, ${pulse * 0.15})`);
+            gradient.addColorStop(0, `rgba(${color.r}, ${color.g}, ${color.b}, 0.5)`);
+            gradient.addColorStop(0.3, `rgba(${color.r}, ${color.g}, ${color.b}, 0.3)`);
+            gradient.addColorStop(0.7, `rgba(${color.r}, ${color.g}, ${color.b}, 0.15)`);
             gradient.addColorStop(1, `rgba(${color.r}, ${color.g}, ${color.b}, 0)`);
 
             this.ctx.fillStyle = gradient;
             this.ctx.fillRect(0, 0, this.width, this.height);
         });
 
-        // Draw rotated grid overlay (static, no pulsing)
+        // Draw rotated grid overlay (static)
         this.ctx.save();
 
         // Rotate grid by 15 degrees around center
