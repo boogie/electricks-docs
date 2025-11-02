@@ -26,6 +26,7 @@ class HomeSearch {
         document.addEventListener('click', (e) => {
             if (!e.target.closest('.hero-search')) {
                 this.hideResults();
+                this.selectedIndex = -1;
             }
         });
 
@@ -36,10 +37,9 @@ class HomeSearch {
                 this.searchInput.focus();
             }
 
-            // Escape to close
+            // Escape to close (keep focus and selection)
             if (e.key === 'Escape') {
                 this.hideResults();
-                this.searchInput.blur();
             }
 
             // Arrow navigation
@@ -186,7 +186,6 @@ class HomeSearch {
         if (this.searchContainer) {
             this.searchContainer.classList.remove('active');
         }
-        this.selectedIndex = -1;
     }
 }
 
