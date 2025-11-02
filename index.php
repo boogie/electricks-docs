@@ -47,10 +47,10 @@ include __DIR__ . '/includes/header.php';
             <!-- Popular Searches -->
             <div class="popular-searches">
                 <span class="popular-label">Popular:</span>
-                <a href="/docs/devices/peeking/peeksmith-3" class="popular-tag">PeekSmith 3</a>
-                <a href="/docs/guides/troubleshooting-common-issues#bluetooth-connection-problems" class="popular-tag">Bluetooth Pairing</a>
-                <a href="/docs/guides/firmware-updates" class="popular-tag">Firmware Updates</a>
-                <a href="/docs/guides/troubleshooting-common-issues" class="popular-tag">Troubleshooting</a>
+                <a href="/docs/peeksmith-3" class="popular-tag">PeekSmith 3</a>
+                <a href="/docs/bond" class="popular-tag">Bond</a>
+                <a href="/docs/atom-remote" class="popular-tag">Atom 2</a>
+                <a href="/docs/getting-started" class="popular-tag">Getting Started</a>
             </div>
         </div>
     </div>
