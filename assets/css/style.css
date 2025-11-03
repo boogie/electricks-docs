@@ -208,6 +208,7 @@ pre code {
     padding: 1.5em !important;
     overflow-x: auto;
     margin: 1.5em 0;
+    white-space: pre !important;
 }
 
 .article-body pre[class*="language-"] code,
@@ -219,6 +220,7 @@ pre code {
     border: none !important;
     box-shadow: none !important;
     padding: 0 !important;
+    white-space: pre !important;
 }
 
 /* ===== Layout ===== */
