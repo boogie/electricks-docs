@@ -335,8 +335,16 @@ class ElectricksMarkdownParser extends Parsedown {
 
     /**
      * Add IDs to headers for anchor links
+     * Also prevent # followed by a digit from being treated as a heading
      */
     protected function blockHeader($Line) {
+        // Check if this line looks like a numbered label (#1, #2, etc.)
+        // If so, don't treat it as a header
+        // Match # followed immediately by digits (no space) and then non-letter character
+        if (preg_match('/^#\d+($|[^a-zA-Z])/', $Line['text'])) {
+            return null; // Don't treat as header - this is a numbered item like #1, #2, etc.
+        }
+
         $Block = parent::blockHeader($Line);
 
         if (isset($Block) && isset($Block['element']['text'])) {
