@@ -9,22 +9,6 @@ require_once BASE_PATH . '/vendor/erusev/parsedown/Parsedown.php';
 class ElectricksMarkdownParser extends Parsedown {
 
     /**
-     * Override blockFencedCodeComplete to prevent leading/trailing whitespace
-     */
-    protected function blockFencedCodeComplete($Block)
-    {
-        // Call parent implementation
-        $Block = parent::blockFencedCodeComplete($Block);
-
-        // Remove leading/trailing whitespace from code content
-        if (isset($Block['element']['element']['text'])) {
-            $Block['element']['element']['text'] = trim($Block['element']['element']['text']);
-        }
-
-        return $Block;
-    }
-
-    /**
      * Parse markdown file and return HTML
      */
     public static function parseFile($filePath) {
