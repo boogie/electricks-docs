@@ -4,6 +4,7 @@ description: "Control apps and devices"
 updated: "2025-10-26"
 author: Electricks
 category: guides
+sidebar: aa887b8
 ---
 
 # Atom 2 Smart Remote

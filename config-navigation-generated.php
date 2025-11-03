@@ -15,7 +15,7 @@ $NAVIGATION = array (
     'emoji' => '🚀',
     'items' =>
     array (
-      'docs' => 'Documentation',
+      'docs/getting-started' => 'Getting Started',
     ),
   ),
   'docs/peeksmith-3' =>

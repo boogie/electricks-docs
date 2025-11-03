@@ -57,8 +57,10 @@ function buildNavigation($currentPath = '') {
  * Render a single navigation section
  */
 function renderNavSection($sectionSlug, $section, $currentPath, $isGrouped = false) {
-    // Extract the product slug from section (e.g., "docs/peeksmith-3" -> "peeksmith-3")
-    $productSlug = str_replace('docs/', '', $sectionSlug);
+    // Get first item from section, or use section slug as fallback
+    $firstItemKey = isset($section['items']) ? key($section['items']) : $sectionSlug;
+    // Extract the product slug (e.g., "docs/peeksmith-3" -> "peeksmith-3")
+    $productSlug = str_replace('docs/', '', $firstItemKey);
 
     // Check if current path matches this product
     $sectionActive = strpos($currentPath, $productSlug) === 0;
