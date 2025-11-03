@@ -132,9 +132,9 @@ $content = preg_replace(
 
 $toc = ElectricksMarkdownParser::extractTOC($filePath);
 
-// Normalize links: convert electricks.info URLs to relative URLs
+// Normalize links: convert electricks.info URLs to relative URLs (excluding wp-content)
 $content = preg_replace(
-    '/href="https:\/\/electricks\.info(\/[^"]*?)(\?[^"]*)?"/i',
+    '/href="https:\/\/electricks\.info(\/docs\/[^"]*?)(\?[^"]*)?"/i',
     'href="$1"',
     $content
 );

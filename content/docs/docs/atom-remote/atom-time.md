@@ -24,7 +24,7 @@ If you need to correct the time you entered use the bottom right (#12) button fo
 
 You can also reset the time to the actual time. Enter 4444 or 9999, or long-press any of the buttons. Use the MagisScript Editor to configure the app.
 
-[![](https://electricks.info/wp-content/uploads/2024/07/atom-time-settings-1024x764.jpg)](https://electricks.info/wp-content/uploads/2024/07/atom-time-settings.jpg)
+![](https://electricks.info/wp-content/uploads/2024/07/atom-time-settings-1024x764.jpg)
 
 If you would like to connect to a specific PeekSmith or SB Watch , replace the * with your device's exact name. Make sure the casing is correct, and the name includes the PeekSmith- and/or the SBWatch- prefixes.
 
