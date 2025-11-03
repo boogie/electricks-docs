@@ -134,10 +134,12 @@ class ElectricksMarkdownParser extends Parsedown {
         $reg = "\u{00AE}"; // Registered ®
         $trade = "\u{2122}"; // Trademark ™
 
-        // Protect front matter, code blocks and inline code from replacements
+        // Protect front matter, code blocks, inline code, images and links from replacements
         $frontMatter = null;
         $codeBlocks = [];
         $inlineCode = [];
+        $images = [];
+        $links = [];
 
         // Extract and protect YAML front matter
         if (preg_match('/^---\s*\n(.*?)\n---\s*\n/s', $text, $matches)) {
@@ -156,6 +158,20 @@ class ElectricksMarkdownParser extends Parsedown {
         $text = preg_replace_callback('/`[^`]+`/', function($matches) use (&$inlineCode) {
             $placeholder = '___INLINE_CODE_' . count($inlineCode) . '___';
             $inlineCode[$placeholder] = $matches[0];
+            return $placeholder;
+        }, $text);
+
+        // Extract and protect images (must come before links)
+        $text = preg_replace_callback('/!\[([^\]]*)\]\(([^)]+)\)/', function($matches) use (&$images) {
+            $placeholder = '___IMAGE_' . count($images) . '___';
+            $images[$placeholder] = $matches[0];
+            return $placeholder;
+        }, $text);
+
+        // Extract and protect links
+        $text = preg_replace_callback('/\[([^\]]+)\]\(([^)]+)\)/', function($matches) use (&$links) {
+            $placeholder = '___LINK_' . count($links) . '___';
+            $links[$placeholder] = $matches[0];
             return $placeholder;
         }, $text);
 
@@ -206,6 +222,16 @@ class ElectricksMarkdownParser extends Parsedown {
         // Restore inline code
         foreach ($inlineCode as $placeholder => $code) {
             $text = str_replace($placeholder, $code, $text);
+        }
+
+        // Restore links
+        foreach ($links as $placeholder => $link) {
+            $text = str_replace($placeholder, $link, $text);
+        }
+
+        // Restore images
+        foreach ($images as $placeholder => $image) {
+            $text = str_replace($placeholder, $image, $text);
         }
 
         return $text;
