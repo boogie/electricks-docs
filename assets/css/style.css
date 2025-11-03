@@ -1170,8 +1170,6 @@ pre code {
     position: sticky;
     top: calc(var(--header-height) + var(--spacing-lg));
     height: fit-content;
-    max-height: calc(100vh - var(--header-height) - var(--spacing-2xl));
-    overflow-y: auto;
     background: linear-gradient(
         135deg,
         rgba(20, 20, 22, 0.8) 0%,
@@ -1413,8 +1411,6 @@ pre code {
     position: sticky;
     top: calc(var(--header-height) + var(--spacing-lg));
     height: fit-content;
-    max-height: calc(100vh - var(--header-height) - var(--spacing-2xl));
-    overflow-y: auto;
     background: linear-gradient(
         135deg,
         rgba(20, 20, 22, 0.8) 0%,
