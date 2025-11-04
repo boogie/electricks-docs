@@ -1,2882 +1,3005 @@
 {
-    "6bc33bd": {
-        "id": "6bc33bd",
-        "name": "Teleport Sidebar",
-        "sections": [
-            {
-                "heading": "Devices & Apps",
-                "links": [
-                    {
-                        "icon": "♥️",
-                        "text": "Teleport",
-                        "url": "\/docs\/teleport"
-                    },
-                    {
-                        "icon": "🛒",
-                        "text": "Buy Teleport Now",
-                        "url": "\/product\/teleport"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "First Steps",
-                        "url": "\/docs\/teleport"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Specifications",
-                        "url": "\/docs\/teleport\/specifications"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "FAQ",
-                        "url": "\/docs\/teleport\/faq"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "PeekSmith App",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "Basics",
-                        "url": "\/docs\/teleport\/peeksmith-app"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Poker Card (Thumper)",
-                        "url": "\/docs\/teleport\/poker-card-image"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Handwritten Text",
-                        "url": "\/docs\/teleport\/handwritten-text"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Doodle Drawing",
-                        "url": "\/docs\/teleport\/doodle-drawing"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Poker Card (from Text)",
-                        "url": "\/docs\/teleport\/poker-card-text"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "ESP Card",
-                        "url": "\/docs\/teleport\/esp-card-reveal"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Atom Remote",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "Basics",
-                        "url": "\/docs\/teleport\/atom-2"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Atom Time",
-                        "url": "\/docs\/teleport\/atom-time"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Atom Card",
-                        "url": "\/docs\/teleport\/atom-stack"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Fetch Image to Teleport",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "Basics",
-                        "url": "\/docs\/teleport\/fetch-image-to-teleport"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Luggage Label",
-                        "url": "\/docs\/teleport\/luggage-label-reveal"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Hotel Card (Colorful)",
-                        "url": "\/docs\/teleport\/hotel-card-colorful-reveal"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Hotel Card (Black)",
-                        "url": "\/docs\/teleport\/hotel-card-black-reveal"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Hand Drawn ESP",
-                        "url": "\/docs\/teleport\/hand-drawn-esp"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "TrueWrite – Neural Handwriting for Teleport",
-                        "url": "\/docs\/teleport\/truewrite-neural-handwriting-for-teleport"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "TrueWrite Chalk Style",
-                        "url": "\/docs\/teleport\/truewrite-chalk"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "TrueWrite Marker Style",
-                        "url": "\/docs\/teleport\/truewrite-marker"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "TrueWrite Post-it Style",
-                        "url": "\/docs\/teleport\/truewrite-post-it"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Accessories",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "Neck Badge Holder",
-                        "url": "\/docs\/teleport\/neck-badge-holder"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Teleport Wallet",
-                        "url": "\/docs\/teleport\/teleport-wallet"
-                    }
-                ],
-                "type": "normal"
-            }
+  "6bc33bd": {
+    "id": "6bc33bd",
+    "name": "Teleport Sidebar",
+    "sections": [
+      {
+        "heading": "Devices & Apps",
+        "links": [
+          {
+            "icon": "♥️",
+            "text": "Teleport",
+            "url": "/docs/teleport"
+          },
+          {
+            "icon": "🛒",
+            "text": "Buy Teleport Now",
+            "url": "/product/teleport"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "First Steps",
+            "url": "/docs/teleport"
+          },
+          {
+            "icon": "📃",
+            "text": "Specifications",
+            "url": "/docs/teleport/specifications"
+          },
+          {
+            "icon": "📃",
+            "text": "FAQ",
+            "url": "/docs/teleport/faq"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "PeekSmith App",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Basics",
+            "url": "/docs/teleport/peeksmith-app"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Poker Card (Thumper)",
+            "url": "/docs/teleport/poker-card-image"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Handwritten Text",
+            "url": "/docs/teleport/handwritten-text"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Doodle Drawing",
+            "url": "/docs/teleport/doodle-drawing"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Poker Card (from Text)",
+            "url": "/docs/teleport/poker-card-text"
+          },
+          {
+            "icon": "🎞️",
+            "text": "ESP Card",
+            "url": "/docs/teleport/esp-card-reveal"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Atom Remote",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Basics",
+            "url": "/docs/teleport/atom-2"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Atom Time",
+            "url": "/docs/teleport/atom-time"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Atom Card",
+            "url": "/docs/teleport/atom-stack"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Fetch Image to Teleport",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Basics",
+            "url": "/docs/teleport/fetch-image-to-teleport"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Luggage Label",
+            "url": "/docs/teleport/luggage-label-reveal"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Hotel Card (Colorful)",
+            "url": "/docs/teleport/hotel-card-colorful-reveal"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Hotel Card (Black)",
+            "url": "/docs/teleport/hotel-card-black-reveal"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Hand Drawn ESP",
+            "url": "/docs/teleport/hand-drawn-esp"
+          },
+          {
+            "icon": "🎞️",
+            "text": "TrueWrite – Neural Handwriting for Teleport",
+            "url": "/docs/teleport/truewrite-neural-handwriting-for-teleport"
+          },
+          {
+            "icon": "🎞️",
+            "text": "TrueWrite Chalk Style",
+            "url": "/docs/teleport/truewrite-chalk"
+          },
+          {
+            "icon": "🎞️",
+            "text": "TrueWrite Marker Style",
+            "url": "/docs/teleport/truewrite-marker"
+          },
+          {
+            "icon": "🎞️",
+            "text": "TrueWrite Post-it Style",
+            "url": "/docs/teleport/truewrite-post-it"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Accessories",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Neck Badge Holder",
+            "url": "/docs/teleport/neck-badge-holder"
+          },
+          {
+            "icon": "📃",
+            "text": "Teleport Wallet",
+            "url": "/docs/teleport/teleport-wallet"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "945e687": {
+    "id": "945e687",
+    "name": "Sbwatch Sidebar",
+    "sections": [
+      {
+        "heading": "Devices & Apps",
+        "links": [
+          {
+            "icon": "⌚",
+            "text": "SB Watch",
+            "url": "/docs/sbwatch"
+          },
+          {
+            "icon": "⌚",
+            "text": "SB Watch 2",
+            "url": "/docs/sb-watch-2"
+          },
+          {
+            "icon": "📱",
+            "text": "TimeSmith App",
+            "url": "/docs/timesmith-app"
+          },
+          {
+            "icon": "📱",
+            "text": "PeekSmith App",
+            "url": "/docs/sb-watch-2/peeksmith-app"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "First Steps",
+            "url": "/docs/sbwatch"
+          },
+          {
+            "icon": "📃",
+            "text": "Troubleshooting",
+            "url": "/docs/sbwatch/troubleshooting"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Calibration",
+            "url": "/docs/sbwatch/calibration"
+          },
+          {
+            "icon": "📃",
+            "text": "Standalone Mode",
+            "url": "/docs/sbwatch/standalone-mode-2"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Video Reviews",
+            "url": "/docs/sbwatch/video-reviews-sbwatch"
+          },
+          {
+            "icon": "📃",
+            "text": "Specifications",
+            "url": "/docs/sbwatch/specifications"
+          },
+          {
+            "icon": "📃",
+            "text": "FAQ",
+            "url": "/docs/sbwatch/faq"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Compatibility",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Atom Remote",
+            "url": "/docs/sbwatch/atom-remote"
+          },
+          {
+            "icon": "📃",
+            "text": "SB Mote",
+            "url": "/docs/sbwatch/sb-mote"
+          },
+          {
+            "icon": "📃",
+            "text": "Wilson Nexus",
+            "url": "/docs/sbwatch/wilson-nexus"
+          },
+          {
+            "icon": "📃",
+            "text": "ThoughtCast Versa",
+            "url": "/docs/sbwatch/thoughtcast-versa"
+          },
+          {
+            "icon": "📃",
+            "text": "Actions",
+            "url": "/docs/sbwatch/actions"
+          },
+          {
+            "icon": "📃",
+            "text": "iTHUMP/Toxic+",
+            "url": "/docs/sbwatch/ithump-toxicplus"
+          },
+          {
+            "icon": "📃",
+            "text": "Lumen",
+            "url": "/docs/sbwatch/lumen"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Time Capture",
+            "url": "/docs/sbwatch/time-capture"
+          },
+          {
+            "icon": "📃",
+            "text": "WikiTest",
+            "url": "/docs/sbwatch/wiki-test"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Maintenance",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Changing the Straps",
+            "url": "/docs/sbwatch/changing-the-straps"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Opening/Closing the Back",
+            "url": "/docs/sbwatch/opening-closing-the-back"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Rotating the Watch Face",
+            "url": "/docs/sbwatch/rotating-the-watch-face"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Battery Replacement",
+            "url": "/docs/sbwatch/battery-replacement"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "297a4df": {
+    "id": "297a4df",
+    "name": "Peeksmith 3 Sidebar",
+    "sections": [
+      {
+        "heading": "Devices & PeekSmith App",
+        "links": [
+          {
+            "icon": "👁️",
+            "text": "PeekSmith 3 / SuperPeek",
+            "url": "/docs/peeksmith-3"
+          },
+          {
+            "icon": "⌚",
+            "text": "Electricks Bond",
+            "url": "/docs/bond"
+          },
+          {
+            "icon": "🪪",
+            "text": "Electricks MrCard",
+            "url": "/docs/mrcard"
+          },
+          {
+            "icon": "📱",
+            "text": "PeekSmith App",
+            "url": "/docs/peeksmith-app"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "First Steps",
+            "url": "/docs/peeksmith-3"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Troubleshooting",
+            "url": "/docs/peeksmith-3/troubleshooting"
+          },
+          {
+            "icon": "📃",
+            "text": "Smart Text",
+            "url": "/docs/peeksmith-3/smart-text"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Firmware Update",
+            "url": "/docs/peeksmith-3/firmware-update"
+          },
+          {
+            "icon": "📃",
+            "text": "Battery Life",
+            "url": "/docs/peeksmith-3/battery-life"
+          },
+          {
+            "icon": "📃",
+            "text": "Specifications",
+            "url": "/docs/peeksmith-3/specifications"
+          },
+          {
+            "icon": "📃",
+            "text": "FAQ",
+            "url": "/docs/peeksmith-3/faq"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Compatibility",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Basics",
+            "url": "/docs/peeksmith-3/compatibility"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Cognito",
+            "url": "/docs/peeksmith-3/cognito"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Elips",
+            "url": "/docs/peeksmith-3/elips"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Glyphs",
+            "url": "/docs/peeksmith-3/glyphs"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Inject 2.0",
+            "url": "/docs/peeksmith-3/inject-2-0"
+          },
+          {
+            "icon": "🎞️",
+            "text": "PI Revelations",
+            "url": "/docs/peeksmith-3/pi-revelations"
+          },
+          {
+            "icon": "📃",
+            "text": "ReaList",
+            "url": "/docs/peeksmith-3/realist"
+          },
+          {
+            "icon": "🎞️",
+            "text": "WikiTest",
+            "url": "/docs/peeksmith-3/wiki-test"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Standalone Mode",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/peeksmith-3/standalone-mode"
+          },
+          {
+            "icon": "🎞️",
+            "text": "SB Watch",
+            "url": "/docs/peeksmith-3/sbwatch-direct"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Dice Thumper",
+            "url": "/docs/peeksmith-3/dice-thumper"
+          },
+          {
+            "icon": "📃",
+            "text": "Ray",
+            "url": "/docs/atom-remote/peeksmith/ray-direct-connection"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Impression Pads",
+            "url": "/docs/peeksmith-3/impression-pads"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Scrabble",
+            "url": "/docs/peeksmith-3/standalone-mode/scrabble"
+          },
+          {
+            "icon": "📃",
+            "text": "Rainman 2",
+            "url": "/docs/peeksmith-3/standalone-mode/rainman-2"
+          },
+          {
+            "icon": "📃",
+            "text": "Insight / Insight Pro",
+            "url": "/docs/peeksmith-3/insight"
+          },
+          {
+            "icon": "📃",
+            "text": "GhostMove",
+            "url": "/docs/peeksmith-3/ghostmove-direct-connection"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Accessories",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Sharpeek",
+            "url": "/docs/peeksmith-3/sharpeek"
+          },
+          {
+            "icon": "📃",
+            "text": "Leather Business Card Case",
+            "url": "/docs/peeksmith-3/business-card-peek-case"
+          },
+          {
+            "icon": "📃",
+            "text": "Leather Peek Case",
+            "url": "/docs/peeksmith-3/leather-peek-case"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Peek Box 3",
+            "url": "/docs/peeksmith-3/peek-box-3"
+          },
+          {
+            "icon": "🎞️",
+            "text": "The Peek Thief",
+            "url": "/docs/peeksmith-3/the-peek-thief"
+          },
+          {
+            "icon": "📃",
+            "text": "FleshPeek",
+            "url": "/docs/peeksmith-3/fleshpeek-by-seamus-mjolnir"
+          },
+          {
+            "icon": "📃",
+            "text": "Card Holder",
+            "url": "/docs/peeksmith-3/card-holder"
+          },
+          {
+            "icon": "📃",
+            "text": "Nest",
+            "url": "/docs/peeksmith-3/nest"
+          },
+          {
+            "icon": "📃",
+            "text": "Basic Stand",
+            "url": "/docs/peeksmith-3/basic-stand"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "a56f609": {
+    "id": "a56f609",
+    "name": "Bond Sidebar",
+    "sections": [
+      {
+        "heading": "Devices & PeekSmith App",
+        "links": [
+          {
+            "icon": "👁️",
+            "text": "PeekSmith 3 / SuperPeek",
+            "url": "/docs/peeksmith-3"
+          },
+          {
+            "icon": "⌚",
+            "text": "Electricks Bond",
+            "url": "/docs/bond"
+          },
+          {
+            "icon": "🪪",
+            "text": "Electricks MrCard",
+            "url": "/docs/mrcard"
+          },
+          {
+            "icon": "📱",
+            "text": "PeekSmith App",
+            "url": "/docs/peeksmith-app"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "First Steps",
+            "url": "/docs/bond"
+          },
+          {
+            "icon": "📃",
+            "text": "Roadmap",
+            "url": "/docs/bond/roadmap"
+          },
+          {
+            "icon": "📃",
+            "text": "Troubleshooting",
+            "url": "/docs/bond/troubleshooting"
+          },
+          {
+            "icon": "📃",
+            "text": "Firmware Update",
+            "url": "/docs/bond/firmware-update"
+          },
+          {
+            "icon": "📃",
+            "text": "Specifications",
+            "url": "/docs/bond/specifications"
+          },
+          {
+            "icon": "📃",
+            "text": "Compatibility",
+            "url": "/docs/bond/compatibility"
+          },
+          {
+            "icon": "📃",
+            "text": "FAQ",
+            "url": "/docs/bond/faq"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Accessories",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Watch Bands / Straps",
+            "url": "/docs/bond/watch-bands-straps"
+          },
+          {
+            "icon": "📃",
+            "text": "Cases / Screen Protectors",
+            "url": "/docs/bond/cases"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Maintenance",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Changing the Straps",
+            "url": "/docs/bond/changing-the-straps"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "aa887b8": {
+    "id": "aa887b8",
+    "name": "Atom Remote Sidebar",
+    "sections": [
+      {
+        "heading": "Devices & MagiScript",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "⚛️ Atom Remote",
+            "url": "/docs/atom-remote"
+          },
+          {
+            "icon": "QuantumCalculator",
+            "text": "🔢",
+            "url": "/products"
+          },
+          {
+            "icon": "🤹‍♂️",
+            "text": "MagiScript Language",
+            "url": "/docs/magiscript"
+          },
+          {
+            "icon": "🤹‍♂️",
+            "text": "MagiScript Examples",
+            "url": "/docs/magiscript/examples"
+          },
+          {
+            "icon": "🤹‍♂️",
+            "text": "MagiScript Tutorials",
+            "url": "/docs/magiscript/tutorial"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "First Steps",
+            "url": "/docs/atom-remote"
+          },
+          {
+            "icon": "📃",
+            "text": "Troubleshooting",
+            "url": "/docs/atom-remote/troubleshooting"
+          },
+          {
+            "icon": "📃",
+            "text": "Bluetooth Keyboard",
+            "url": "/docs/atom-remote/bluetooth-keyboard"
+          },
+          {
+            "icon": "📃",
+            "text": "Firmware Ugprade",
+            "url": "/docs/atom-remote/firmware-upgrade"
+          },
+          {
+            "icon": "📃",
+            "text": "Comparison",
+            "url": "/docs/atom-remote/comparison"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Settings",
+            "url": "/docs/atom-remote/settings"
+          },
+          {
+            "icon": "📃",
+            "text": "Specifications",
+            "url": "/docs/atom-remote/specifications"
+          },
+          {
+            "icon": "📃",
+            "text": "FAQ",
+            "url": "/docs/atom-remote/faq"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Built-In Mini-Apps",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "About",
+            "url": "/docs/atom-remote/built-in-mini-apps"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Atom Time",
+            "url": "/docs/atom-remote/atom-time"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Atom Card",
+            "url": "/docs/atom-remote/atom-card"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Atom Stack",
+            "url": "/docs/atom-remote/atom-stack"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Atom Pi",
+            "url": "/docs/atom-remote/atom-pi"
+          },
+          {
+            "icon": "🎞",
+            "text": "Atom Square",
+            "url": "/docs/atom-remote/atom-square"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Atom Practice",
+            "url": "/docs/atom-remote/atom-practice"
+          },
+          {
+            "icon": "📃",
+            "text": "Atom Alias",
+            "url": "/docs/atom-remote/atom-alias"
+          },
+          {
+            "icon": "📃",
+            "text": "Atom Unlock",
+            "url": "/docs/atom-remote/atom-unlock"
+          },
+          {
+            "icon": "📃",
+            "text": "Numeric Keyboard",
+            "url": "/docs/atom-remote/numeric-keyboard"
+          },
+          {
+            "icon": "📃",
+            "text": "NOKIA Keyboard",
+            "url": "/docs/atom-remote/nokia-alphanumeric-keyboard"
+          },
+          {
+            "icon": "📃",
+            "text": "Cursor Keyboard",
+            "url": "/docs/atom-remote/cursor-keyboard"
+          },
+          {
+            "icon": "📃",
+            "text": "Custom Keyboard",
+            "url": "/docs/atom-remote/custom-keyboard"
+          },
+          {
+            "icon": "📃",
+            "text": "Media Controls",
+            "url": "/docs/atom-remote/media-controls"
+          },
+          {
+            "icon": "📃",
+            "text": "Jordy’s Poker Hands",
+            "url": "/docs/atom-remote/jordys-poker-hands"
+          },
+          {
+            "icon": "📃",
+            "text": "Mnematching",
+            "url": "/docs/atom-remote/mnematching"
+          },
+          {
+            "icon": "📃",
+            "text": "Atom Drum",
+            "url": "/docs/atom-remote/atom-drum"
+          },
+          {
+            "icon": "📃",
+            "text": "Atom Level",
+            "url": "/docs/atom-remote/atom-level"
+          },
+          {
+            "icon": "📃",
+            "text": "Atom Mouse",
+            "url": "/docs/atom-remote/atom-mouse"
+          },
+          {
+            "icon": "📃",
+            "text": "Atom Thmpr",
+            "url": "/docs/atom-remote/atom-thmpr"
+          },
+          {
+            "icon": "📃",
+            "text": "Atom Words",
+            "url": "/docs/atom-remote/atom-words"
+          },
+          {
+            "icon": "📃",
+            "text": "Blinky",
+            "url": "/docs/atom-remote/blinky"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Compatibility",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "In General",
+            "url": "/docs/atom-remote/compatibility"
+          },
+          {
+            "icon": "🎞️",
+            "text": "PeekSmith",
+            "url": "/docs/atom-remote/peeksmith"
+          },
+          {
+            "icon": "📃",
+            "text": "TimeSmith",
+            "url": "/docs/atom-remote/timesmith"
+          },
+          {
+            "icon": "📃",
+            "text": "DFB-X",
+            "url": "/docs/atom-remote/dfb-x"
+          },
+          {
+            "icon": "📃",
+            "text": "Glyphs",
+            "url": "/docs/atom-remote/glyphs"
+          },
+          {
+            "icon": "📃",
+            "text": "Inject 2",
+            "url": "/docs/atom-remote/inject-2"
+          },
+          {
+            "icon": "📃",
+            "text": "iThump/Toxic",
+            "url": "/docs/atom-remote/ithump-toxic"
+          },
+          {
+            "icon": "📃",
+            "text": "TAP",
+            "url": "/docs/atom-remote/tap"
+          },
+          {
+            "icon": "📃",
+            "text": "WikiTest",
+            "url": "/docs/atom-remote/wikitest"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "8f9b47b": {
+    "id": "8f9b47b",
+    "name": "Sbmote Sidebar",
+    "sections": [
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "First Steps",
+            "url": "/docs/sbmote"
+          },
+          {
+            "icon": "📃",
+            "text": "Specifications",
+            "url": "/docs/sbmote/specifications"
+          },
+          {
+            "icon": "📃",
+            "text": "Compatibility",
+            "url": "/docs/sbmote/compatibility"
+          },
+          {
+            "icon": "📃",
+            "text": "FAQ",
+            "url": "/docs/sbmote/faq"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "47c53eb": {
+    "id": "47c53eb",
+    "name": "Spotted Dice Sidebar",
+    "sections": [
+      {
+        "heading": "Device & DiceSmith App",
+        "links": [
+          {
+            "icon": "🎲",
+            "text": "Spotted Dice",
+            "url": "/docs/spotted-dice"
+          },
+          {
+            "icon": "📱",
+            "text": "DiceSmith App",
+            "url": "/docs/dicesmith-app"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "First Steps",
+            "url": "/docs/spotted-dice"
+          },
+          {
+            "icon": "📃",
+            "text": "Troubleshooting",
+            "url": "/docs/spotted-dice/troubleshooting"
+          },
+          {
+            "icon": "📃",
+            "text": "Specifications",
+            "url": "/docs/spotted-dice/specifications"
+          },
+          {
+            "icon": "📃",
+            "text": "FAQ",
+            "url": "/docs/spotted-dice/faq"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Accessories",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Bright Dice",
+            "url": "/docs/spotted-dice/bright-dice"
+          },
+          {
+            "icon": "📃",
+            "text": "Twisting Magic Cube Shell",
+            "url": "/docs/spotted-dice/twisting-magic-cube-shell"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "11a9eac": {
+    "id": "11a9eac",
+    "name": "Cubesmith Sidebar",
+    "sections": [
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "First Steps",
+            "url": "/docs/cubesmith"
+          },
+          {
+            "icon": "📃",
+            "text": "Our Cubes",
+            "url": "/docs/cubesmith/our-cubes"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Our CubeSmith Kits",
+            "url": "/docs/cubesmith/our-cubesmith-kits"
+          },
+          {
+            "icon": "🎞️",
+            "text": "FAQ",
+            "url": "/docs/cubesmith/faq"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Compatibility",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/cubesmith/compatible-cubes"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Solving the Cube",
+            "url": "/docs/cubesmith/solving-the-cube"
+          },
+          {
+            "icon": "📃",
+            "text": "Prediction",
+            "url": "/docs/cubesmith/prediction"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Cloned Cube (2 cubes)",
+            "url": "/docs/cubesmith/cloned-cube-2-cubes"
+          },
+          {
+            "icon": "📃",
+            "text": "Solve a Custom Pattern",
+            "url": "/docs/cubesmith/solve-a-custom-pattern"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Dual Solve",
+            "url": "/docs/cubesmith/dual-solve"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Camera Snapshot",
+            "url": "/docs/cubesmith/camera-snapshot-%c2%b7-cubesmith-app"
+          },
+          {
+            "icon": "🎞️",
+            "text": "The Stranger",
+            "url": "/docs/cubesmith/the-stranger"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Pattern from 18-Card Stack",
+            "url": "/docs/cubesmith/pattern-from-18-card-stack"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Color Sense-action",
+            "url": "/docs/cubesmith/color-sense-action"
+          },
+          {
+            "icon": "📃",
+            "text": "One Color Only",
+            "url": "/docs/cubesmith/one-color-only"
+          },
+          {
+            "icon": "📃",
+            "text": "Virtual Cube Match",
+            "url": "/docs/cubesmith/virtual-cube-match"
+          },
+          {
+            "icon": "📃",
+            "text": "Virtual Cube Predicted",
+            "url": "/docs/cubesmith/virtual-cube-predicted"
+          },
+          {
+            "icon": "🎞️",
+            "text": "WEB-Cube Cloning",
+            "url": "/docs/cubesmith/web-cube-predicted"
+          },
+          {
+            "icon": "📃",
+            "text": "Follow the WEB-Cube",
+            "url": "/docs/cubesmith/follow-the-web-cube"
+          },
+          {
+            "icon": "📃",
+            "text": "Cloning with a Regular Cube",
+            "url": "/docs/cubesmith/cloning-with-a-regular-cube"
+          },
+          {
+            "icon": "📃",
+            "text": "Do as I Do",
+            "url": "/docs/cubesmith/do-as-i-do"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Cube Techniques",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "The Basics",
+            "url": "/docs/cubesmith/the-basics"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Online Solver",
+            "url": "/docs/cubesmith/online-solver"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Corner Cutting",
+            "url": "/docs/cubesmith/corner-cutting"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "6b7f096": {
+    "id": "6b7f096",
+    "name": "Ghostmove Sidebar",
+    "sections": [
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "First Steps",
+            "url": "/docs/ghostmove"
+          },
+          {
+            "icon": "📃",
+            "text": "FAQ",
+            "url": "/docs/ghostmove/faq"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "GhostMove App",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Basics",
+            "url": "/docs/ghostmove/ghostmove-app"
+          },
+          {
+            "icon": "📃",
+            "text": "Full App Activation",
+            "url": "/docs/ghostmove/full-app-activation"
+          },
+          {
+            "icon": "📃",
+            "text": "Audio Assistant",
+            "url": "/docs/ghostmove/audio-assistant"
+          },
+          {
+            "icon": "📃",
+            "text": "BT Screen",
+            "url": "/docs/ghostmove/bt-screen"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Smart Notifications",
+            "url": "/docs/ghostmove/smart-notifications"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Movement (Single)",
+            "url": "/docs/ghostmove/movement-single"
+          },
+          {
+            "icon": "📃",
+            "text": "Movement (Multi)",
+            "url": "/docs/ghostmove/movement-multi"
+          },
+          {
+            "icon": "📃",
+            "text": "Which Side is Up",
+            "url": "/docs/ghostmove/which-side-is-up"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "ee4bc46": {
+    "id": "ee4bc46",
+    "name": "Soulmate Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/scalesmith-app"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "First Steps",
+            "url": "/docs/soulmate"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Hiding the Scale",
+            "url": "/docs/soulmate/hiding-the-scale"
+          },
+          {
+            "icon": "📃",
+            "text": "Calibration",
+            "url": "/docs/soulmate/calibration"
+          },
+          {
+            "icon": "📃",
+            "text": "Settings",
+            "url": "/docs/soulmate/settings"
+          },
+          {
+            "icon": "📃",
+            "text": "FAQ",
+            "url": "/docs/soulmate/faq"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Selecting a Routine",
+            "url": "/docs/soulmate/selecting-a-routine"
+          },
+          {
+            "icon": "📃",
+            "text": "Card Stacks Reading",
+            "url": "/docs/soulmate/card-stacks-reading"
+          },
+          {
+            "icon": "📃",
+            "text": "Multiple Cuts",
+            "url": "/docs/soulmate/multiple-cuts"
+          },
+          {
+            "icon": "📃",
+            "text": "Equal Weight Objects",
+            "url": "/docs/soulmate/equal-weight-objects"
+          },
+          {
+            "icon": "📃",
+            "text": "Custom Card Stacks",
+            "url": "/docs/soulmate/custom-card-stacks"
+          },
+          {
+            "icon": "📃",
+            "text": "Kurotsuke Effect",
+            "url": "/docs/soulmate/kurotsuke-effect"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Stacks",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Bicycle (New Deck Order)",
+            "url": "/docs/soulmate/bicycle-new-deck-order"
+          },
+          {
+            "icon": "📃",
+            "text": "Mnemonica",
+            "url": "/docs/soulmate/mnemonica-stack"
+          },
+          {
+            "icon": "📃",
+            "text": "Memorandum",
+            "url": "/docs/soulmate/memorandum-stack"
+          },
+          {
+            "icon": "📃",
+            "text": "Aronson",
+            "url": "/docs/soulmate/aronson-stack"
+          },
+          {
+            "icon": "📃",
+            "text": "F.R.O.E.",
+            "url": "/docs/soulmate/f-r-o-e-stack"
+          },
+          {
+            "icon": "📃",
+            "text": "Si Stebbins",
+            "url": "/docs/soulmate/si-stebbins-stack"
+          },
+          {
+            "icon": "📃",
+            "text": "SHCF",
+            "url": "/docs/soulmate/shcf-stack"
+          },
+          {
+            "icon": "📃",
+            "text": "Luis Nikola",
+            "url": "/docs/soulmate/luis-nikola-stack"
+          },
+          {
+            "icon": "📃",
+            "text": "Eight Kings",
+            "url": "/docs/soulmate/eight-kings-stack"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "b05d384": {
+    "id": "b05d384",
+    "name": "Vision Sidebar",
+    "sections": [
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "First Steps",
+            "url": "/docs/vision"
+          },
+          {
+            "icon": "📃",
+            "text": "Specifications",
+            "url": "/docs/vision/specifications"
+          },
+          {
+            "icon": "📃",
+            "text": "Compatibility",
+            "url": "/docs/vision/compatible-apps"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "6e331f5": {
+    "id": "6e331f5",
+    "name": "Mental Wave Sidebar",
+    "sections": [
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "First Steps",
+            "url": "/docs/mental-wave"
+          },
+          {
+            "icon": "📃",
+            "text": "Optimal Placements",
+            "url": "/docs/mental-wave/optimal-placements"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Working with the Bandana",
+            "url": "/docs/mental-wave/working-with-the-bandana"
+          },
+          {
+            "icon": "📃",
+            "text": "Tips and Tricks",
+            "url": "/docs/mental-wave/tips-and-tricks"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Videos",
+            "url": "/docs/mental-wave/mental-wave-videos"
+          },
+          {
+            "icon": "📃",
+            "text": "FAQ",
+            "url": "/docs/mental-wave/faq"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Revealing Information",
+            "url": "/docs/mental-wave/revealing-information"
+          },
+          {
+            "icon": "📃",
+            "text": "Forced Secrets",
+            "url": "/docs/mental-wave/forced-secrets"
+          },
+          {
+            "icon": "📃",
+            "text": "Bond of Connection",
+            "url": "/docs/mental-wave/bond-of-connection"
+          },
+          {
+            "icon": "📃",
+            "text": "Mental Connection",
+            "url": "/docs/mental-wave/mental-connection"
+          },
+          {
+            "icon": "📃",
+            "text": "The Intuitive Trinity",
+            "url": "/docs/mental-wave/the-intuitive-trinity"
+          },
+          {
+            "icon": "📃",
+            "text": "Enchanted Melody",
+            "url": "/docs/mental-wave/enchanted-melody"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "5072f56": {
+    "id": "5072f56",
+    "name": "Lunacards Sidebar",
+    "sections": [
+      {
+        "heading": "Luna Cards",
+        "links": [
+          {
+            "icon": "🛒",
+            "text": "Buy Them Now",
+            "url": "/product-category/cards/paper-cards"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "First Steps",
+            "url": "/docs/lunacards"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Card Box Design",
+            "url": "/docs/lunacards/cardbox"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Paper Quality",
+            "url": "/docs/lunacards/paper-quality"
+          },
+          {
+            "icon": "🎞️",
+            "text": "One-Way System",
+            "url": "/docs/lunacards/one-way-system"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Poker Cards",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Marking System",
+            "url": "/docs/lunacards/marking-system-poker-cards"
+          },
+          {
+            "icon": "📃",
+            "text": "Special Decks",
+            "url": "/docs/lunacards/force-decks-poker-cards"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Flash Cards",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Marking System",
+            "url": "/docs/lunacards/marking-system-flash-cards"
+          },
+          {
+            "icon": "📃",
+            "text": "Special Decks",
+            "url": "/docs/lunacards/force-decks-flash-cards"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Tricks",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Basic Forces",
+            "url": "/docs/lunacards/basic-forces"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Double Lift",
+            "url": "/docs/lunacards/double-lift"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Double Back Card",
+            "url": "/docs/lunacards/double-back-card"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Self-Working Tricks",
+            "url": "/docs/lunacards/self-working-tricks"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Marked Card Trick",
+            "url": "/docs/lunacards/marked-card-trick"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Flash Card Tricks",
+            "url": "/docs/lunacards/flash-card-tricks"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Aces Revealed",
+            "url": "/docs/lunacards/aces-revealed"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Error to Astonishment",
+            "url": "/docs/lunacards/error-to-astonishment"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "ba330b3": {
+    "id": "ba330b3",
+    "name": "Nfc Rfid Sidebar",
+    "sections": [
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "First Steps",
+            "url": "/docs/nfc-rfid"
+          },
+          {
+            "icon": "📃",
+            "text": "Specifications",
+            "url": "/docs/nfc-rfid/specifications"
+          },
+          {
+            "icon": "📃",
+            "text": "Compatibility",
+            "url": "/docs/nfc-rfid/compatibility"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "a93aec4": {
+    "id": "a93aec4",
+    "name": "Magiscript Sidebar",
+    "sections": [
+      {
+        "heading": "Devices & MagiScript",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "⚛️ Atom Remote",
+            "url": "/docs/atom-remote"
+          },
+          {
+            "icon": "QuantumCalculator",
+            "text": "🔢",
+            "url": "/products"
+          },
+          {
+            "icon": "🤹‍♂️",
+            "text": "MagiScript Language",
+            "url": "/docs/magiscript"
+          },
+          {
+            "icon": "🤹‍♂️",
+            "text": "MagiScript Examples",
+            "url": "/docs/magiscript/examples"
+          },
+          {
+            "icon": "🤹‍♂️",
+            "text": "MagiScript Tutorials",
+            "url": "/docs/magiscript/tutorial"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "First Steps",
+            "url": "/docs/magiscript"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "MagiScript Editor",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Basics",
+            "url": "/docs/magiscript/basics"
+          },
+          {
+            "icon": "📃",
+            "text": "Keyboard Shortcuts",
+            "url": "/docs/magiscript/keyboard-shortcuts"
+          },
+          {
+            "icon": "📃",
+            "text": "Running Your First Program",
+            "url": "/docs/magiscript/running-your-first-program"
+          },
+          {
+            "icon": "📃",
+            "text": "App Store",
+            "url": "/docs/magiscript/app-store"
+          },
+          {
+            "icon": "📃",
+            "text": "Atom Settings (Editor)",
+            "url": "/docs/magiscript/editor-settings"
+          },
+          {
+            "icon": "📃",
+            "text": "Debugging Techniques",
+            "url": "/docs/magiscript/debugging-techniques"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Input/Output",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Buttons",
+            "url": "/docs/magiscript/buttons"
+          },
+          {
+            "icon": "📃",
+            "text": "Vibration Motor",
+            "url": "/docs/magiscript/vibration-motor"
+          },
+          {
+            "icon": "📃",
+            "text": "RGB LED",
+            "url": "/docs/magiscript/rgb-led"
+          },
+          {
+            "icon": "📃",
+            "text": "Devices",
+            "url": "/docs/magiscript/devices"
+          },
+          {
+            "icon": "📃",
+            "text": "PeekSmith",
+            "url": "/docs/magiscript/peeksmith"
+          },
+          {
+            "icon": "📃",
+            "text": "Quantum",
+            "url": "/docs/magiscript/quantum"
+          },
+          {
+            "icon": "📃",
+            "text": "Teleport",
+            "url": "/docs/magiscript/teleport"
+          },
+          {
+            "icon": "📃",
+            "text": "Spotted Dice",
+            "url": "/docs/magiscript/spotted-dice"
+          },
+          {
+            "icon": "📃",
+            "text": "SB Watch",
+            "url": "/docs/magiscript/sb-watch"
+          },
+          {
+            "icon": "📃",
+            "text": "IARVEL Watch",
+            "url": "/docs/magiscript/iarvel-watch"
+          },
+          {
+            "icon": "📃",
+            "text": "Fossil Watch",
+            "url": "/docs/magiscript/fossil-watch"
+          },
+          {
+            "icon": "📃",
+            "text": "Cosmos Printer",
+            "url": "/docs/magiscript/cosmos-printer"
+          },
+          {
+            "icon": "📃",
+            "text": "PeriPage Printer",
+            "url": "/docs/magiscript/peripage-printer"
+          },
+          {
+            "icon": "📃",
+            "text": "ATC Remote",
+            "url": "/docs/magiscript/atc-remote"
+          },
+          {
+            "icon": "📃",
+            "text": "Labco Scrabble",
+            "url": "/docs/magiscript/labco-scrabble"
+          },
+          {
+            "icon": "📃",
+            "text": "Bluetooth Keyboard",
+            "url": "/docs/magiscript/bluetooth-keyboard"
+          },
+          {
+            "icon": "📃",
+            "text": "Bluetooth Mouse",
+            "url": "/docs/magiscript/bluetooth-mouse"
+          },
+          {
+            "icon": "📃",
+            "text": "Timers",
+            "url": "/docs/magiscript/timers"
+          },
+          {
+            "icon": "📃",
+            "text": "Database",
+            "url": "/docs/magiscript/database"
+          },
+          {
+            "icon": "📃",
+            "text": "Events",
+            "url": "/docs/magiscript/events"
+          },
+          {
+            "icon": "📃",
+            "text": "System (exit, sleep, rand)",
+            "url": "/docs/magiscript/system"
+          },
+          {
+            "icon": "📃",
+            "text": "Objects (card, time)",
+            "url": "/docs/magiscript/magic-objects"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Language",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Summary",
+            "url": "/docs/magiscript/language"
+          },
+          {
+            "icon": "📃",
+            "text": "Comments",
+            "url": "/docs/magiscript/comments"
+          },
+          {
+            "icon": "📃",
+            "text": "Variable Declarations",
+            "url": "/docs/magiscript/variable-declarations"
+          },
+          {
+            "icon": "📃",
+            "text": "Operators",
+            "url": "/docs/magiscript/operators"
+          },
+          {
+            "icon": "📃",
+            "text": "Control Flow",
+            "url": "/docs/magiscript/control-flow"
+          },
+          {
+            "icon": "📃",
+            "text": "Functions",
+            "url": "/docs/magiscript/functions"
+          },
+          {
+            "icon": "📃",
+            "text": "Numbers",
+            "url": "/docs/magiscript/numbers"
+          },
+          {
+            "icon": "📃",
+            "text": "Strings",
+            "url": "/docs/magiscript/strings"
+          },
+          {
+            "icon": "📃",
+            "text": "Arrays",
+            "url": "/docs/magiscript/arrays"
+          },
+          {
+            "icon": "📃",
+            "text": "Objects",
+            "url": "/docs/magiscript/objects"
+          },
+          {
+            "icon": "📃",
+            "text": "Uint8Array",
+            "url": "/docs/magiscript/uint8array"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "0": {
+    "id": "7211048",
+    "name": "Scalesmith App Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate/"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/dicesmith-app/"
+          }
         ]
-    },
-    "945e687": {
-        "id": "945e687",
-        "name": "Sbwatch Sidebar",
-        "sections": [
-            {
-                "heading": "Devices & Apps",
-                "links": [
-                    {
-                        "icon": "⌚",
-                        "text": "SB Watch",
-                        "url": "\/docs\/sbwatch"
-                    },
-                    {
-                        "icon": "⌚",
-                        "text": "SB Watch 2",
-                        "url": "\/docs\/sb-watch-2"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "TimeSmith App",
-                        "url": "\/docs\/timesmith-app"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "PeekSmith App",
-                        "url": "\/docs\/sb-watch-2\/peeksmith-app"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "First Steps",
-                        "url": "\/docs\/sbwatch"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Troubleshooting",
-                        "url": "\/docs\/sbwatch\/troubleshooting"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Calibration",
-                        "url": "\/docs\/sbwatch\/calibration"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Standalone Mode",
-                        "url": "\/docs\/sbwatch\/standalone-mode-2"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Video Reviews",
-                        "url": "\/docs\/sbwatch\/video-reviews-sbwatch"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Specifications",
-                        "url": "\/docs\/sbwatch\/specifications"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "FAQ",
-                        "url": "\/docs\/sbwatch\/faq"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Compatibility",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "Atom Remote",
-                        "url": "\/docs\/sbwatch\/atom-remote"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "SB Mote",
-                        "url": "\/docs\/sbwatch\/sb-mote"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Wilson Nexus",
-                        "url": "\/docs\/sbwatch\/wilson-nexus"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "ThoughtCast Versa",
-                        "url": "\/docs\/sbwatch\/thoughtcast-versa"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Actions",
-                        "url": "\/docs\/sbwatch\/actions"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "iTHUMP\/Toxic+",
-                        "url": "\/docs\/sbwatch\/ithump-toxicplus"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Lumen",
-                        "url": "\/docs\/sbwatch\/lumen"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Time Capture",
-                        "url": "\/docs\/sbwatch\/time-capture"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "WikiTest",
-                        "url": "\/docs\/sbwatch\/wiki-test"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Maintenance",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Changing the Straps",
-                        "url": "\/docs\/sbwatch\/changing-the-straps"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Opening\/Closing the Back",
-                        "url": "\/docs\/sbwatch\/opening-closing-the-back"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Rotating the Watch Face",
-                        "url": "\/docs\/sbwatch\/rotating-the-watch-face"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Battery Replacement",
-                        "url": "\/docs\/sbwatch\/battery-replacement"
-                    }
-                ],
-                "type": "normal"
-            }
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️ ",
+            "text": "Introduction",
+            "url": "/docs/scalesmith-app/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/scalesmith-app/basics/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Management",
+            "url": "/docs/scalesmith-app/management/"
+          }
         ]
-    },
-    "297a4df": {
-        "id": "297a4df",
-        "name": "Peeksmith 3 Sidebar",
-        "sections": [
-            {
-                "heading": "Devices & PeekSmith App",
-                "links": [
-                    {
-                        "icon": "👁️",
-                        "text": "PeekSmith 3 \/ SuperPeek",
-                        "url": "\/docs\/peeksmith-3"
-                    },
-                    {
-                        "icon": "⌚",
-                        "text": "Electricks Bond",
-                        "url": "\/docs\/bond"
-                    },
-                    {
-                        "icon": "🪪",
-                        "text": "Electricks MrCard",
-                        "url": "\/docs\/mrcard"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "PeekSmith App",
-                        "url": "\/docs\/peeksmith-app"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "First Steps",
-                        "url": "\/docs\/peeksmith-3"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Troubleshooting",
-                        "url": "\/docs\/peeksmith-3\/troubleshooting"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Smart Text",
-                        "url": "\/docs\/peeksmith-3\/smart-text"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Firmware Update",
-                        "url": "\/docs\/peeksmith-3\/firmware-update"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Battery Life",
-                        "url": "\/docs\/peeksmith-3\/battery-life"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Specifications",
-                        "url": "\/docs\/peeksmith-3\/specifications"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "FAQ",
-                        "url": "\/docs\/peeksmith-3\/faq"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Compatibility",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "Basics",
-                        "url": "\/docs\/peeksmith-3\/compatibility"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Cognito",
-                        "url": "\/docs\/peeksmith-3\/cognito"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Elips",
-                        "url": "\/docs\/peeksmith-3\/elips"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Glyphs",
-                        "url": "\/docs\/peeksmith-3\/glyphs"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Inject 2.0",
-                        "url": "\/docs\/peeksmith-3\/inject-2-0"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "PI Revelations",
-                        "url": "\/docs\/peeksmith-3\/pi-revelations"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "ReaList",
-                        "url": "\/docs\/peeksmith-3\/realist"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "WikiTest",
-                        "url": "\/docs\/peeksmith-3\/wiki-test"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Standalone Mode",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/peeksmith-3\/standalone-mode"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "SB Watch",
-                        "url": "\/docs\/peeksmith-3\/sbwatch-direct"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Dice Thumper",
-                        "url": "\/docs\/peeksmith-3\/dice-thumper"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Ray",
-                        "url": "\/docs\/atom-remote\/peeksmith\/ray-direct-connection"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Impression Pads",
-                        "url": "\/docs\/peeksmith-3\/impression-pads"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Scrabble",
-                        "url": "\/docs\/peeksmith-3\/standalone-mode\/scrabble"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Rainman 2",
-                        "url": "\/docs\/peeksmith-3\/standalone-mode\/rainman-2"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Insight \/ Insight Pro",
-                        "url": "\/docs\/peeksmith-3\/insight"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "GhostMove",
-                        "url": "\/docs\/peeksmith-3\/ghostmove-direct-connection"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Accessories",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "Sharpeek",
-                        "url": "\/docs\/peeksmith-3\/sharpeek"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Leather Business Card Case",
-                        "url": "\/docs\/peeksmith-3\/business-card-peek-case"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Leather Peek Case",
-                        "url": "\/docs\/peeksmith-3\/leather-peek-case"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Peek Box 3",
-                        "url": "\/docs\/peeksmith-3\/peek-box-3"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "The Peek Thief",
-                        "url": "\/docs\/peeksmith-3\/the-peek-thief"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "FleshPeek",
-                        "url": "\/docs\/peeksmith-3\/fleshpeek-by-seamus-mjolnir"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Card Holder",
-                        "url": "\/docs\/peeksmith-3\/card-holder"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Nest",
-                        "url": "\/docs\/peeksmith-3\/nest"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Basic Stand",
-                        "url": "\/docs\/peeksmith-3\/basic-stand"
-                    }
-                ],
-                "type": "normal"
-            }
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Playing Cards",
+            "url": "/docs/scalesmith-app/playing-cards/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Place / Take Objects",
+            "url": "/docs/scalesmith-app/place-take-objects/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Bulk Items",
+            "url": "/docs/scalesmith-app/bulk-items/"
+          }
         ]
-    },
-    "a56f609": {
-        "id": "a56f609",
-        "name": "Bond Sidebar",
-        "sections": [
-            {
-                "heading": "Devices & PeekSmith App",
-                "links": [
-                    {
-                        "icon": "👁️",
-                        "text": "PeekSmith 3 \/ SuperPeek",
-                        "url": "\/docs\/peeksmith-3"
-                    },
-                    {
-                        "icon": "⌚",
-                        "text": "Electricks Bond",
-                        "url": "\/docs\/bond"
-                    },
-                    {
-                        "icon": "🪪",
-                        "text": "Electricks MrCard",
-                        "url": "\/docs\/mrcard"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "PeekSmith App",
-                        "url": "\/docs\/peeksmith-app"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "First Steps",
-                        "url": "\/docs\/bond"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Roadmap",
-                        "url": "\/docs\/bond\/roadmap"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Troubleshooting",
-                        "url": "\/docs\/bond\/troubleshooting"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Firmware Update",
-                        "url": "\/docs\/bond\/firmware-update"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Specifications",
-                        "url": "\/docs\/bond\/specifications"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Compatibility",
-                        "url": "\/docs\/bond\/compatibility"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "FAQ",
-                        "url": "\/docs\/bond\/faq"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Accessories",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "Watch Bands \/ Straps",
-                        "url": "\/docs\/bond\/watch-bands-straps"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Cases \/ Screen Protectors",
-                        "url": "\/docs\/bond\/cases"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Maintenance",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Changing the Straps",
-                        "url": "\/docs\/bond\/changing-the-straps"
-                    }
-                ],
-                "type": "normal"
-            }
+      }
+    ]
+  },
+  "1": {
+    "id": "7211048",
+    "name": "Scalesmith App Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate/"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/dicesmith-app/"
+          }
         ]
-    },
-    "aa887b8": {
-        "id": "aa887b8",
-        "name": "Atom Remote Sidebar",
-        "sections": [
-            {
-                "heading": "Devices & MagiScript",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "⚛️ Atom Remote",
-                        "url": "\/docs\/atom-remote"
-                    },
-                    {
-                        "icon": "QuantumCalculator",
-                        "text": "🔢",
-                        "url": "\/products"
-                    },
-                    {
-                        "icon": "🤹‍♂️",
-                        "text": "MagiScript Language",
-                        "url": "\/docs\/magiscript"
-                    },
-                    {
-                        "icon": "🤹‍♂️",
-                        "text": "MagiScript Examples",
-                        "url": "\/docs\/magiscript\/examples"
-                    },
-                    {
-                        "icon": "🤹‍♂️",
-                        "text": "MagiScript Tutorials",
-                        "url": "\/docs\/magiscript\/tutorial"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "First Steps",
-                        "url": "\/docs\/atom-remote"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Troubleshooting",
-                        "url": "\/docs\/atom-remote\/troubleshooting"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Bluetooth Keyboard",
-                        "url": "\/docs\/atom-remote\/bluetooth-keyboard"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Firmware Ugprade",
-                        "url": "\/docs\/atom-remote\/firmware-upgrade"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Comparison",
-                        "url": "\/docs\/atom-remote\/comparison"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Settings",
-                        "url": "\/docs\/atom-remote\/settings"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Specifications",
-                        "url": "\/docs\/atom-remote\/specifications"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "FAQ",
-                        "url": "\/docs\/atom-remote\/faq"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Built-In Mini-Apps",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "About",
-                        "url": "\/docs\/atom-remote\/built-in-mini-apps"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Atom Time",
-                        "url": "\/docs\/atom-remote\/atom-time"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Atom Card",
-                        "url": "\/docs\/atom-remote\/atom-card"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Atom Stack",
-                        "url": "\/docs\/atom-remote\/atom-stack"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Atom Pi",
-                        "url": "\/docs\/atom-remote\/atom-pi"
-                    },
-                    {
-                        "icon": "🎞",
-                        "text": "Atom Square",
-                        "url": "\/docs\/atom-remote\/atom-square"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Atom Practice",
-                        "url": "\/docs\/atom-remote\/atom-practice"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Atom Alias",
-                        "url": "\/docs\/atom-remote\/atom-alias"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Atom Unlock",
-                        "url": "\/docs\/atom-remote\/atom-unlock"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Numeric Keyboard",
-                        "url": "\/docs\/atom-remote\/numeric-keyboard"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "NOKIA Keyboard",
-                        "url": "\/docs\/atom-remote\/nokia-alphanumeric-keyboard"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Cursor Keyboard",
-                        "url": "\/docs\/atom-remote\/cursor-keyboard"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Custom Keyboard",
-                        "url": "\/docs\/atom-remote\/custom-keyboard"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Media Controls",
-                        "url": "\/docs\/atom-remote\/media-controls"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Jordy’s Poker Hands",
-                        "url": "\/docs\/atom-remote\/jordys-poker-hands"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Mnematching",
-                        "url": "\/docs\/atom-remote\/mnematching"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Atom Drum",
-                        "url": "\/docs\/atom-remote\/atom-drum"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Atom Level",
-                        "url": "\/docs\/atom-remote\/atom-level"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Atom Mouse",
-                        "url": "\/docs\/atom-remote\/atom-mouse"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Atom Thmpr",
-                        "url": "\/docs\/atom-remote\/atom-thmpr"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Atom Words",
-                        "url": "\/docs\/atom-remote\/atom-words"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Blinky",
-                        "url": "\/docs\/atom-remote\/blinky"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Compatibility",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "In General",
-                        "url": "\/docs\/atom-remote\/compatibility"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "PeekSmith",
-                        "url": "\/docs\/atom-remote\/peeksmith"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "TimeSmith",
-                        "url": "\/docs\/atom-remote\/timesmith"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "DFB-X",
-                        "url": "\/docs\/atom-remote\/dfb-x"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Glyphs",
-                        "url": "\/docs\/atom-remote\/glyphs"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Inject 2",
-                        "url": "\/docs\/atom-remote\/inject-2"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "iThump\/Toxic",
-                        "url": "\/docs\/atom-remote\/ithump-toxic"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "TAP",
-                        "url": "\/docs\/atom-remote\/tap"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "WikiTest",
-                        "url": "\/docs\/atom-remote\/wikitest"
-                    }
-                ],
-                "type": "normal"
-            }
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️ ",
+            "text": "Introduction",
+            "url": "/docs/scalesmith-app/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/scalesmith-app/basics/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Management",
+            "url": "/docs/scalesmith-app/management/"
+          }
         ]
-    },
-    "8f9b47b": {
-        "id": "8f9b47b",
-        "name": "Sbmote Sidebar",
-        "sections": [
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "First Steps",
-                        "url": "\/docs\/sbmote"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Specifications",
-                        "url": "\/docs\/sbmote\/specifications"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Compatibility",
-                        "url": "\/docs\/sbmote\/compatibility"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "FAQ",
-                        "url": "\/docs\/sbmote\/faq"
-                    }
-                ],
-                "type": "normal"
-            }
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Playing Cards",
+            "url": "/docs/scalesmith-app/playing-cards/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Place / Take Objects",
+            "url": "/docs/scalesmith-app/place-take-objects/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Bulk Items",
+            "url": "/docs/scalesmith-app/bulk-items/"
+          }
         ]
-    },
-    "47c53eb": {
-        "id": "47c53eb",
-        "name": "Spotted Dice Sidebar",
-        "sections": [
-            {
-                "heading": "Device & DiceSmith App",
-                "links": [
-                    {
-                        "icon": "🎲",
-                        "text": "Spotted Dice",
-                        "url": "\/docs\/spotted-dice"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "DiceSmith App",
-                        "url": "\/docs\/dicesmith-app"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "First Steps",
-                        "url": "\/docs\/spotted-dice"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Troubleshooting",
-                        "url": "\/docs\/spotted-dice\/troubleshooting"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Specifications",
-                        "url": "\/docs\/spotted-dice\/specifications"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "FAQ",
-                        "url": "\/docs\/spotted-dice\/faq"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Accessories",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "Bright Dice",
-                        "url": "\/docs\/spotted-dice\/bright-dice"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Twisting Magic Cube Shell",
-                        "url": "\/docs\/spotted-dice\/twisting-magic-cube-shell"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "11a9eac": {
-        "id": "11a9eac",
-        "name": "Cubesmith Sidebar",
-        "sections": [
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "First Steps",
-                        "url": "\/docs\/cubesmith"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Our Cubes",
-                        "url": "\/docs\/cubesmith\/our-cubes"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Our CubeSmith Kits",
-                        "url": "\/docs\/cubesmith\/our-cubesmith-kits"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "FAQ",
-                        "url": "\/docs\/cubesmith\/faq"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Compatibility",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/cubesmith\/compatible-cubes"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Solving the Cube",
-                        "url": "\/docs\/cubesmith\/solving-the-cube"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Prediction",
-                        "url": "\/docs\/cubesmith\/prediction"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Cloned Cube (2 cubes)",
-                        "url": "\/docs\/cubesmith\/cloned-cube-2-cubes"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Solve a Custom Pattern",
-                        "url": "\/docs\/cubesmith\/solve-a-custom-pattern"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Dual Solve",
-                        "url": "\/docs\/cubesmith\/dual-solve"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Camera Snapshot",
-                        "url": "\/docs\/cubesmith\/camera-snapshot-%c2%b7-cubesmith-app"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "The Stranger",
-                        "url": "\/docs\/cubesmith\/the-stranger"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Pattern from 18-Card Stack",
-                        "url": "\/docs\/cubesmith\/pattern-from-18-card-stack"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Color Sense-action",
-                        "url": "\/docs\/cubesmith\/color-sense-action"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "One Color Only",
-                        "url": "\/docs\/cubesmith\/one-color-only"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Virtual Cube Match",
-                        "url": "\/docs\/cubesmith\/virtual-cube-match"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Virtual Cube Predicted",
-                        "url": "\/docs\/cubesmith\/virtual-cube-predicted"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "WEB-Cube Cloning",
-                        "url": "\/docs\/cubesmith\/web-cube-predicted"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Follow the WEB-Cube",
-                        "url": "\/docs\/cubesmith\/follow-the-web-cube"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Cloning with a Regular Cube",
-                        "url": "\/docs\/cubesmith\/cloning-with-a-regular-cube"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Do as I Do",
-                        "url": "\/docs\/cubesmith\/do-as-i-do"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Cube Techniques",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "The Basics",
-                        "url": "\/docs\/cubesmith\/the-basics"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Online Solver",
-                        "url": "\/docs\/cubesmith\/online-solver"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Corner Cutting",
-                        "url": "\/docs\/cubesmith\/corner-cutting"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "6b7f096": {
-        "id": "6b7f096",
-        "name": "Ghostmove Sidebar",
-        "sections": [
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "First Steps",
-                        "url": "\/docs\/ghostmove"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "FAQ",
-                        "url": "\/docs\/ghostmove\/faq"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "GhostMove App",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "Basics",
-                        "url": "\/docs\/ghostmove\/ghostmove-app"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Full App Activation",
-                        "url": "\/docs\/ghostmove\/full-app-activation"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Audio Assistant",
-                        "url": "\/docs\/ghostmove\/audio-assistant"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "BT Screen",
-                        "url": "\/docs\/ghostmove\/bt-screen"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Smart Notifications",
-                        "url": "\/docs\/ghostmove\/smart-notifications"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "Movement (Single)",
-                        "url": "\/docs\/ghostmove\/movement-single"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Movement (Multi)",
-                        "url": "\/docs\/ghostmove\/movement-multi"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Which Side is Up",
-                        "url": "\/docs\/ghostmove\/which-side-is-up"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "ee4bc46": {
-        "id": "ee4bc46",
-        "name": "Soulmate Sidebar",
-        "sections": [
-            {
-                "heading": "Device & ScaleSmith App",
-                "links": [
-                    {
-                        "icon": "⚖️",
-                        "text": "SoulMate",
-                        "url": "\/docs\/soulmate"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "ScaleSmith App",
-                        "url": "\/docs\/scalesmith-app"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "First Steps",
-                        "url": "\/docs\/soulmate"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Hiding the Scale",
-                        "url": "\/docs\/soulmate\/hiding-the-scale"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Calibration",
-                        "url": "\/docs\/soulmate\/calibration"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Settings",
-                        "url": "\/docs\/soulmate\/settings"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "FAQ",
-                        "url": "\/docs\/soulmate\/faq"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "Selecting a Routine",
-                        "url": "\/docs\/soulmate\/selecting-a-routine"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Card Stacks Reading",
-                        "url": "\/docs\/soulmate\/card-stacks-reading"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Multiple Cuts",
-                        "url": "\/docs\/soulmate\/multiple-cuts"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Equal Weight Objects",
-                        "url": "\/docs\/soulmate\/equal-weight-objects"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Custom Card Stacks",
-                        "url": "\/docs\/soulmate\/custom-card-stacks"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Kurotsuke Effect",
-                        "url": "\/docs\/soulmate\/kurotsuke-effect"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Stacks",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "Bicycle (New Deck Order)",
-                        "url": "\/docs\/soulmate\/bicycle-new-deck-order"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Mnemonica",
-                        "url": "\/docs\/soulmate\/mnemonica-stack"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Memorandum",
-                        "url": "\/docs\/soulmate\/memorandum-stack"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Aronson",
-                        "url": "\/docs\/soulmate\/aronson-stack"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "F.R.O.E.",
-                        "url": "\/docs\/soulmate\/f-r-o-e-stack"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Si Stebbins",
-                        "url": "\/docs\/soulmate\/si-stebbins-stack"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "SHCF",
-                        "url": "\/docs\/soulmate\/shcf-stack"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Luis Nikola",
-                        "url": "\/docs\/soulmate\/luis-nikola-stack"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Eight Kings",
-                        "url": "\/docs\/soulmate\/eight-kings-stack"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "b05d384": {
-        "id": "b05d384",
-        "name": "Vision Sidebar",
-        "sections": [
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "First Steps",
-                        "url": "\/docs\/vision"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Specifications",
-                        "url": "\/docs\/vision\/specifications"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Compatibility",
-                        "url": "\/docs\/vision\/compatible-apps"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "6e331f5": {
-        "id": "6e331f5",
-        "name": "Mental Wave Sidebar",
-        "sections": [
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "First Steps",
-                        "url": "\/docs\/mental-wave"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Optimal Placements",
-                        "url": "\/docs\/mental-wave\/optimal-placements"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Working with the Bandana",
-                        "url": "\/docs\/mental-wave\/working-with-the-bandana"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Tips and Tricks",
-                        "url": "\/docs\/mental-wave\/tips-and-tricks"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Videos",
-                        "url": "\/docs\/mental-wave\/mental-wave-videos"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "FAQ",
-                        "url": "\/docs\/mental-wave\/faq"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "Revealing Information",
-                        "url": "\/docs\/mental-wave\/revealing-information"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Forced Secrets",
-                        "url": "\/docs\/mental-wave\/forced-secrets"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Bond of Connection",
-                        "url": "\/docs\/mental-wave\/bond-of-connection"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Mental Connection",
-                        "url": "\/docs\/mental-wave\/mental-connection"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "The Intuitive Trinity",
-                        "url": "\/docs\/mental-wave\/the-intuitive-trinity"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Enchanted Melody",
-                        "url": "\/docs\/mental-wave\/enchanted-melody"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "5072f56": {
-        "id": "5072f56",
-        "name": "Lunacards Sidebar",
-        "sections": [
-            {
-                "heading": "Luna Cards",
-                "links": [
-                    {
-                        "icon": "🛒",
-                        "text": "Buy Them Now",
-                        "url": "\/product-category\/cards\/paper-cards"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "First Steps",
-                        "url": "\/docs\/lunacards"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Card Box Design",
-                        "url": "\/docs\/lunacards\/cardbox"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Paper Quality",
-                        "url": "\/docs\/lunacards\/paper-quality"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "One-Way System",
-                        "url": "\/docs\/lunacards\/one-way-system"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Poker Cards",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Marking System",
-                        "url": "\/docs\/lunacards\/marking-system-poker-cards"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Special Decks",
-                        "url": "\/docs\/lunacards\/force-decks-poker-cards"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Flash Cards",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Marking System",
-                        "url": "\/docs\/lunacards\/marking-system-flash-cards"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Special Decks",
-                        "url": "\/docs\/lunacards\/force-decks-flash-cards"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Tricks",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Basic Forces",
-                        "url": "\/docs\/lunacards\/basic-forces"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Double Lift",
-                        "url": "\/docs\/lunacards\/double-lift"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Double Back Card",
-                        "url": "\/docs\/lunacards\/double-back-card"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Self-Working Tricks",
-                        "url": "\/docs\/lunacards\/self-working-tricks"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Marked Card Trick",
-                        "url": "\/docs\/lunacards\/marked-card-trick"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Flash Card Tricks",
-                        "url": "\/docs\/lunacards\/flash-card-tricks"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Aces Revealed",
-                        "url": "\/docs\/lunacards\/aces-revealed"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Error to Astonishment",
-                        "url": "\/docs\/lunacards\/error-to-astonishment"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "ba330b3": {
-        "id": "ba330b3",
-        "name": "Nfc Rfid Sidebar",
-        "sections": [
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "First Steps",
-                        "url": "\/docs\/nfc-rfid"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Specifications",
-                        "url": "\/docs\/nfc-rfid\/specifications"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Compatibility",
-                        "url": "\/docs\/nfc-rfid\/compatibility"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "a93aec4": {
-        "id": "a93aec4",
-        "name": "Magiscript Sidebar",
-        "sections": [
-            {
-                "heading": "Devices & MagiScript",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "⚛️ Atom Remote",
-                        "url": "\/docs\/atom-remote"
-                    },
-                    {
-                        "icon": "QuantumCalculator",
-                        "text": "🔢",
-                        "url": "\/products"
-                    },
-                    {
-                        "icon": "🤹‍♂️",
-                        "text": "MagiScript Language",
-                        "url": "\/docs\/magiscript"
-                    },
-                    {
-                        "icon": "🤹‍♂️",
-                        "text": "MagiScript Examples",
-                        "url": "\/docs\/magiscript\/examples"
-                    },
-                    {
-                        "icon": "🤹‍♂️",
-                        "text": "MagiScript Tutorials",
-                        "url": "\/docs\/magiscript\/tutorial"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "First Steps",
-                        "url": "\/docs\/magiscript"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "MagiScript Editor",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "Basics",
-                        "url": "\/docs\/magiscript\/basics"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Keyboard Shortcuts",
-                        "url": "\/docs\/magiscript\/keyboard-shortcuts"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Running Your First Program",
-                        "url": "\/docs\/magiscript\/running-your-first-program"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "App Store",
-                        "url": "\/docs\/magiscript\/app-store"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Atom Settings (Editor)",
-                        "url": "\/docs\/magiscript\/editor-settings"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Debugging Techniques",
-                        "url": "\/docs\/magiscript\/debugging-techniques"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Input\/Output",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "Buttons",
-                        "url": "\/docs\/magiscript\/buttons"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Vibration Motor",
-                        "url": "\/docs\/magiscript\/vibration-motor"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "RGB LED",
-                        "url": "\/docs\/magiscript\/rgb-led"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Devices",
-                        "url": "\/docs\/magiscript\/devices"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "PeekSmith",
-                        "url": "\/docs\/magiscript\/peeksmith"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Quantum",
-                        "url": "\/docs\/magiscript\/quantum"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Teleport",
-                        "url": "\/docs\/magiscript\/teleport"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Spotted Dice",
-                        "url": "\/docs\/magiscript\/spotted-dice"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "SB Watch",
-                        "url": "\/docs\/magiscript\/sb-watch"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "IARVEL Watch",
-                        "url": "\/docs\/magiscript\/iarvel-watch"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Fossil Watch",
-                        "url": "\/docs\/magiscript\/fossil-watch"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Cosmos Printer",
-                        "url": "\/docs\/magiscript\/cosmos-printer"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "PeriPage Printer",
-                        "url": "\/docs\/magiscript\/peripage-printer"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "ATC Remote",
-                        "url": "\/docs\/magiscript\/atc-remote"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Labco Scrabble",
-                        "url": "\/docs\/magiscript\/labco-scrabble"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Bluetooth Keyboard",
-                        "url": "\/docs\/magiscript\/bluetooth-keyboard"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Bluetooth Mouse",
-                        "url": "\/docs\/magiscript\/bluetooth-mouse"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Timers",
-                        "url": "\/docs\/magiscript\/timers"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Database",
-                        "url": "\/docs\/magiscript\/database"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Events",
-                        "url": "\/docs\/magiscript\/events"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "System (exit, sleep, rand)",
-                        "url": "\/docs\/magiscript\/system"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Objects (card, time)",
-                        "url": "\/docs\/magiscript\/magic-objects"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Language",
-                "links": [
-                    {
-                        "icon": "📃",
-                        "text": "Summary",
-                        "url": "\/docs\/magiscript\/language"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Comments",
-                        "url": "\/docs\/magiscript\/comments"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Variable Declarations",
-                        "url": "\/docs\/magiscript\/variable-declarations"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Operators",
-                        "url": "\/docs\/magiscript\/operators"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Control Flow",
-                        "url": "\/docs\/magiscript\/control-flow"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Functions",
-                        "url": "\/docs\/magiscript\/functions"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Numbers",
-                        "url": "\/docs\/magiscript\/numbers"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Strings",
-                        "url": "\/docs\/magiscript\/strings"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Arrays",
-                        "url": "\/docs\/magiscript\/arrays"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Objects",
-                        "url": "\/docs\/magiscript\/objects"
-                    },
-                    {
-                        "icon": "📃",
-                        "text": "Uint8Array",
-                        "url": "\/docs\/magiscript\/uint8array"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "0": {
-        "id": "7211048",
-        "name": "Scalesmith App Sidebar",
-        "sections": [
-            {
-                "heading": "Device & ScaleSmith App",
-                "links": [
-                    {
-                        "icon": "⚖️",
-                        "text": "SoulMate",
-                        "url": "\/docs\/soulmate\/"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "ScaleSmith App",
-                        "url": "\/docs\/dicesmith-app\/"
-                    }
-                ]
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️ ",
-                        "text": "Introduction",
-                        "url": "\/docs\/scalesmith-app\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/scalesmith-app\/basics\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Management",
-                        "url": "\/docs\/scalesmith-app\/management\/"
-                    }
-                ]
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Playing Cards",
-                        "url": "\/docs\/scalesmith-app\/playing-cards\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Place \/ Take Objects",
-                        "url": "\/docs\/scalesmith-app\/place-take-objects\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Bulk Items",
-                        "url": "\/docs\/scalesmith-app\/bulk-items\/"
-                    }
-                ]
-            }
-        ]
-    },
-    "1": {
-        "id": "7211048",
-        "name": "Scalesmith App Sidebar",
-        "sections": [
-            {
-                "heading": "Device & ScaleSmith App",
-                "links": [
-                    {
-                        "icon": "⚖️",
-                        "text": "SoulMate",
-                        "url": "\/docs\/soulmate\/"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "ScaleSmith App",
-                        "url": "\/docs\/dicesmith-app\/"
-                    }
-                ]
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️ ",
-                        "text": "Introduction",
-                        "url": "\/docs\/scalesmith-app\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/scalesmith-app\/basics\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Management",
-                        "url": "\/docs\/scalesmith-app\/management\/"
-                    }
-                ]
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Playing Cards",
-                        "url": "\/docs\/scalesmith-app\/playing-cards\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Place \/ Take Objects",
-                        "url": "\/docs\/scalesmith-app\/place-take-objects\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Bulk Items",
-                        "url": "\/docs\/scalesmith-app\/bulk-items\/"
-                    }
-                ]
-            }
-        ]
-    },
-    "2": {
-        "id": "7211048",
-        "name": "Scalesmith App Sidebar",
-        "sections": [
-            {
-                "heading": "Device & ScaleSmith App",
-                "links": [
-                    {
-                        "icon": "⚖️",
-                        "text": "SoulMate",
-                        "url": "\/docs\/soulmate\/"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "ScaleSmith App",
-                        "url": "\/docs\/dicesmith-app\/"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️ ",
-                        "text": "Introduction",
-                        "url": "\/docs\/scalesmith-app\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/scalesmith-app\/basics\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Management",
-                        "url": "\/docs\/scalesmith-app\/management\/"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Playing Cards",
-                        "url": "\/docs\/scalesmith-app\/playing-cards\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Place \/ Take Objects",
-                        "url": "\/docs\/scalesmith-app\/place-take-objects\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Bulk Items",
-                        "url": "\/docs\/scalesmith-app\/bulk-items\/"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "3": {
-        "id": "7211048",
-        "name": "Scalesmith App Sidebar",
-        "sections": [
-            {
-                "heading": "Device & ScaleSmith App",
-                "links": [
-                    {
-                        "icon": "⚖️",
-                        "text": "SoulMate",
-                        "url": "\/docs\/soulmate\/"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "ScaleSmith App",
-                        "url": "\/docs\/dicesmith-app\/"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️ ",
-                        "text": "Introduction",
-                        "url": "\/docs\/scalesmith-app\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/scalesmith-app\/basics\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Management",
-                        "url": "\/docs\/scalesmith-app\/management\/"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Playing Cards",
-                        "url": "\/docs\/scalesmith-app\/playing-cards\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Place \/ Take Objects",
-                        "url": "\/docs\/scalesmith-app\/place-take-objects\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Bulk Items",
-                        "url": "\/docs\/scalesmith-app\/bulk-items\/"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "4": {
-        "id": "7211048",
-        "name": "Scalesmith App Sidebar",
-        "sections": [
-            {
-                "heading": "Device & ScaleSmith App",
-                "links": [
-                    {
-                        "icon": "⚖️",
-                        "text": "SoulMate",
-                        "url": "\/docs\/soulmate\/"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "ScaleSmith App",
-                        "url": "\/docs\/dicesmith-app\/"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️ ",
-                        "text": "Introduction",
-                        "url": "\/docs\/scalesmith-app\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/scalesmith-app\/basics\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Management",
-                        "url": "\/docs\/scalesmith-app\/management\/"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Playing Cards",
-                        "url": "\/docs\/scalesmith-app\/playing-cards\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Place \/ Take Objects",
-                        "url": "\/docs\/scalesmith-app\/place-take-objects\/"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Bulk Items",
-                        "url": "\/docs\/scalesmith-app\/bulk-items\/"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "5": {
-        "id": "7211048",
-        "name": "Scalesmith App Sidebar",
-        "sections": [
-            {
-                "heading": "Device & ScaleSmith App",
-                "links": [
-                    {
-                        "icon": "⚖️",
-                        "text": "SoulMate",
-                        "url": "\/docs\/soulmate"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "ScaleSmith App",
-                        "url": "\/docs\/dicesmith-app"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️ ",
-                        "text": "Introduction",
-                        "url": "\/docs\/scalesmith-app"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/scalesmith-app\/basics"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Management",
-                        "url": "\/docs\/scalesmith-app\/management"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Playing Cards",
-                        "url": "\/docs\/scalesmith-app\/playing-cards"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Place \/ Take Objects",
-                        "url": "\/docs\/scalesmith-app\/place-take-objects"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Bulk Items",
-                        "url": "\/docs\/scalesmith-app\/bulk-items"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "6": {
-        "id": "7211048",
-        "name": "Scalesmith App Sidebar",
-        "sections": [
-            {
-                "heading": "Device & ScaleSmith App",
-                "links": [
-                    {
-                        "icon": "⚖️",
-                        "text": "SoulMate",
-                        "url": "\/docs\/soulmate"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "ScaleSmith App",
-                        "url": "\/docs\/dicesmith-app"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Introduction",
-                        "url": "\/docs\/scalesmith-app"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/scalesmith-app\/basics"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Management",
-                        "url": "\/docs\/scalesmith-app\/management"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Playing Cards",
-                        "url": "\/docs\/scalesmith-app\/playing-cards"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Place \/ Take Objects",
-                        "url": "\/docs\/scalesmith-app\/place-take-objects"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Bulk Items",
-                        "url": "\/docs\/scalesmith-app\/bulk-items"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "7": {
-        "id": "7211048",
-        "name": "Scalesmith App Sidebar",
-        "sections": [
-            {
-                "heading": "Device & ScaleSmith App",
-                "links": [
-                    {
-                        "icon": "⚖️",
-                        "text": "SoulMate",
-                        "url": "\/docs\/soulmate"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "ScaleSmith App",
-                        "url": "\/docs\/dicesmith-app"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Introduction",
-                        "url": "\/docs\/scalesmith-app"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/scalesmith-app\/basics"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Management",
-                        "url": "\/docs\/scalesmith-app\/management"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Playing Cards",
-                        "url": "\/docs\/scalesmith-app\/playing-cards"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Place \/ Take Objects",
-                        "url": "\/docs\/scalesmith-app\/place-take-objects"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Bulk Items",
-                        "url": "\/docs\/scalesmith-app\/bulk-items"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "8": {
-        "id": "7211048",
-        "name": "Scalesmith App Sidebar",
-        "sections": [
-            {
-                "heading": "Device & ScaleSmith App",
-                "links": [
-                    {
-                        "icon": "⚖️",
-                        "text": "SoulMate",
-                        "url": "\/docs\/soulmate"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "ScaleSmith App",
-                        "url": "\/docs\/dicesmith-app"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Introduction",
-                        "url": "\/docs\/scalesmith-app"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/scalesmith-app\/basics"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Management",
-                        "url": "\/docs\/scalesmith-app\/management"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Playing Cards",
-                        "url": "\/docs\/scalesmith-app\/playing-cards"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Place \/ Take Objects",
-                        "url": "\/docs\/scalesmith-app\/place-take-objects"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Bulk Items",
-                        "url": "\/docs\/scalesmith-app\/bulk-items"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "9": {
-        "id": "7211048",
-        "name": "Scalesmith App Sidebar",
-        "sections": [
-            {
-                "heading": "Device & ScaleSmith App",
-                "links": [
-                    {
-                        "icon": "⚖️",
-                        "text": "SoulMate",
-                        "url": "\/docs\/soulmate"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "ScaleSmith App",
-                        "url": "\/docs\/dicesmith-app"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Introduction",
-                        "url": "\/docs\/scalesmith-app"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/scalesmith-app\/basics"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Management",
-                        "url": "\/docs\/scalesmith-app\/management"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Playing Cards",
-                        "url": "\/docs\/scalesmith-app\/playing-cards"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Place \/ Take Objects",
-                        "url": "\/docs\/scalesmith-app\/place-take-objects"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Bulk Items",
-                        "url": "\/docs\/scalesmith-app\/bulk-items"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "10": {
-        "id": "7211048",
-        "name": "Scalesmith App Sidebar",
-        "sections": [
-            {
-                "heading": "Device & ScaleSmith App",
-                "links": [
-                    {
-                        "icon": "⚖️",
-                        "text": "SoulMate",
-                        "url": "\/docs\/soulmate"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "ScaleSmith App",
-                        "url": "\/docs\/dicesmith-app"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Introduction",
-                        "url": "\/docs\/scalesmith-app"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/scalesmith-app\/basics"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Management",
-                        "url": "\/docs\/scalesmith-app\/management"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Playing Cards",
-                        "url": "\/docs\/scalesmith-app\/playing-cards"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Place \/ Take Objects",
-                        "url": "\/docs\/scalesmith-app\/place-take-objects"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Bulk Items",
-                        "url": "\/docs\/scalesmith-app\/bulk-items"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "11": {
-        "id": "7211048",
-        "name": "Scalesmith App Sidebar",
-        "sections": [
-            {
-                "heading": "Device & ScaleSmith App",
-                "links": [
-                    {
-                        "icon": "⚖️",
-                        "text": "SoulMate",
-                        "url": "\/docs\/soulmate"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "ScaleSmith App",
-                        "url": "\/docs\/dicesmith-app"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Introduction",
-                        "url": "\/docs\/scalesmith-app"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/scalesmith-app\/basics"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Management",
-                        "url": "\/docs\/scalesmith-app\/management"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Playing Cards",
-                        "url": "\/docs\/scalesmith-app\/playing-cards"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Place \/ Take Objects",
-                        "url": "\/docs\/scalesmith-app\/place-take-objects"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Bulk Items",
-                        "url": "\/docs\/scalesmith-app\/bulk-items"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "12": {
-        "id": "7211048",
-        "name": "Scalesmith App Sidebar",
-        "sections": [
-            {
-                "heading": "Device & ScaleSmith App",
-                "links": [
-                    {
-                        "icon": "⚖️",
-                        "text": "SoulMate",
-                        "url": "\/docs\/soulmate"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "ScaleSmith App",
-                        "url": "\/docs\/dicesmith-app"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Introduction",
-                        "url": "\/docs\/scalesmith-app"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/scalesmith-app\/basics"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Management",
-                        "url": "\/docs\/scalesmith-app\/management"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Playing Cards",
-                        "url": "\/docs\/scalesmith-app\/playing-cards"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Place \/ Take Objects",
-                        "url": "\/docs\/scalesmith-app\/place-take-objects"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Bulk Items",
-                        "url": "\/docs\/scalesmith-app\/bulk-items"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "13": {
-        "id": "7211048",
-        "name": "Scalesmith App Sidebar",
-        "sections": [
-            {
-                "heading": "Device & ScaleSmith App",
-                "links": [
-                    {
-                        "icon": "⚖️",
-                        "text": "SoulMate",
-                        "url": "\/docs\/soulmate"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "ScaleSmith App",
-                        "url": "\/docs\/dicesmith-app"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Introduction",
-                        "url": "\/docs\/scalesmith-app"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/scalesmith-app\/basics"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Management",
-                        "url": "\/docs\/scalesmith-app\/management"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Playing Cards",
-                        "url": "\/docs\/scalesmith-app\/playing-cards"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Place \/ Take Objects",
-                        "url": "\/docs\/scalesmith-app\/place-take-objects"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Bulk Items",
-                        "url": "\/docs\/scalesmith-app\/bulk-items"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "14": {
-        "id": "7211048",
-        "name": "Scalesmith App Sidebar",
-        "sections": [
-            {
-                "heading": "Device & ScaleSmith App",
-                "links": [
-                    {
-                        "icon": "⚖️",
-                        "text": "SoulMate",
-                        "url": "\/docs\/soulmate"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "ScaleSmith App",
-                        "url": "\/docs\/dicesmith-app"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Introduction",
-                        "url": "\/docs\/scalesmith-app"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/scalesmith-app\/basics"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Management",
-                        "url": "\/docs\/scalesmith-app\/management"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Playing Cards",
-                        "url": "\/docs\/scalesmith-app\/playing-cards"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Place \/ Take Objects",
-                        "url": "\/docs\/scalesmith-app\/place-take-objects"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Bulk Items",
-                        "url": "\/docs\/scalesmith-app\/bulk-items"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    },
-    "15": {
-        "id": "7211048",
-        "name": "Scalesmith App Sidebar",
-        "sections": [
-            {
-                "heading": "Device & ScaleSmith App",
-                "links": [
-                    {
-                        "icon": "⚖️",
-                        "text": "SoulMate",
-                        "url": "\/docs\/soulmate"
-                    },
-                    {
-                        "icon": "📱",
-                        "text": "ScaleSmith App",
-                        "url": "\/docs\/dicesmith-app"
-                    }
-                ],
-                "type": "related-products"
-            },
-            {
-                "heading": "General",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Introduction",
-                        "url": "\/docs\/scalesmith-app"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Basics",
-                        "url": "\/docs\/scalesmith-app\/basics"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Management",
-                        "url": "\/docs\/scalesmith-app\/management"
-                    }
-                ],
-                "type": "normal"
-            },
-            {
-                "heading": "Routines",
-                "links": [
-                    {
-                        "icon": "🎞️",
-                        "text": "Playing Cards",
-                        "url": "\/docs\/scalesmith-app\/playing-cards"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Place \/ Take Objects",
-                        "url": "\/docs\/scalesmith-app\/place-take-objects"
-                    },
-                    {
-                        "icon": "🎞️",
-                        "text": "Bulk Items",
-                        "url": "\/docs\/scalesmith-app\/bulk-items"
-                    }
-                ],
-                "type": "normal"
-            }
-        ]
-    }
+      }
+    ]
+  },
+  "2": {
+    "id": "7211048",
+    "name": "Scalesmith App Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate/"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/dicesmith-app/"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️ ",
+            "text": "Introduction",
+            "url": "/docs/scalesmith-app/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/scalesmith-app/basics/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Management",
+            "url": "/docs/scalesmith-app/management/"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Playing Cards",
+            "url": "/docs/scalesmith-app/playing-cards/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Place / Take Objects",
+            "url": "/docs/scalesmith-app/place-take-objects/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Bulk Items",
+            "url": "/docs/scalesmith-app/bulk-items/"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "3": {
+    "id": "7211048",
+    "name": "Scalesmith App Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate/"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/dicesmith-app/"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️ ",
+            "text": "Introduction",
+            "url": "/docs/scalesmith-app/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/scalesmith-app/basics/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Management",
+            "url": "/docs/scalesmith-app/management/"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Playing Cards",
+            "url": "/docs/scalesmith-app/playing-cards/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Place / Take Objects",
+            "url": "/docs/scalesmith-app/place-take-objects/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Bulk Items",
+            "url": "/docs/scalesmith-app/bulk-items/"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "4": {
+    "id": "7211048",
+    "name": "Scalesmith App Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate/"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/dicesmith-app/"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️ ",
+            "text": "Introduction",
+            "url": "/docs/scalesmith-app/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/scalesmith-app/basics/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Management",
+            "url": "/docs/scalesmith-app/management/"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Playing Cards",
+            "url": "/docs/scalesmith-app/playing-cards/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Place / Take Objects",
+            "url": "/docs/scalesmith-app/place-take-objects/"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Bulk Items",
+            "url": "/docs/scalesmith-app/bulk-items/"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "5": {
+    "id": "7211048",
+    "name": "Scalesmith App Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/dicesmith-app"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️ ",
+            "text": "Introduction",
+            "url": "/docs/scalesmith-app"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/scalesmith-app/basics"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Management",
+            "url": "/docs/scalesmith-app/management"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Playing Cards",
+            "url": "/docs/scalesmith-app/playing-cards"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Place / Take Objects",
+            "url": "/docs/scalesmith-app/place-take-objects"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Bulk Items",
+            "url": "/docs/scalesmith-app/bulk-items"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "6": {
+    "id": "7211048",
+    "name": "Scalesmith App Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/dicesmith-app"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Introduction",
+            "url": "/docs/scalesmith-app"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/scalesmith-app/basics"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Management",
+            "url": "/docs/scalesmith-app/management"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Playing Cards",
+            "url": "/docs/scalesmith-app/playing-cards"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Place / Take Objects",
+            "url": "/docs/scalesmith-app/place-take-objects"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Bulk Items",
+            "url": "/docs/scalesmith-app/bulk-items"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "7": {
+    "id": "7211048",
+    "name": "Scalesmith App Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/dicesmith-app"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Introduction",
+            "url": "/docs/scalesmith-app"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/scalesmith-app/basics"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Management",
+            "url": "/docs/scalesmith-app/management"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Playing Cards",
+            "url": "/docs/scalesmith-app/playing-cards"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Place / Take Objects",
+            "url": "/docs/scalesmith-app/place-take-objects"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Bulk Items",
+            "url": "/docs/scalesmith-app/bulk-items"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "8": {
+    "id": "7211048",
+    "name": "Scalesmith App Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/dicesmith-app"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Introduction",
+            "url": "/docs/scalesmith-app"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/scalesmith-app/basics"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Management",
+            "url": "/docs/scalesmith-app/management"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Playing Cards",
+            "url": "/docs/scalesmith-app/playing-cards"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Place / Take Objects",
+            "url": "/docs/scalesmith-app/place-take-objects"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Bulk Items",
+            "url": "/docs/scalesmith-app/bulk-items"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "9": {
+    "id": "7211048",
+    "name": "Scalesmith App Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/dicesmith-app"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Introduction",
+            "url": "/docs/scalesmith-app"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/scalesmith-app/basics"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Management",
+            "url": "/docs/scalesmith-app/management"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Playing Cards",
+            "url": "/docs/scalesmith-app/playing-cards"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Place / Take Objects",
+            "url": "/docs/scalesmith-app/place-take-objects"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Bulk Items",
+            "url": "/docs/scalesmith-app/bulk-items"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "10": {
+    "id": "7211048",
+    "name": "Scalesmith App Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/dicesmith-app"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Introduction",
+            "url": "/docs/scalesmith-app"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/scalesmith-app/basics"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Management",
+            "url": "/docs/scalesmith-app/management"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Playing Cards",
+            "url": "/docs/scalesmith-app/playing-cards"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Place / Take Objects",
+            "url": "/docs/scalesmith-app/place-take-objects"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Bulk Items",
+            "url": "/docs/scalesmith-app/bulk-items"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "11": {
+    "id": "7211048",
+    "name": "Scalesmith App Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/dicesmith-app"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Introduction",
+            "url": "/docs/scalesmith-app"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/scalesmith-app/basics"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Management",
+            "url": "/docs/scalesmith-app/management"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Playing Cards",
+            "url": "/docs/scalesmith-app/playing-cards"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Place / Take Objects",
+            "url": "/docs/scalesmith-app/place-take-objects"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Bulk Items",
+            "url": "/docs/scalesmith-app/bulk-items"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "12": {
+    "id": "7211048",
+    "name": "Scalesmith App Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/dicesmith-app"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Introduction",
+            "url": "/docs/scalesmith-app"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/scalesmith-app/basics"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Management",
+            "url": "/docs/scalesmith-app/management"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Playing Cards",
+            "url": "/docs/scalesmith-app/playing-cards"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Place / Take Objects",
+            "url": "/docs/scalesmith-app/place-take-objects"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Bulk Items",
+            "url": "/docs/scalesmith-app/bulk-items"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "13": {
+    "id": "7211048",
+    "name": "Scalesmith App Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/dicesmith-app"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Introduction",
+            "url": "/docs/scalesmith-app"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/scalesmith-app/basics"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Management",
+            "url": "/docs/scalesmith-app/management"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Playing Cards",
+            "url": "/docs/scalesmith-app/playing-cards"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Place / Take Objects",
+            "url": "/docs/scalesmith-app/place-take-objects"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Bulk Items",
+            "url": "/docs/scalesmith-app/bulk-items"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "14": {
+    "id": "7211048",
+    "name": "Scalesmith App Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/dicesmith-app"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Introduction",
+            "url": "/docs/scalesmith-app"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/scalesmith-app/basics"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Management",
+            "url": "/docs/scalesmith-app/management"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Playing Cards",
+            "url": "/docs/scalesmith-app/playing-cards"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Place / Take Objects",
+            "url": "/docs/scalesmith-app/place-take-objects"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Bulk Items",
+            "url": "/docs/scalesmith-app/bulk-items"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "15": {
+    "id": "7211048",
+    "name": "Scalesmith App Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/dicesmith-app"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Introduction",
+            "url": "/docs/scalesmith-app"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/scalesmith-app/basics"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Management",
+            "url": "/docs/scalesmith-app/management"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Playing Cards",
+            "url": "/docs/scalesmith-app/playing-cards"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Place / Take Objects",
+            "url": "/docs/scalesmith-app/place-take-objects"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Bulk Items",
+            "url": "/docs/scalesmith-app/bulk-items"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "16": {
+    "id": "7211048",
+    "name": "Scalesmith App Sidebar",
+    "sections": [
+      {
+        "heading": "Device & ScaleSmith App",
+        "links": [
+          {
+            "icon": "⚖️",
+            "text": "SoulMate",
+            "url": "/docs/soulmate"
+          },
+          {
+            "icon": "📱",
+            "text": "ScaleSmith App",
+            "url": "/docs/dicesmith-app"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Introduction",
+            "url": "/docs/scalesmith-app"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Basics",
+            "url": "/docs/scalesmith-app/basics"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Management",
+            "url": "/docs/scalesmith-app/management"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "🎞️",
+            "text": "Playing Cards",
+            "url": "/docs/scalesmith-app/playing-cards"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Place / Take Objects",
+            "url": "/docs/scalesmith-app/place-take-objects"
+          },
+          {
+            "icon": "🎞️",
+            "text": "Bulk Items",
+            "url": "/docs/scalesmith-app/bulk-items"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  },
+  "d039fe0": {
+    "id": "d039fe0",
+    "name": "Ray Sidebar",
+    "sections": [
+      {
+        "heading": "Device",
+        "links": [
+          {
+            "icon": "📡",
+            "text": "Ray",
+            "url": "/docs/ray"
+          },
+          {
+            "icon": "🛒",
+            "text": "Buy Ray Now",
+            "url": "/product/ray"
+          }
+        ],
+        "type": "related-products"
+      },
+      {
+        "heading": "General",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "FAQ",
+            "url": "/docs/ray/faq"
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "heading": "Routines",
+        "links": [
+          {
+            "icon": "📃",
+            "text": "Which Hand",
+            "url": "/docs/ray/which-hand"
+          },
+          {
+            "icon": "📃",
+            "text": "Feel",
+            "url": "/docs/ray/feel"
+          },
+          {
+            "icon": "📃",
+            "text": "Lucky Coin",
+            "url": "/docs/ray/lucky-coin"
+          },
+          {
+            "icon": "📃",
+            "text": "Heads or Tails",
+            "url": "/docs/ray/heads-or-tails"
+          }
+        ],
+        "type": "normal"
+      }
+    ]
+  }
 }
