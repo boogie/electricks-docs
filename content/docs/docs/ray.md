@@ -1,6 +1,7 @@
 ---
 title: Ray
-updated: "2025-11-04"
+description: "Sense magnetic coins"
+updated: "2025-10-26"
 author: Electricks
 category: guides
 sidebar: "d039fe0"
@@ -22,7 +23,11 @@ We recommend joining our [PeekSmith Facebook group](https://www.facebook.com/gro
 
 The Ray package includes a wireless charger and a micro-USB charging cable. To get started, ensure its full charge by plugging in the charger and placing the Ray on the spot with the correct side facing up (Please try which of its two sides it loads on and mark it for yourself if you want). Verify that it is properly positioned and that the LED next to it is pulsating. If not, adjust its placement accordingly or try the other side of the Ray. You can charge 3 devices at a time.
 
-[![](https://electricks.info/wp-content/uploads/2023/11/ray-on-charger-1024x522.png)](https://electricks.info/wp-content/uploads/2023/11/ray-on-charger.png)
+[
+
+![](https://electricks.info/wp-content/uploads/2023/11/ray-on-charger-1024x522.png)
+
+](https://electricks.info/wp-content/uploads/2023/11/ray-on-charger.png)
 
 A blue LED indicates a successful charger connection. During charging, green LEDs pulsate slowly next to the sensor. When the sensor reaches a 100% charge, its LED will stop pulsating. For a more thorough charge, you can leave the Ray on the charger for an extended period.
 
