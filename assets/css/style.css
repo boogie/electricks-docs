@@ -2443,7 +2443,11 @@ pre code {
 
 /* Related Products Section (brown header) */
 .related-products-section {
-    /* Styling removed - will be handled differently */
+    margin: 0 -2px var(--spacing-lg) -2px;
+    padding: calc(var(--spacing-lg) - var(--spacing-xs));
+    border: 0;
+    border-radius: var(--border-radius-md);
+    background: var(--color-bg-tertiary);
 }
 
 /* Section wrappers - all sections have same margin and left border */
@@ -2479,7 +2483,7 @@ pre code {
 }
 
 .related-products-heading {
-    color: rgba(255, 255, 255, 0.95);
+    color: var(--color-text-primary);
     margin: 0 0 var(--spacing-sm) 0;
 }
 
@@ -2539,15 +2543,21 @@ pre code {
 
 /* Related products links styling */
 .related-products-section .sidebar-links a {
-    background-color: rgba(139, 90, 43, 0.1);
+    background-color: transparent;
+    color: var(--color-text-primary);
 }
 
 .related-products-section .sidebar-links a:hover {
-    background-color: rgba(139, 90, 43, 0.25);
+    background-color: transparent;
+    color: var(--color-primary-dark);
 }
 
-.related-products-section .sidebar-links li.active a {
-    background-color: rgba(139, 90, 43, 0.35);
-    color: #ffffff;
+.related-products-section .sidebar-links li.active a,
+.related-products-section .sidebar-links a[aria-current="page"] {
+    background-color: transparent;
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
 }
-
