@@ -2443,17 +2443,36 @@ pre code {
 
 /* Related Products Section (brown header) */
 .related-products-section {
+    position: relative;
     margin: 0 -2px var(--spacing-lg) -2px;
-    padding: calc(var(--spacing-lg) - var(--spacing-xs));
-    border: 0;
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-border-light);
     border-radius: var(--border-radius-md);
-    background: var(--color-bg-tertiary);
+    background: var(--color-bg-secondary);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.related-products-section::before {
+    content: "";
+    position: absolute;
+    top: var(--spacing-sm);
+    bottom: var(--spacing-sm);
+    left: 0;
+    width: 6px;
+    background: linear-gradient(180deg, var(--color-secondary), var(--color-primary));
+    border-radius: var(--border-radius-md) 0 0 var(--border-radius-md);
 }
 
 /* Section wrappers - all sections have same margin and left border */
 .docs-toc > div {
     border-left: 3px solid rgba(49, 46, 129, 0.2);
     padding: var(--spacing-md);
+}
+
+.docs-toc > .related-products-section {
+    border-left: 0;
+    padding: var(--spacing-lg);
 }
 
 /* Active Section Highlighting (darker left border) */
@@ -2483,7 +2502,7 @@ pre code {
 }
 
 .related-products-heading {
-    color: var(--color-text-primary);
+    color: var(--color-text-secondary);
     margin: 0 0 var(--spacing-sm) 0;
 }
 
@@ -2545,11 +2564,17 @@ pre code {
 .related-products-section .sidebar-links a {
     background-color: transparent;
     color: var(--color-text-primary);
+    padding: var(--spacing-xs) 0;
+    border-radius: 0;
+}
+
+.related-products-section .sidebar-links .link-icon {
+    color: var(--color-text-secondary);
 }
 
 .related-products-section .sidebar-links a:hover {
     background-color: transparent;
-    color: var(--color-primary-dark);
+    color: var(--color-primary);
 }
 
 .related-products-section .sidebar-links li.active a,
@@ -2557,7 +2582,10 @@ pre code {
     background-color: transparent;
     color: var(--color-primary);
     font-weight: 700;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
+    box-shadow: inset 0 -2px 0 currentColor;
+}
+
+.related-products-section .sidebar-links li.active .link-icon,
+.related-products-section .sidebar-links a[aria-current="page"] .link-icon {
+    color: var(--color-primary);
 }
