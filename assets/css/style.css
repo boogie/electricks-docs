@@ -2574,13 +2574,13 @@ pre code {
 .related-products-section .sidebar-links .link-icon {
     color: var(--color-text-secondary);
     font-size: 1rem;
+    align-self: flex-start;
 }
 
 .related-products-section .sidebar-links .link-text {
     position: relative;
-    padding-bottom: 2px;
-    display: inline-flex;
-    align-items: center;
+    padding-bottom: 0;
+    display: inline;
 }
 
 .related-products-section .sidebar-links .link-text::after {
@@ -2589,10 +2589,10 @@ pre code {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 2px;
+    height: 3px;
     border-radius: 999px;
     background: transparent;
-    transition: background var(--transition-fast);
+    transition: background var(--transition-fast), opacity var(--transition-fast);
 }
 
 .related-products-section .sidebar-links a:hover {
@@ -2602,13 +2602,13 @@ pre code {
 
 .related-products-section .sidebar-links a:hover .link-text::after {
     background: var(--color-primary);
-    opacity: 0.4;
+    opacity: 0.3;
 }
 
 .related-products-section .sidebar-links li.active a,
 .related-products-section .sidebar-links a[aria-current="page"] {
     background-color: transparent;
-    color: var(--color-primary);
+    color: var(--color-secondary);
     font-weight: 700;
 }
 
@@ -2620,5 +2620,5 @@ pre code {
 
 .related-products-section .sidebar-links li.active .link-icon,
 .related-products-section .sidebar-links a[aria-current="page"] .link-icon {
-    color: var(--color-primary);
+    color: var(--color-secondary);
 }
