@@ -3,7 +3,7 @@ title: Colors
 updated: "2025-09-23"
 author: Electricks
 category: guides
-sidebar: "a56f609"
+sidebar: "a56f609-mrcard"
 ---
 
 # Colors

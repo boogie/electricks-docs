@@ -3,7 +3,7 @@ title: Doodle
 updated: "2025-07-19"
 author: Electricks
 category: guides
-sidebar: "a56f609"
+sidebar: "a56f609-mrcard"
 ---
 
 # Doodle

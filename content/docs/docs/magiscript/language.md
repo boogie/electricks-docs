@@ -1,12 +1,12 @@
 ---
-title: Language · MagiScript
+title: Language
 updated: "2025-10-26"
 author: Electricks
 category: guides
 sidebar: "a93aec4"
 ---
 
-# Language · MagiScript
+# Language
 
 ## JavaScript Similarities
 

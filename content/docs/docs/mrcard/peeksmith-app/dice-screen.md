@@ -3,7 +3,7 @@ title: Dice Screen
 updated: "2025-10-08"
 author: Electricks
 category: guides
-sidebar: "a56f609"
+sidebar: "a56f609-mrcard"
 ---
 
 # Dice Screen

@@ -1,12 +1,12 @@
 ---
-title: API + A.I. Access · PeekSmith
+title: API + A.I. Access
 updated: "2025-06-01"
 author: Electricks
 category: guides
 sidebar: "297a4df"
 ---
 
-# API + A.I. Access · PeekSmith
+# API + A.I. Access
 
 ## About
 

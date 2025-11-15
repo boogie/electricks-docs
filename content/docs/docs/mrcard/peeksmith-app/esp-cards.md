@@ -3,7 +3,7 @@ title: ESP Cards
 updated: "2025-10-03"
 author: Electricks
 category: guides
-sidebar: "a56f609"
+sidebar: "a56f609-mrcard"
 ---
 
 # ESP Cards

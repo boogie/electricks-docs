@@ -3,7 +3,7 @@ title: TimeSmith App
 updated: "2025-10-26"
 author: Electricks
 category: guides
-sidebar: "a56f609"
+sidebar: "a56f609-mrcard"
 ---
 
 # TimeSmith App

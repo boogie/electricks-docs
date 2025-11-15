@@ -3,7 +3,7 @@ title: Play Audio Screen
 updated: "2025-05-16"
 author: Electricks
 category: guides
-sidebar: "a56f609"
+sidebar: "a56f609-mrcard"
 ---
 
 # Play Audio Screen

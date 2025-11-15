@@ -13,6 +13,7 @@ The `crawl-docs.php` script combines the functionality of the previous `scrape-n
 3. ✅ **Extracts Elementor sidebars** (navigation structures)
 4. ✅ **Saves sidebars** to `sidebars.json`
 5. ✅ **Automatically adds sidebar metadata** to all markdown files
+6. ✅ **Supports local sidebar overrides** when Elementor widgets don’t match the product
 
 ## Usage
 
@@ -32,6 +33,12 @@ php crawl-docs.php --docs-only
 Only extract sidebar structures:
 ```bash
 php crawl-docs.php --sidebars-only
+```
+
+### Local Sidebar Overrides Only
+Only rebuild the sidebars defined in `config/sidebar-overrides.php` (useful when Elementor output is wrong) and update markdown metadata:
+```bash
+php crawl-docs.php --local-sidebars-only
 ```
 
 ### Dry Run
@@ -122,6 +129,7 @@ sidebar: "945e687"
 - ✅ Captures icons (emojis)
 - ✅ Detects highlighted items
 - ✅ Converts URLs to relative paths
+- ✅ Applies local overrides from `config/sidebar-overrides.php` when Elementor data is wrong
 
 ### Automatic Updates
 - ✅ Adds `sidebar:` to frontmatter
@@ -174,6 +182,16 @@ Run the crawler when:
 - 🔄 Content updated on electricks.info
 - 📝 Sidebars changed on main site
 - 🐛 Need to sync structures
+
+## Sidebar Overrides
+
+Not every product page ships with the correct Elementor sidebar (DiceSmith App is a good example). Add overrides to `config/sidebar-overrides.php` to describe these special cases. Each entry supports:
+
+- `mode`: `local` (generate from markdown directories) or `alias` (point to another ID)
+- `sidebar_id` / `name`: how the sidebar is stored in frontmatter and `sidebars.json`
+- Optional `icons` and `section_headings` for quick customization
+
+Run `php crawl-docs.php --local-sidebars-only` whenever you modify the override file to regenerate the sidebar JSON and update the relevant markdown frontmatter.
 
 ## Performance
 

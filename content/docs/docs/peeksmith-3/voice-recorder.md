@@ -1,12 +1,12 @@
 ---
-title: Voice Recorder · PeekSmith
+title: Voice Recorder
 updated: "2025-06-01"
 author: Electricks
 category: guides
 sidebar: "297a4df"
 ---
 
-# Voice Recorder · PeekSmith
+# Voice Recorder
 
 ## About
 

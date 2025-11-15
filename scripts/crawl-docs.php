@@ -31,6 +31,9 @@ class ElectricksDocsCrawler {
         'files_updated' => 0,
         'errors' => 0
     ];
+    private $sidebarOverrides = [];
+    private $sidebarBaseIndex = [];
+    private $usedSidebarIds = [];
 
     // Products to crawl
     private $products = [
@@ -68,6 +71,14 @@ class ElectricksDocsCrawler {
         $this->contentDir = __DIR__ . '/../content/docs/docs';
         $this->sidebarsFile = __DIR__ . '/../sidebars.json';
         $this->dryRun = isset($options['dry-run']);
+
+        $overridesPath = __DIR__ . '/../config/sidebar-overrides.php';
+        if (file_exists($overridesPath)) {
+            $overrides = require $overridesPath;
+            if (is_array($overrides)) {
+                $this->sidebarOverrides = $overrides;
+            }
+        }
     }
 
     public function run($mode = 'all') {
@@ -81,6 +92,8 @@ class ElectricksDocsCrawler {
 
         if ($mode === 'all' || $mode === 'sidebars') {
             $this->crawlSidebars();
+        } elseif ($mode === 'local-sidebars') {
+            $this->generateLocalSidebarsOnly();
         }
 
         $this->printStats();
@@ -571,25 +584,43 @@ class ElectricksDocsCrawler {
 
             $sidebars = $this->extractElementorSidebars($html);
             if ($sidebars) {
+                $registeredSidebars = [];
+
                 foreach ($sidebars as $sidebarId => $sidebarData) {
-                    if (!isset($allSidebars[$sidebarId])) {
-                        if (empty($sidebarData['name'])) {
-                            $sidebarData['name'] = ucwords(str_replace('-', ' ', $product)) . ' Sidebar';
-                        }
-                        $allSidebars[$sidebarId] = $sidebarData;
-                        echo "  ✅ Found sidebar: $sidebarId\n";
+                    if (empty($sidebarData['name'])) {
+                        $sidebarData['name'] = ucwords(str_replace('-', ' ', $product)) . ' Sidebar';
                     }
+
+                    [$finalId, $isNew] = $this->registerSidebarInstance(
+                        $sidebarId,
+                        $sidebarData,
+                        $product,
+                        $allSidebars
+                    );
+
+                    if (!$finalId) {
+                        continue;
+                    }
+
+                    if ($isNew) {
+                        echo "  ✅ Found sidebar: $finalId\n";
+                    }
+
+                    $registeredSidebars[$finalId] = $allSidebars[$finalId];
                 }
 
-                // Store product-sidebar mapping
-                $this->navigationStructure['sidebars'][$product] = [
-                    'type' => 'elementor',
-                    'sidebars' => $sidebars
-                ];
+                if (!empty($registeredSidebars)) {
+                    $this->navigationStructure['sidebars'][$product] = [
+                        'type' => 'elementor',
+                        'sidebars' => $registeredSidebars
+                    ];
+                }
             }
 
             sleep(1);
         }
+
+        $this->applySidebarOverrides($allSidebars);
 
         // Save sidebars
         if (!empty($allSidebars) && !$this->dryRun) {
@@ -598,6 +629,258 @@ class ElectricksDocsCrawler {
         }
 
         $this->stats['sidebars'] = count($allSidebars);
+    }
+
+    /**
+     * Generate only local sidebar overrides (no remote crawling)
+     */
+    private function generateLocalSidebarsOnly() {
+        echo "\n=== Applying Local Sidebar Overrides ===\n\n";
+
+        $allSidebars = [];
+        $this->applySidebarOverrides($allSidebars);
+
+        if (!empty($allSidebars) && !$this->dryRun) {
+            $this->saveSidebars($allSidebars);
+            $this->addSidebarsToMarkdownFiles();
+        }
+
+        $this->stats['sidebars'] = count($allSidebars);
+    }
+
+    /**
+     * Ensure sidebar IDs remain stable and apply overrides
+     */
+    private function applySidebarOverrides(array &$allSidebars) {
+        if (empty($this->sidebarOverrides)) {
+            return;
+        }
+
+        foreach ($this->sidebarOverrides as $product => $override) {
+            $mode = $override['mode'] ?? 'local';
+
+            if ($mode === 'local') {
+                $sidebar = $this->generateLocalSidebar($product, $override);
+                if ($sidebar) {
+                    $sidebarId = (string) $sidebar['id'];
+                    $allSidebars[$sidebarId] = $sidebar;
+                    $this->navigationStructure['sidebars'][$product] = [
+                        'type' => 'local',
+                        'sidebars' => [
+                            $sidebarId => $sidebar
+                        ]
+                    ];
+                    echo "  ✅ Applied local sidebar for $product ({$sidebarId})\n";
+                }
+            } elseif ($mode === 'alias' && !empty($override['sidebar_id'])) {
+                $sidebarId = (string) $override['sidebar_id'];
+                if (isset($allSidebars[$sidebarId])) {
+                    $this->navigationStructure['sidebars'][$product] = [
+                        'type' => 'alias',
+                        'sidebars' => [
+                            $sidebarId => $allSidebars[$sidebarId]
+                        ]
+                    ];
+                    echo "  ✅ Applied alias sidebar {$sidebarId} to $product\n";
+                }
+            }
+        }
+    }
+
+    /**
+     * Normalize sidebar array using their explicit IDs
+     */
+    private function normalizeSidebarsData(array $sidebars) {
+        $normalized = [];
+
+        foreach ($sidebars as $key => $sidebar) {
+            if (!is_array($sidebar) || empty($sidebar['id'])) {
+                continue;
+            }
+            $normalized[(string) $sidebar['id']] = $sidebar;
+        }
+
+        return $normalized;
+    }
+
+    /**
+     * Register sidebar instance and ensure unique IDs per product/content
+     */
+    private function registerSidebarInstance($sidebarId, $sidebarData, $product, array &$allSidebars) {
+        $hash = $this->hashSidebarData($sidebarData);
+
+        if (!isset($this->sidebarBaseIndex[$sidebarId])) {
+            $this->sidebarBaseIndex[$sidebarId] = [];
+        }
+
+        if (isset($this->sidebarBaseIndex[$sidebarId][$hash])) {
+            $finalId = $this->sidebarBaseIndex[$sidebarId][$hash];
+            return [$finalId, false];
+        }
+
+        $finalId = $sidebarId;
+        if (!empty($this->sidebarBaseIndex[$sidebarId])) {
+            $finalId = $this->generateSidebarInstanceId($sidebarId, $product);
+        }
+
+        $sidebarData['id'] = $finalId;
+        $this->sidebarBaseIndex[$sidebarId][$hash] = $finalId;
+        $this->usedSidebarIds[$finalId] = true;
+        $allSidebars[$finalId] = $sidebarData;
+
+        return [$finalId, true];
+    }
+
+    /**
+     * Generate stable hash for sidebar sections
+     */
+    private function hashSidebarData($sidebarData) {
+        $sections = $sidebarData['sections'] ?? [];
+        return sha1(json_encode($sections, JSON_UNESCAPED_UNICODE));
+    }
+
+    /**
+     * Build a unique sidebar ID when Elementor widget IDs are reused
+     */
+    private function generateSidebarInstanceId($baseId, $product) {
+        $candidate = "{$baseId}-{$product}";
+        $suffix = 1;
+
+        while (isset($this->usedSidebarIds[$candidate])) {
+            $suffix++;
+            $candidate = "{$baseId}-{$product}-{$suffix}";
+        }
+
+        return $candidate;
+    }
+
+    /**
+     * Build sidebar structure from local markdown content
+     */
+    private function generateLocalSidebar($product, $override) {
+        $sidebarId = (string) ($override['sidebar_id'] ?? $product . '-sidebar');
+        $name = $override['name'] ?? ucwords(str_replace('-', ' ', $product)) . ' Sidebar';
+
+        $icons = $override['icons'] ?? [];
+        $generalIcon = $icons['general'] ?? '📃';
+        $routineIcon = $icons['routines'] ?? '🎞️';
+
+        $sections = [];
+        $generalLinks = [];
+        $routineLinks = [];
+
+        $mainFile = "{$this->contentDir}/$product.md";
+        if (file_exists($mainFile)) {
+            $generalLinks[] = [
+                'icon' => $generalIcon,
+                'text' => $this->getMarkdownTitle($mainFile),
+                'url' => "/docs/$product"
+            ];
+        }
+
+        $productDir = "{$this->contentDir}/$product";
+        if (is_dir($productDir)) {
+            $files = glob("$productDir/*.md");
+            sort($files, SORT_NATURAL | SORT_FLAG_CASE);
+
+            foreach ($files as $file) {
+                $slug = basename($file, '.md');
+                $title = $this->getMarkdownTitle($file);
+                $isGeneral = $this->isGeneralSlug($slug);
+
+                $link = [
+                    'icon' => $isGeneral ? $generalIcon : $routineIcon,
+                    'text' => $title,
+                    'url' => "/docs/$product/$slug"
+                ];
+
+                if ($isGeneral) {
+                    $generalLinks[] = $link;
+                } else {
+                    $routineLinks[] = $link;
+                }
+            }
+        }
+
+        if (!empty($generalLinks)) {
+            $sections[] = [
+                'heading' => $override['section_headings']['general'] ?? 'General',
+                'links' => $generalLinks,
+                'type' => 'normal'
+            ];
+        }
+
+        if (!empty($routineLinks)) {
+            $sections[] = [
+                'heading' => $override['section_headings']['routines'] ?? 'Routines',
+                'links' => $routineLinks,
+                'type' => 'normal'
+            ];
+        }
+
+        if (empty($sections)) {
+            return null;
+        }
+
+        return [
+            'id' => $sidebarId,
+            'name' => $name,
+            'sections' => $sections
+        ];
+    }
+
+    /**
+     * Extract title from markdown file
+     */
+    private function getMarkdownTitle($filepath) {
+        if (!file_exists($filepath)) {
+            return ucwords(str_replace('-', ' ', basename($filepath, '.md')));
+        }
+
+        $content = file_get_contents($filepath);
+
+        if (preg_match('/^---\s*(.*?)\s*---/s', $content, $matches)) {
+            $frontMatter = $matches[1];
+            if (preg_match('/^title:\s*"(.*?)"/m', $frontMatter, $titleMatch)) {
+                return trim($titleMatch[1]);
+            }
+            if (preg_match('/^title:\s*(.+)$/m', $frontMatter, $titleMatch)) {
+                return trim($titleMatch[1]);
+            }
+        }
+
+        if (preg_match('/^#\s+(.+)$/m', $content, $headingMatch)) {
+            return trim($headingMatch[1]);
+        }
+
+        return ucwords(str_replace('-', ' ', basename($filepath, '.md')));
+    }
+
+    /**
+     * Determine if slug should be grouped under general section
+     */
+    private function isGeneralSlug($slug) {
+        $generalKeywords = [
+            'faq',
+            'intro',
+            'introduction',
+            'overview',
+            'setup',
+            'install',
+            'installation',
+            'getting-started',
+            'general',
+            'basics',
+            'settings'
+        ];
+
+        foreach ($generalKeywords as $keyword) {
+            if (strpos($slug, $keyword) !== false) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /**
@@ -762,7 +1045,9 @@ class ElectricksDocsCrawler {
             $existing = json_decode(file_get_contents($this->sidebarsFile), true) ?: [];
         }
 
-        $merged = array_merge($existing, $sidebars);
+        $existing = $this->normalizeSidebarsData($existing);
+        $sidebars = $this->normalizeSidebarsData($sidebars);
+        $merged = array_replace($existing, $sidebars);
         file_put_contents($this->sidebarsFile, json_encode($merged, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
         echo "\n✅ Saved " . count($sidebars) . " sidebars to sidebars.json\n";
@@ -841,22 +1126,30 @@ class ElectricksDocsCrawler {
      */
     private function addSidebarToFile($filepath, $sidebarId) {
         $content = file_get_contents($filepath);
-
-        if (preg_match('/^sidebar:/m', $content)) {
-            return false; // Already has sidebar
-        }
-
-        if (!preg_match('/^---\n/', $content)) {
+        if (!preg_match('/^---\n(.*?)\n---\n/s', $content, $matches)) {
             return false; // No frontmatter
         }
 
-        // Match frontmatter block and add sidebar before closing ---
-        $content = preg_replace(
-            '/^(---\n.*?)\n(---\n)/s',
-            "$1\nsidebar: \"$sidebarId\"\n$2",
-            $content,
-            1
-        );
+        $frontMatter = $matches[1];
+        $frontMatterBlock = $matches[0];
+        $updatedFrontMatter = $frontMatter;
+
+        if (preg_match('/^sidebar:\s*"?([^"\n]+)"?/m', $frontMatter, $sidebarMatch)) {
+            if ($sidebarMatch[1] === $sidebarId) {
+                return false; // Already set correctly
+            }
+            $updatedFrontMatter = preg_replace(
+                '/^sidebar:\s*"?([^"\n]+)"?/m',
+                'sidebar: "' . $sidebarId . '"',
+                $frontMatter,
+                1
+            );
+        } else {
+            $updatedFrontMatter = rtrim($frontMatter) . "\nsidebar: \"$sidebarId\"\n";
+        }
+
+        $newFrontMatterBlock = "---\n" . rtrim($updatedFrontMatter) . "\n---\n";
+        $content = substr_replace($content, $newFrontMatterBlock, 0, strlen($frontMatterBlock));
 
         file_put_contents($filepath, $content);
         return true;
@@ -934,6 +1227,7 @@ foreach (array_slice($argv, 1) as $arg) {
         echo "Options:\n";
         echo "  --docs-only        Only crawl documentation content (skip sidebars)\n";
         echo "  --sidebars-only    Only extract sidebars (skip content)\n";
+        echo "  --local-sidebars-only  Only rebuild local sidebar overrides\n";
         echo "  --page=URL         Crawl a specific page (can be used multiple times)\n";
         echo "                     Examples:\n";
         echo "                       --page=peeksmith-3/glyphs\n";
@@ -949,6 +1243,8 @@ foreach (array_slice($argv, 1) as $arg) {
         $mode = 'docs';
     } elseif ($arg === '--sidebars-only') {
         $mode = 'sidebars';
+    } elseif ($arg === '--local-sidebars-only') {
+        $mode = 'local-sidebars';
     } elseif (strpos($arg, '--page=') === 0) {
         $page = substr($arg, 7); // Remove '--page=' prefix
         // Normalize the page URL

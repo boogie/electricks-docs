@@ -4,7 +4,7 @@ description: "Predict the time & peek"
 updated: "2025-10-26"
 author: Electricks
 category: guides
-sidebar: "945e687"
+sidebar: "945e687-sb-watch-2"
 ---
 
 # SB Watch 2

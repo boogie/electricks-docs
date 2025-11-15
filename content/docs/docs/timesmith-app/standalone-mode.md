@@ -3,7 +3,7 @@ title: Standalone Mode
 updated: "2025-10-26"
 author: Electricks
 category: guides
-sidebar: "945e687"
+sidebar: "945e687-timesmith-app"
 ---
 
 # Standalone Mode
