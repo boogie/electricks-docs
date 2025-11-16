@@ -242,7 +242,7 @@
                 "links": [
                     {
                         "icon": "📃",
-                        "text": "Atom Remote",
+                        "text": "Atom 2 Smart Remote",
                         "url": "\/docs\/sbwatch\/atom-remote"
                     },
                     {
@@ -321,7 +321,7 @@
         "name": "Peeksmith 3 Sidebar",
         "sections": [
             {
-                "heading": "Devices & PeekSmith App",
+                "heading": "Peek Family",
                 "links": [
                     {
                         "icon": "👁️",
@@ -542,7 +542,7 @@
         "name": "Bond Sidebar",
         "sections": [
             {
-                "heading": "Devices & PeekSmith App",
+                "heading": "Peek Family",
                 "links": [
                     {
                         "icon": "👁️",
@@ -645,15 +645,14 @@
                 "heading": "Devices & MagiScript",
                 "links": [
                     {
-                        "icon": "📃",
-                        "text": "⚛️ Atom Remote",
+                        "icon": "⚛️",
+                        "text": "Atom 2 Smart Remote",
                         "url": "\/docs\/atom-remote"
                     },
                     {
-                        "icon": "QuantumCalculator",
-                        "text": "🔢",
-                        "url": "\/products"
-                    },
+                        "icon": "🔢",
+                        "text": "Quantum Calculator",
+                        "url": "\/docs\/quantum"                    },
                     {
                         "icon": "🤹‍♂️",
                         "text": "MagiScript Language",
@@ -1608,15 +1607,14 @@
                 "heading": "Devices & MagiScript",
                 "links": [
                     {
-                        "icon": "📃",
-                        "text": "⚛️ Atom Remote",
+                        "icon": "⚛️",
+                        "text": "Atom 2 Smart Remote",
                         "url": "\/docs\/atom-remote"
                     },
                     {
-                        "icon": "QuantumCalculator",
-                        "text": "🔢",
-                        "url": "\/products"
-                    },
+                        "icon": "🔢",
+                        "text": "Quantum Calculator",
+                        "url": "\/docs\/quantum"                    },
                     {
                         "icon": "🤹‍♂️",
                         "text": "MagiScript Language",
@@ -2067,7 +2065,7 @@
         "name": "Mrcard Sidebar",
         "sections": [
             {
-                "heading": "Devices & PeekSmith App",
+                "heading": "Peek Family",
                 "links": [
                     {
                         "icon": "👁️",
@@ -2279,7 +2277,7 @@
                 "links": [
                     {
                         "icon": "📃",
-                        "text": "Atom Remote",
+                        "text": "Atom 2 Smart Remote",
                         "url": "\/docs\/sb-watch-2\/atom-remote"
                     },
                     {
@@ -2346,18 +2344,17 @@
                 "heading": "Devices & MagiScript",
                 "links": [
                     {
-                        "icon": "📃",
-                        "text": "⚛️ Atom Remote",
+                        "icon": "⚛️",
+                        "text": "Atom 2 Smart Remote",
                         "url": "\/docs\/atom-remote"
                     },
                     {
-                        "icon": "QuantumCalculator",
-                        "text": "🔢",
-                        "url": "\/products"
-                    },
+                        "icon": "🔢",
+                        "text": "Quantum Calculator",
+                        "url": "\/docs\/quantum"                    },
                     {
-                        "icon": "🤹‍♂️MagiScriptLanguage",
-                        "text": "",
+                        "icon": "🤹‍♂️",
+                        "text": "MagiScript Language",
                         "url": "\/docs\/magiscript"
                     },
                     {
@@ -2504,7 +2501,7 @@
         "name": "Peeksmith App Sidebar",
         "sections": [
             {
-                "heading": "Devices & PeekSmith App",
+                "heading": "Peek Family",
                 "links": [
                     {
                         "icon": "👁️",

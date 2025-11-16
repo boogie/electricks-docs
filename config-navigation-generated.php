@@ -20,8 +20,8 @@ $NAVIGATION = array (
   ),
   'docs/peeksmith-3' =>
   array (
-    'title' => 'PeekSmith 3. [Card peek.]',
-    'description' => 'Know any card, instantly.',
+    'title' => 'PeekSmith 3. [Know, Instantly.]',
+    'description' => 'Peek information from many sources.',
     'icon' => 'eye',
     'icon_color' => 'blue',
     'emoji' => '👁️',
@@ -211,7 +211,7 @@ $NAVIGATION = array (
   ),
   'docs/mrcard' =>
   array (
-    'title' => 'Electricks MrCard. [Peek and remote.]',
+    'title' => 'Electricks MrCard. [Peek and Remote.]',
     'description' => 'Everyday carry, extraordinary secrets.',
     'icon' => 'eye',
     'icon_color' => 'blue',
@@ -302,7 +302,7 @@ $NAVIGATION = array (
   ),
   'docs/sbwatch' =>
   array (
-    'title' => 'SB Watch. [Prediction watch.]',
+    'title' => 'SB Watch. [Prediction Watch.]',
     'description' => 'Predict time with precision and style.',
     'icon' => 'watch',
     'icon_color' => 'purple',
@@ -424,7 +424,7 @@ $NAVIGATION = array (
   ),
   'docs/sb-watch-2' =>
   array (
-    'title' => 'SB Watch 2. [Advanced.]',
+    'title' => 'SB Watch 2. [Predict and Peek.]',
     'description' => 'Time prediction meets powerful peeking.',
     'icon' => 'watch',
     'icon_color' => 'purple',
@@ -481,7 +481,7 @@ $NAVIGATION = array (
   ),
   'docs/atom-remote' =>
   array (
-    'title' => 'Atom 2. [Smart remote.]',
+    'title' => 'Atom 2. [Smart Remote.]',
     'description' => 'Wireless control, invisible to audiences.',
     'icon' => 'game-controller',
     'icon_color' => 'orange',
@@ -594,8 +594,8 @@ $NAVIGATION = array (
   ),
   'docs/sbmote' =>
   array (
-    'title' => 'SB Mote',
-    'description' => 'TRIGGER APP ACTIONS',
+    'title' => 'SB Mote. [One Button.]',
+    'description' => 'Trigger app actions with a press.',
     'icon' => 'game-controller',
     'icon_color' => 'orange',
     'category' => 'Remote Controls',
@@ -625,8 +625,8 @@ $NAVIGATION = array (
   ),
   'docs/teleport' =>
   array (
-    'title' => 'Teleport',
-    'description' => 'REVEAL CARDS, WORDS',
+    'title' => 'Teleport. [Color Reveal.]',
+    'description' => 'Reveal cards, words, numbers and more.',
     'icon' => 'cube',
     'icon_color' => 'pink',
     'category' => 'Specialty Devices',
@@ -702,7 +702,7 @@ $NAVIGATION = array (
   ),
   'docs/quantum' =>
   array (
-    'title' => 'Quantum. [Force calculator.]',
+    'title' => 'Quantum. [Force Calculator.]',
     'description' => 'Force any number, reveal anything.',
     'icon' => 'cube',
     'icon_color' => 'pink',
@@ -771,8 +771,8 @@ $NAVIGATION = array (
   ),
   'docs/spotted-dice' =>
   array (
-    'title' => 'Spotted Dice',
-    'description' => 'GET DICE VALUES',
+    'title' => 'Spotted Dice. [See the Invisible.]',
+    'description' => 'Know every outcome the moment it lands.',
     'icon' => 'cube',
     'icon_color' => 'pink',
     'category' => 'Specialty Devices',
