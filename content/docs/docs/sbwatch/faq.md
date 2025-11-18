@@ -24,14 +24,9 @@ SB Watch is coming with the TimeSmith app , and there are 10+ ways (it is growin
 
 The price depends on the model, please note that it includes the TimeSmith app (190 EUR):
 
--
-
 - Our best offer is coming with the [2020 Models](https://electricks.info/product/sb-watch-2020/), you can buy them for $219 – $297Price range: $219 through $297.
-
 - The latest SB Watch 1 model is the [2022 Models](https://electricks.info/product/sb-watch-2022/) for $367 – $517Price range: $367 through $517.
-
 - The unique [pocket watches](https://electricks.info/product/sb-watch-pocket/) are available for $417 – $567Price range: $417 through $567.
-
 - The limited edition [Steel](https://electricks.info/product/sb-watch-steel/) luxury models are $467.
 
 For more details, please check all our available models: [SB Watches](https://electricks.info/product-category/sbwatch/).

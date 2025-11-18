@@ -28,8 +28,6 @@ We recommend using Multi-Display for our [Vision One Glasses](https://electricks
 
 The features of the Multi-Display add-on are as follows:
 
-- 
-
 **[Audio Assistant](https://electricks.info/docs/peeksmith-3/audio-assistant/)** (Text-to-Speech): allows users to have the text from the PeekSmith app read aloud by an audio assistant.
 
 **[Local Notifications](https://electricks.info/docs/peeksmith-3/local-notifications/):** this allows users to receive notifications on any smartwatch or smart band.
@@ -49,9 +47,7 @@ The features of the Multi-Display add-on are as follows:
 Follow these instructions to purchase and activate the addon on your iOS or Android device:
 
 - Purchase the add-on from Benke Smith at [bsmagic.app](https://bsmagic.app/payment/?item=multidisplay).
-
 - Make sure you have the latest version of the PeekSmith app installed on your phone.
-
 - You will get a link with the instructions, follow them.
 
 This documentation should help you purchase and activate the Multi-Display addon for PeekSmith. Let us know if you have any questions.
@@ -103,7 +99,7 @@ This documentation should help you purchase and activate the Multi-Display addon
 
 [Dice Thumper](https://electricks.info/docs/peeksmith-3/dice-thumper/)
 
-[Ray](https://electricks.info/docs/atom-remote/peeksmith/ray-direct-connection/)
+[Ray](https://electricks.info/docs/peeksmith-3\/standalone-mode\/ray-direct-connection/)
 
 [Impression Pads](https://electricks.info/docs/peeksmith-3/impression-pads/)
 

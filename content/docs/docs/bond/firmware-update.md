@@ -10,7 +10,7 @@ sidebar: "a56f609"
 
 ### About
 
-## Firmware is a type of software that is running on a device, such as Electricks Bond, and controls its hardware functions. It’s like the operating system of a device, but it’s specifically designed to manage the hardware and low-level functions.
+[alert:info]Firmware is a type of software that is running on a device, such as Electricks Bond, and controls its hardware functions. It’s like the operating system of a device, but it’s specifically designed to manage the hardware and low-level functions.[/alert]
 
 Firmware controls the basic functions and features of a device, such as how it controls the screen, how it connects to other devices, how it processes data, and how it responds to user input. Updating the firmware can improve performance and add new features to the device.
 

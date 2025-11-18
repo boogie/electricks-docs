@@ -44,11 +44,7 @@ Congrats, Atom is connected to the app.
 
 Each and every apps and MagiScript mini-apps defines its own button layout. Our most common layout is the “numeric” layout, but even this layout can change how it handles the bottom-left and bottom-right buttons. TimeSmith app also has a different layout when you are on the swipe screen.
 
-[
-
 ![](https://electricks.info/wp-content/uploads/2023/04/atom_numeric_buttons_timesmith-1024x658.png)
-
-](https://electricks.info/wp-content/uploads/2023/04/atom_numeric_buttons_timesmith.png)
 
 This is how the TimeSmith app works with the buttons. The bottom-left button clears the entered numbers, and the bottom-right button acts as a backspace.
 
@@ -60,11 +56,7 @@ Tap the Play icon at the bottom of the screen in the TimeSmith app. You should s
 
 On the main screen , you can use the buttons as number buttons to type the time you would like to set on the watch. You will see the numbers entered in the small input field. After a few seconds the app is processing the time you entered. To set how long this timeout is, go to Settings, Manual Time Input, and set the “Wait for manual input” according to your preferences.
 
-[
-
 ![](https://electricks.info/wp-content/uploads/2023/04/IMG_285D2323E256-1-1024x390.jpeg)
-
-](https://electricks.info/wp-content/uploads/2023/04/IMG_285D2323E256-1.jpeg)
 
 This is how the numbers will be processed:
 
@@ -84,11 +76,7 @@ Entering number 4444 or 9999 will set the current time.
 
 Optionally , you can go to the swipe input screen, it’s the black button on the main screen, and use the remote buttons as up/left/right/down buttons.
 
-[
-
 ![](https://electricks.info/wp-content/uploads/2023/04/atom_swipe_buttons_timesmith-1024x658.png)
-
-](https://electricks.info/wp-content/uploads/2023/04/atom_swipe_buttons_timesmith.png)
 
 The swipe method is explained on our [TimeSmith Swipe](https://electricks.info/docs/sbwatch/clock-swipe/) documentation page
 

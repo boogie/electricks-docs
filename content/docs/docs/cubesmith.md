@@ -19,15 +19,11 @@ Congratulations on having your CubeSmith set! We are sure that you will love our
 
 On  iOS  please install CubeSmith PRO from the  AppStore : [click here to open
 
-![](https://timesmith.info/admin/images/AppStore_button.png)
-
-](https://apps.apple.com/app/id6443452602)
+[![](https://timesmith.info/admin/images/AppStore_button.png)](https://apps.apple.com/app/id6443452602)
 
 On  Android  you can install CubeSmith PRO from  Google Play : [click here to open
 
-![](https://timesmith.info/admin/images/GooglePlay_button.png)
-
-](https://play.google.com/store/apps/details?id=com.benkesmith.cubesmith_pro)
+[![](https://timesmith.info/admin/images/GooglePlay_button.png)](https://play.google.com/store/apps/details?id=com.benkesmith.cubesmith_pro)
 
 ## Facebook Group
 
@@ -38,23 +34,3 @@ We recommend joining our[ CubeSmith Facebook group](https://www.facebook.com/gro
 Make sure you learn the basics of the cube, the sides, the turns, and so on. The app will tell you the moves to solve the cube, but you need to practice.
 
 We have collected a lot of information on these pages about using the app, handling the cubes, replacing batteries, activating the full version of the CubeSmith app, and so on. Please read them all to get the best out of our powerful combo.
-
-## Cube Techniques
-
-Once you feel ready, make sure to read this information as well:
-
- 
-
--
-
-- [Hiding the Scale](https://electricks.info/docs/soulmate/hiding-the-scale/) – how to make a card box to cover it?
-
-- Calibration – make sure it works with your deck
-
-- Routines – how to work with card stacks and objects
-
-- ScaleSmith app – installing and using the app
-
- 
-
-You should install the ScaleSmith app and make sure you always update your device’s firmware to the latest with the app.

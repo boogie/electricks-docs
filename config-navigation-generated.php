@@ -52,7 +52,7 @@ $NAVIGATION = array (
       'peeksmith-3/fleshpeek-by-seamus-mjolnir' => 'FleshPeek',
       'peeksmith-3/ghostmove-direct-connection' => 'GhostMove Direct Connection',
       'peeksmith-3/glyphs' => 'Glyphs',
-      'peeksmith-3/impression-pads-peeksmith-app' => 'Impression Pads &#8211; PeekSmith App',
+      'peeksmith-3/impression-pads-peeksmith-app' => 'Impression Pads',
       'peeksmith-3/impression-pads' => 'Impression Pads',
       'peeksmith-3/inject-2-0' => 'Inject 2.0',
       'peeksmith-3/insight' => 'Insight / Insight Pro · Standalone Mode',
@@ -114,7 +114,7 @@ $NAVIGATION = array (
       'compatibility' => 
       array (
         'peeksmith-3/atom-2-settings' => 'Atom 2 Settings',
-        'peeksmith-3/impression-pads-peeksmith-app' => 'Impression Pads &#8211; PeekSmith App',
+        'peeksmith-3/impression-pads-peeksmith-app' => 'Impression Pads',
         'peeksmith-3/ray-settings' => 'Ray Settings',
         'peeksmith-3/sb-watch-settings' => 'SB Watch Settings',
         'peeksmith-3/settings' => 'Settings',
@@ -219,7 +219,7 @@ $NAVIGATION = array (
     'items' => 
     array (
       'mrcard' => 'Electricks MrCard',
-      'mrcard/badge-holder-peek' => 'Retractable Plastic Badge Holder &#8211; Peek',
+      'mrcard/badge-holder-peek' => 'Retractable Plastic Badge Holder',
       'mrcard/badge-holder' => 'Retractable Plastic Badge Holder',
       'mrcard/deck-peek' => 'Deck Peek',
       'mrcard/faq' => 'FAQ',
@@ -287,7 +287,7 @@ $NAVIGATION = array (
       ),
       'accessories' => 
       array (
-        'mrcard/badge-holder-peek' => 'Retractable Plastic Badge Holder &#8211; Peek',
+        'mrcard/badge-holder-peek' => 'Retractable Plastic Badge Holder',
         'mrcard/badge-holder' => 'Retractable Plastic Badge Holder',
         'mrcard/notebook' => 'Notebook',
         'mrcard/wallet' => 'Wallet',
@@ -345,7 +345,7 @@ $NAVIGATION = array (
       'sbwatch/the-web-doodle' => 'The WEB-Doodle',
       'sbwatch/thoughtcast-versa' => 'ThoughtCast Versa',
       'sbwatch/time-capture' => 'Time Capture',
-      'sbwatch/time-setting-with-rubiks-cube' => 'Time Setting with Rubik&#8217;s Cube',
+      'sbwatch/time-setting-with-rubiks-cube' => 'Time Setting with Rubik\'s Cube',
       'sbwatch/troubleshooting' => 'Troubleshooting',
       'sbwatch/using-the-bt-screen' => 'Using The BT Screen',
       'sbwatch/using-the-web-input' => 'Using The WEB-Input',
@@ -413,7 +413,7 @@ $NAVIGATION = array (
         'sbwatch/the-prediction' => 'The Prediction',
         'sbwatch/thoughtcast-versa' => 'ThoughtCast Versa',
         'sbwatch/time-capture' => 'Time Capture',
-        'sbwatch/time-setting-with-rubiks-cube' => 'Time Setting with Rubik&#8217;s Cube',
+        'sbwatch/time-setting-with-rubiks-cube' => 'Time Setting with Rubik\'s Cube',
         'sbwatch/video-reviews-sbwatch' => 'Video Reviews • SBWatch',
         'sbwatch/voice-recognition' => 'Voice Recognition',
         'sbwatch/wiki-test' => 'WikiTest',
@@ -519,12 +519,11 @@ $NAVIGATION = array (
       'atom-remote/inject-2' => 'Inject 2',
       'atom-remote/international-keyboards' => 'International Keyboards',
       'atom-remote/ithump-toxic' => 'iThump/Toxic',
-      'atom-remote/jordys-poker-hands' => 'Jordy&#8217;s Poker Hands',
+      'atom-remote/jordys-poker-hands' => 'Jordy\'s Poker Hands',
       'atom-remote/media-controls' => 'Media Controls',
       'atom-remote/mnematching' => 'Mnematching',
-      'atom-remote/nokia-alphanumeric-keyboard' => 'NOKIA Alphanumeric Keyboard ',
+      'atom-remote/nokia-alphanumeric-keyboard' => 'NOKIA Alphanumeric Keyboard',
       'atom-remote/numeric-keyboard' => 'Numeric Keyboard',
-      'atom-remote/peeksmith/ray-direct-connection' => 'Ray Direct Connection',
       'atom-remote/peeksmith' => 'PeekSmith',
       'atom-remote/settings' => 'Settings',
       'atom-remote/specifications' => 'Specifications',
@@ -568,7 +567,7 @@ $NAVIGATION = array (
         'atom-remote/blinky' => 'Blinky',
         'atom-remote/bluetooth-keyboard' => 'Bluetooth Keyboard / Mouse',
         'atom-remote/built-in-mini-apps' => 'Built-In Mini-Apps',
-        'atom-remote/comparison' => 'Comparison (Atom vs. other remotes)',
+        'atom-remote/comparison' => 'Compare Atom to Other Remotes',
         'atom-remote/compatibility' => 'Compatibility',
         'atom-remote/cursor-keyboard' => 'Cursor Keyboard',
         'atom-remote/custom-keyboard' => 'Custom Keyboard',
@@ -577,12 +576,11 @@ $NAVIGATION = array (
         'atom-remote/inject-2' => 'Inject 2',
         'atom-remote/international-keyboards' => 'International Keyboards',
         'atom-remote/ithump-toxic' => 'iThump/Toxic',
-        'atom-remote/jordys-poker-hands' => 'Jordy&#8217;s Poker Hands',
+        'atom-remote/jordys-poker-hands' => 'Jordy\'s Poker Hands',
         'atom-remote/media-controls' => 'Media Controls',
         'atom-remote/mnematching' => 'Mnematching',
-        'atom-remote/nokia-alphanumeric-keyboard' => 'NOKIA Alphanumeric Keyboard ',
+        'atom-remote/nokia-alphanumeric-keyboard' => 'NOKIA Alphanumeric Keyboard',
         'atom-remote/numeric-keyboard' => 'Numeric Keyboard',
-        'atom-remote/peeksmith/ray-direct-connection' => 'Ray Direct Connection',
         'atom-remote/peeksmith' => 'PeekSmith',
         'atom-remote/settings' => 'Settings',
         'atom-remote/tap' => 'TAP',
@@ -654,7 +652,7 @@ $NAVIGATION = array (
       'teleport/teleport-wallet' => 'Teleport Wallet',
       'teleport/truewrite-chalk' => 'TrueWrite Chalk Style',
       'teleport/truewrite-marker' => 'TrueWrite Marker Style',
-      'teleport/truewrite-neural-handwriting-for-teleport' => 'TrueWrite &#8211; Neural Handwriting for Teleport',
+      'teleport/truewrite-neural-handwriting-for-teleport' => 'TrueWrite',
       'teleport/truewrite-post-it' => 'TrueWrite Post-it Style',
     ),
     'groups' => 
@@ -695,7 +693,7 @@ $NAVIGATION = array (
         'teleport/poker-card-text' => 'Poker Card from Text',
         'teleport/truewrite-chalk' => 'TrueWrite Chalk Style',
         'teleport/truewrite-marker' => 'TrueWrite Marker Style',
-        'teleport/truewrite-neural-handwriting-for-teleport' => 'TrueWrite &#8211; Neural Handwriting for Teleport',
+        'teleport/truewrite-neural-handwriting-for-teleport' => 'TrueWrite',
         'teleport/truewrite-post-it' => 'TrueWrite Post-it Style',
       ),
     ),
@@ -806,8 +804,8 @@ $NAVIGATION = array (
   ),
   'docs/cubesmith' =>
   array (
-    'title' => 'CubeSmith',
-    'description' => 'SOLVE THE CUBE BLINDFOLDED',
+    'title' => 'CubeSmith. [Rubik\'s Cube Magic.]',
+    'description' => 'Solve the cube blindfolded and much more.',
     'icon' => 'cube',
     'icon_color' => 'pink',
     'category' => 'Specialty Devices',
@@ -882,8 +880,8 @@ $NAVIGATION = array (
   ),
   'docs/ghostmove' =>
   array (
-    'title' => 'GhostMove',
-    'description' => 'SENSE PICKED UP OBJECT',
+    'title' => 'GhostMove. [Sense Moves.]',
+    'description' => 'Sense when objects are picked up or moved.',
     'icon' => 'cube',
     'icon_color' => 'pink',
     'category' => 'Specialty Devices',
@@ -928,14 +926,14 @@ $NAVIGATION = array (
   ),
   'docs/soulmate' =>
   array (
-    'title' => 'Electricks SoulMate',
-    'description' => 'SENSE THE NUMBER OF CARDS',
+    'title' => 'Electricks SoulMate. [Smart Scale.]',
+    'description' => 'Sense how many cards are picked up.',
     'icon' => 'cube',
     'icon_color' => 'pink',
     'category' => 'Specialty Devices',
     'items' => 
     array (
-      'soulmate' => 'SoulMate &#8211; the Smart Scale for Magicians',
+      'soulmate' => 'SoulMate',
       'soulmate/aronson-stack' => 'Aronson Stack',
       'soulmate/bicycle-new-deck-order' => 'Bicycle (New Deck Order)',
       'soulmate/calibration' => 'Calibration',
@@ -960,7 +958,7 @@ $NAVIGATION = array (
     array (
       'overview' => 
       array (
-        'soulmate' => 'SoulMate &#8211; the Smart Scale for Magicians',
+        'soulmate' => 'SoulMate',
       ),
       'general' => 
       array (
@@ -997,8 +995,8 @@ $NAVIGATION = array (
   ),
   'docs/ray' =>
   array (
-    'title' => 'Electricks Ray',
-    'description' => 'SENSE MAGNETIC COINS',
+    'title' => 'Electricks Ray. [Which Hand.]',
+    'description' => 'Sense magnetic coins without looking.',
     'icon' => 'cube',
     'icon_color' => 'pink',
     'category' => 'Specialty Devices',
@@ -1032,8 +1030,8 @@ $NAVIGATION = array (
   ),
   'docs/vision' =>
   array (
-    'title' => 'Vision Glasses',
-    'description' => 'HEAR INFORMATION',
+    'title' => 'Vision Glasses. [Audio Peek.]',
+    'description' => 'Hear information discreetly in your ear.',
     'icon' => 'speaker-high',
     'icon_color' => 'teal',
     'category' => 'Audio Devices',
@@ -1061,8 +1059,8 @@ $NAVIGATION = array (
   ),
   'docs/mental-wave' =>
   array (
-    'title' => 'Mental Wave',
-    'description' => 'PLANT THOUGHTS',
+    'title' => 'Mental Wave. [Plant Thoughts.]',
+    'description' => 'Subtly influence thoughts.',
     'icon' => 'speaker-high',
     'icon_color' => 'teal',
     'category' => 'Audio Devices',
@@ -1111,8 +1109,8 @@ $NAVIGATION = array (
   ),
   'docs/lunacards' =>
   array (
-    'title' => 'Luna Cards',
-    'description' => 'PREMIUM CARDS',
+    'title' => 'Luna Cards. [Premium Marked Decks.]',
+    'description' => 'Premium marked cards.',
     'icon' => 'cards',
     'icon_color' => 'indigo',
     'category' => 'Cards & NFC',
@@ -1131,12 +1129,12 @@ $NAVIGATION = array (
       'lunacards/force-decks-poker-cards' => 'Special Poker Decks',
       'lunacards/intuition-trick' => 'Intuition Trick',
       'lunacards/marked-card-trick' => 'Marked Card Trick',
-      'lunacards/marking-system-flash-cards' => 'Marking System &#8211; Flash Cards',
-      'lunacards/marking-system-poker-cards' => 'Marking System &#8211; Poker Cards',
+      'lunacards/marking-system-flash-cards' => 'Marking System',
+      'lunacards/marking-system-poker-cards' => 'Marking System',
       'lunacards/one-way-system' => 'One-Way System',
       'lunacards/paper-quality' => 'Paper Quality',
       'lunacards/self-working-tricks' => 'Self-Working Tricks',
-      'lunacards/value-and-suite-prediction' => 'Value and Suite Prediction',
+      'lunacards/value-and-suite-prediction' => 'Value and Suit Prediction',
     ),
     'groups' => 
     array (
@@ -1158,19 +1156,19 @@ $NAVIGATION = array (
         'lunacards/force-decks-poker-cards' => 'Special Poker Decks',
         'lunacards/intuition-trick' => 'Intuition Trick',
         'lunacards/marked-card-trick' => 'Marked Card Trick',
-        'lunacards/marking-system-flash-cards' => 'Marking System &#8211; Flash Cards',
-        'lunacards/marking-system-poker-cards' => 'Marking System &#8211; Poker Cards',
+        'lunacards/marking-system-flash-cards' => 'Marking System',
+        'lunacards/marking-system-poker-cards' => 'Marking System',
         'lunacards/one-way-system' => 'One-Way System',
         'lunacards/paper-quality' => 'Paper Quality',
         'lunacards/self-working-tricks' => 'Self-Working Tricks',
-        'lunacards/value-and-suite-prediction' => 'Value and Suite Prediction',
+        'lunacards/value-and-suite-prediction' => 'Value and Suit Prediction',
       ),
     ),
   ),
   'docs/nfc-rfid' =>
   array (
-    'title' => 'NFC/RFID Cards',
-    'description' => 'IDENTIFY THE SELECTED CARD',
+    'title' => 'NFC/RFID Cards. [Sense Cards.]',
+    'description' => 'Identify the selected card with NFC/RFID.',
     'icon' => 'identification-card',
     'icon_color' => 'indigo',
     'category' => 'Cards & NFC',

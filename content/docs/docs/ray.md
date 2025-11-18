@@ -45,7 +45,7 @@ Currently the PeekSmith supports vibrations on magnet detection, but not reads H
 
 ## Ray with PeekSmith 3 in Standalone Mode
 
-[PeekSmith 3](https://electricks.info/product/peeksmith-3/) in standalone mode can connect to Ray without using your phone. The feature is available from the PeekSmith 3 firmware 1.8.x release. Make sure Ray is not connected to an app, and you have the latest firmware. Then press and hold the front right button of the PS3, and it will start looking for known Bluetooth devices. Shake and turn your Ray to wake it up, and PeekSmith 3 will connect. After 20-25 seconds, it will stop scanning for more devices, but you can press the right button to immediately stop the process. More about it in the [PeekSmith 3 docs](https://electricks.info/docs/atom-remote/peeksmith/ray-direct-connection/).
+[PeekSmith 3](https://electricks.info/product/peeksmith-3/) in standalone mode can connect to Ray without using your phone. The feature is available from the PeekSmith 3 firmware 1.8.x release. Make sure Ray is not connected to an app, and you have the latest firmware. Then press and hold the front right button of the PS3, and it will start looking for known Bluetooth devices. Shake and turn your Ray to wake it up, and PeekSmith 3 will connect. After 20-25 seconds, it will stop scanning for more devices, but you can press the right button to immediately stop the process. More about it in the [PeekSmith 3 docs](https://electricks.info/docs/peeksmith-3\/standalone-mode\/ray-direct-connection/).
 
 Currently PeekSmith 3 is displaying Heads or Tails information, but not supports vibrations. It is on our list to add vibrations.
 

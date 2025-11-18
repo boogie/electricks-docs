@@ -64,6 +64,12 @@ if (!file_exists($filePath)) {
     }
 }
 
+$relativeArticlePath = str_replace(CONTENT_PATH . '/', '', $filePath);
+$relativeArticlePath = preg_replace('/\.md$/', '', $relativeArticlePath);
+$relativeArticlePath = preg_replace('#/index$#', '', $relativeArticlePath);
+$relativeArticlePath = trim($relativeArticlePath, '/');
+$feedbackTextareaId = 'feedback-comment-' . substr(md5($relativeArticlePath ?: uniqid('', true)), 0, 8);
+
 // Parse the markdown file
 $frontMatter = ElectricksMarkdownParser::extractFrontMatter($filePath);
 $markdownContent = ElectricksMarkdownParser::getContentWithoutFrontMatter($filePath);
@@ -215,7 +221,11 @@ include __DIR__ . '/includes/header.php';
             </div>
 
             <!-- Helpful Section -->
-            <div class="article-feedback">
+            <div
+                class="article-feedback"
+                data-article-path="<?php echo htmlspecialchars($relativeArticlePath); ?>"
+                data-article-title="<?php echo htmlspecialchars($pageTitle); ?>"
+            >
                 <h4>Was this article helpful?</h4>
                 <div class="feedback-buttons">
                     <button class="btn btn-feedback" data-helpful="yes">
@@ -231,10 +241,24 @@ include __DIR__ . '/includes/header.php';
                         No
                     </button>
                 </div>
+                <form class="feedback-form" hidden>
+                    <label for="<?php echo $feedbackTextareaId; ?>">What was missing? (optional)</label>
+                    <textarea
+                        id="<?php echo $feedbackTextareaId; ?>"
+                        rows="3"
+                        placeholder="Share how we can improve this article."
+                    ></textarea>
+                    <div class="feedback-form-actions">
+                        <button type="submit" class="btn btn-secondary">Send feedback</button>
+                    </div>
+                </form>
+                <p class="feedback-status" role="status" aria-live="polite"></p>
             </div>
 
             <!-- Prev/Next Navigation -->
-            <?php echo renderPageNavigation($pageNav); ?>
+            <?php if (false && !empty($pageNav)): ?>
+                <?php echo renderPageNavigation($pageNav); ?>
+            <?php endif; ?>
 
             <!-- Last Updated -->
             <?php if (isset($frontMatter['updated'])): ?>

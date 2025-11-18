@@ -82,14 +82,5 @@ Everything you need to begin using it right away.
 
 ## How Do I Report Issues or Ask Questions? We’re Here to Help!
 
--
-
-![📩](https://static.xx.fbcdn.net/images/emoji.php/v9/t5f/2/16/1f4e9.png)
-
- [Contact our support team](https://electricks.info/contact-us/)
-
--
-
-![💬](https://static.xx.fbcdn.net/images/emoji.php/v9/td/2/16/1f4ac.png)
-
- [Join the PeekSmith Facebook Group ](https://www.facebook.com/groups/peeksmith/)to discuss features, share tips, or report bugs.
+- [Contact our support team](https://electricks.info/contact-us/)
+- [Join the PeekSmith Facebook Group](https://www.facebook.com/groups/peeksmith/) to discuss features, share tips, or report bugs.

@@ -22,25 +22,16 @@ While generally we think this is a great feature, color-blind users might strugg
 
 These text will be transformed:
 
-- single-letter cards: “`A`”-”`Z`”
+- single-letter cards: `A`-`Z`
+- single-digit numbers: `0`-`9`
+- question mark: `?`
+- poker cards: `AH`, `7D`, `10S`, and so on
+- ESP symbols: `circle`, `cross`, `plus`, `waves`, `square`, `star`, `triangle`, and `infinity` (case insensitive, so `circle`, `Circle` and `CIRCLE` are all work
+- colors: `white`, `green`, `red`, `orange`, `blue`, `yellow`, `purple`, `brown`, `black`, `grey`, `pink`, `silver`, `gold`, `bronze`, `violet` – and the `#123456` representation is also supported – it is case insensitive, so `red`, `Red` and `RED` all work
 
-- single-digit numbers: “`0`”-”`9`”
-
-- question mark: “`?`”
-
-- poker cards: “`AH`”, “`7D`”, “`10S`”, and so on
-
-- ESP symbols: “`circle`”, “`cross`”, “`plus`”, “`waves`”, “`square`”, “`star`”, “`triangle`”, and “`infinity`” (case insensitive, so “`circle`“, “`Circle`” and “`CIRCLE`” are all work
-
-- colors: “`white`”, “`green`”, “`red`”, “`orange`”, “`blue`”, “`yellow`”, “`purple`”, “`brown`”, “`black`”, “`grey`”, “`pink`”, “`silver`”, “`gold`”, “`bronze`”, “`violet`” – and the “`#123456`” representation is also supported – it is case insensitive, so “`red`“, “`Red`” and “`RED`” all work
-
-For example, sending the text “`A 7C Yellow`” will display 3 cards, an “A” single-letter card, a Seven of Clubs and a yellow card.
-
-[
+For example, sending the text `A 7C Yellow` will display 3 cards, an “A” single-letter card, a Seven of Clubs and a yellow card.
 
 ![Cards: A 7C Yellow](https://electricks.info/wp-content/uploads/2023/10/IMG_5752-Medium.jpeg)
-
-](https://electricks.info/wp-content/uploads/2023/10/IMG_5752-Medium.jpeg)
 
 ## Icons / Smileys
 
@@ -50,14 +41,7 @@ PeekSmith 3 can also recognize smileys and icons. One icon, and a maximum 10 cha
 
 - supported icons: `:up:`, `:down:`, `:left:`, `:right:`, `:yes:`, `:ok:`, `:correct:`, `:no:`, `:incorrect:`, `:like:`, `:dislike:`, `<3`, `:heart:`, `:temp:`, `:reload:`, `:mix:`, `:shuffle:`
 
-For example, sending “`:)`” will display a smiley, or sending “`:ok: DONE`” will display a checkmark and the text DONE.
-
-[
+For example, sending `:)` will display a smiley, or sending `:ok: DONE` will display a checkmark and the text DONE.
 
 ![Smiley: :)](https://electricks.info/wp-content/uploads/2023/10/IMG_5753-Medium.jpeg)
-
-](https://electricks.info/wp-content/uploads/2023/10/IMG_5753-Medium.jpeg)[
-
 ![Icons: :ok: DONE](https://electricks.info/wp-content/uploads/2023/10/image-3-1024x328.png)
-
-](https://electricks.info/wp-content/uploads/2023/10/image-3.png)

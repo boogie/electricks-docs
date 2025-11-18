@@ -36,7 +36,7 @@ You don’t necessarily need these, as you can use SoulMate’s own display to s
 
 [Dice Thumper](https://electricks.info/docs/peeksmith-3/dice-thumper/)
 
-[Ray](https://electricks.info/docs/atom-remote/peeksmith/ray-direct-connection/)
+[Ray](https://electricks.info/docs/peeksmith-3\/standalone-mode\/ray-direct-connection/)
 
 [Impression Pads](https://electricks.info/docs/peeksmith-3/impression-pads/)
 

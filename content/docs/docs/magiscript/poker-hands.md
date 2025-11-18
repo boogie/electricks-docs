@@ -9,24 +9,12 @@ sidebar: "a93aec4"
 # Poker Hands by Jordy Thys
 
 ## Introduction
+ 
+MagiScript has a built-in database for several cards stack. Jordy Thys has contributed this code which can calculate poker hands and display the hands on a PeekSmith screen. The code is slightly updated to use the latest features of Atom / MagiScript.
+ 
+## The Routine
 
- 
- 
- 
- 
- MagiScript has a built-in database for several cards stack. Jordy Thys has contributed this code which can calculate poker hands and display the hands on a PeekSmith screen. The code is slightly updated to use the latest features of Atom / MagiScript.
-
- 
- 
- 
- 
- ## The Routine
-
- 
- 
- 
- 
- Have a spectator cut the deck until they are satisfied, let them choose how many poker hands they want to be dealt, and let them choose which pile they want.
+Have a spectator cut the deck until they are satisfied, let them choose how many poker hands they want to be dealt, and let them choose which pile they want.
 
 The magician can name all five cards from the pile.
 
@@ -36,22 +24,11 @@ The effect uses a memorized deck. You can set the stack in the MagiScript Editor
 
 Four digits are entered into Atom:
 
-- 
-
 - First two digits: the stack value of the bottom card after cutting (peek at the bottom card)
-
 - Third digit: number of hands to deal
-
 - Fourth digit: the chosen hand
 
 This effect is based on an idea by Craig Raley of the “TAP Users Group”.
-
- 
- 
- 
- 
- 
- 
  
  /*
  Effect:

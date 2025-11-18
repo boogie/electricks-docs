@@ -454,7 +454,7 @@
                     {
                         "icon": "📃",
                         "text": "Ray",
-                        "url": "\/docs\/atom-remote\/peeksmith\/ray-direct-connection"
+                        "url": "\/docs\/peeksmith-3\/standalone-mode\/ray-direct-connection"
                     },
                     {
                         "icon": "🎞️",
@@ -789,7 +789,13 @@
                         "icon": "📃",
                         "text": "Media Controls",
                         "url": "\/docs\/atom-remote\/media-controls"
-                    },
+                    }
+                ],
+                "type": "normal"
+            },
+            {
+                "heading": "Others / Fun",
+                "links": [
                     {
                         "icon": "📃",
                         "text": "Jordy’s Poker Hands",

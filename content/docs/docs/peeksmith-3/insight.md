@@ -22,25 +22,10 @@ PeekSmith 3 has included support for Insight (both the original and the Pro edit
 
 To connect PeekSmith 3 to Insight, follow these steps:
 
--
-
- 
-
--
-
-Long press the right button on your PeekSmith 3 device for 3 seconds.
-
--
-
-PeekSmith 3 will start scanning and connecting to other Bluetooth devices in range.
-
--
-
-Ensure that the Insight device you want to connect to is not already connected to an application.
-
--
-
-Once PeekSmith 3 successfully connects to Insight, it will display the name of the scanned card on its screen.
+1. Long press the right button on your PeekSmith 3 device for 3 seconds.
+2. PeekSmith 3 will start scanning and connecting to other Bluetooth devices in range.
+3. Ensure that the Insight device you want to connect to is not already connected to an application.
+4. Once PeekSmith 3 successfully connects to Insight, it will display the name of the scanned card on its screen.
 
 It is important to note that you do not need the Insight Pro app for the standalone support of Insight with PeekSmith 3.
 
@@ -52,15 +37,8 @@ PeekSmith 3 supports both Poker and ESP (Extra Sensory Perception) cards when co
 
 If you wish to program NFC cards to be compatible with Insight, you have two options:
 
--
-
--
-
-Original Insight App: You can use the original Insight app developed by Hugo Shelley to program NFC cards for Insight. You can use it to program poker and ESP cards.
-
--
-
-Experimental Version of PeekSmith App: PeekSmith provides an experimental version of its app that allows you to program NFC cards for Insight, including both Poker cards and ESP symbols, letters, numbers, and colors. To access the experimental version, open the PeekSmith app, and go to the “User Guide and Version History” section. Press the “Switch to Experimental” button. If you wish to switch back to the “official” version of the PeekSmith app, follow these steps: go to “User Guide and Version History” section in the PeekSmith app, then press the “Restore Official Version” button. The app will load the App Store version, and you should perform another update to ensure you have the latest version.
+1. Original Insight App: You can use the original Insight app developed by Hugo Shelley to program NFC cards for Insight. You can use it to program poker and ESP cards.
+2. Experimental Version of PeekSmith App: PeekSmith provides an experimental version of its app that allows you to program NFC cards for Insight, including both Poker cards and ESP symbols, letters, numbers, and colors. To access the experimental version, open the PeekSmith app, and go to the “User Guide and Version History” section. Press the “Switch to Experimental” button. If you wish to switch back to the “official” version of the PeekSmith app, follow these steps: go to “User Guide and Version History” section in the PeekSmith app, then press the “Restore Official Version” button. The app will load the App Store version, and you should perform another update to ensure you have the latest version.
 
 ## Conclusion
 

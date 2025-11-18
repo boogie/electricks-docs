@@ -115,24 +115,28 @@ Replacing the wick involves ink, and ink stains. Prepare your workspace:
 
 🔄 Step-by-Step Instructions
 
-- Remove the old wick from your SharpeekHold the front and the body of the marker firmly
-- Gently pull the wick while rotating it slightly
-- Do not twist or squeeze forcefully
+1. Remove the old wick from your Sharpeek
+   - Hold the front and the body of the marker firmly
+   - Gently pull the wick while rotating it slightly
+   - Do not twist or squeeze forcefully
 
-- Remove the new wick from the Sharpie M15Use the same pull-and-rotate method
-- Handle with care to avoid ink splatter
+2. Remove the new wick from the Sharpie M15
+   - Use the same pull-and-rotate method
+   - Handle with care to avoid ink splatter
 
-- Cut the new wickMeasure 4 cm with the ruler
-- Cut the wick straight across using a sharp utility knife
-- Place absorbent paper under the wick while cutting to catch any ink leaks
+3. Cut the new wick
+   - Measure 4 cm with the ruler
+   - Cut the wick straight across using a sharp utility knife
+   - Place absorbent paper under the wick while cutting to catch any ink leaks
 
-- Prepare the wick for insertionWrap a small piece of tape around one end of the wick
-(This prevents ink from leaking into the marker body.)
-- Insert the taped end first into the Sharpeek
-- Slide it in gently until only the taped section is visible
+4. Prepare the wick for insertion
+   - Wrap a small piece of tape around one end of the wick (This prevents ink from leaking into the marker body.)
+   - Insert the taped end first into the Sharpeek
+   - Slide it in gently until only the taped section is visible
 
-- Close the markerReattach the tip to the Sharpeek body
-- Press until you feel or hear a soft click – this confirms a proper fit
+5. Close the marker
+   - Reattach the tip to the Sharpeek body
+   - Press until you feel or hear a soft click – this confirms a proper fit
 
 ✅ You’re Done
 

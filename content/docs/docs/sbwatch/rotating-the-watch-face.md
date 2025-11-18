@@ -16,8 +16,6 @@ Sometimes the watch face on the SBWatch may become misaligned due to impacts or 
 
 To fix the rotation issue, please follow these steps:
 
--
-
 - Open the watch case ([see our instructions](https://electricks.info/docs/sbwatch/opening-closing-the-back/)).
 - Remove the white plastic insert from the inside of the SBWatch.
 - Rotate the watch face to the desired position, making sure to mark the position with a sharpie if needed.

@@ -82,44 +82,24 @@ Bluetooth keyboards have different layouts on iOS and Android, you can configure
 
 French, and German (and UK/US) alphabets are available in MagiScript.
 
+## Launching Mini-Apps
  
- 
- 
- 
- ## Launching Mini-Apps
-
- 
- 
- 
- 
- 10 built-in mini-applications came with the firmware. These mini-apps connected to your PeekSmith 3 and/or SB Watch automatically.
+10 built-in mini-applications came with the firmware. These mini-apps connected to your PeekSmith 3 and/or SB Watch automatically.
 
 *Standalone Apps*
 
-- 
-
 - #1 – Atom Time (to set the time on an SB Watch without a phone)
-
 - #2 – Atom Stack (enter a card and it will display the next cards in the selected stack – it is for practicing the stacks)
-
 - #3 – Atom Pi (please note that Pi starts with 3, so we assigned it to this button – enter a 4 digit number and it will display Pi Revelations information by David Penn)
-
 - #4 – Atom Square (a square has 4 sides, so we assigned this app to button 4 – enter a number between 25 and 99 and a magic square will be displayed)
-
 - #5 – Atom Practice (practice entering time to learn working with Atom)
 
 *Keyboard Apps*
 
-- 
-
 - #7 – Numeric Keyboard (to enter numbers)
-
 - #8 – Nokia Keyboard (to enter text)
-
 - #9 – Cursor Keyboard (for Inject 2 – to move up-down-left-right)
-
 - #10 – Media Keyboard (to set volume, play previous/next song, play/pause/mute music)
-
 - #11 – Custom Keyboard (by default it types in the English WikiTest words – app is by Marc-Kerstein)
 
 Turn on Atom, and you have 5 seconds to launch an app by pressing the button assigned to the app. Later you can launch an app by double-clicking on the power button and pressing the app’s button.
@@ -132,28 +112,16 @@ Launcher is a system feature now (it was previously a mini-app).
 
 **MagiScript Updates**
 
-- 
-
 - keyboard.type now supports German and French special letters like ä or ü.
-
 - peeksmith.id() and sbwatch.id() returns the connected device’s Bluetooth name, or undefined
-
 - strSub improvements: you can specify a negative length parameter which means until the xth character from back the end of the string
-
 - if you double, triple (and so on) click a button, it will send a “click3” event value, where 3 is the number of the clicks (one click is “click”)
-
 - voice.say("hello") says hello on your computer when Atom is connected to the editor, and behaves similarly when Atom is connected to the PeekSmith app.
-
 - sound.play("tom1") plays predefined sounds (“tom1”, “tom2”, “tom3” are available now) on your computer.
-
 - config.get() and config.set() functions to query (and use) and set Atom settings.
-
 - keyboard.send() is a smart function, you can send special keys, but simple strings like “hello”, too. For example, keyboard.send("Hello World!", "#ENTER", "#PLAY") types “Hello World!”, presses the ENTER, and plays (or pauses the music)
-
 - peeksmith.connect() and sbwatch.connect() can be called with no parameters, it will connect to the device you configured (it is ‘*’ by default, which means the first PS or SBW it finds)
-
 - there are events for connecting and disconnecting PeekSmith and SB Watch
-
 - sbwatch.print() and sbwatch.vibrate() are ready for SB Watch 2.
 
 Atom can directly connect to PeriPage printers now. It is not a finished feature, we will talk about it in the future.

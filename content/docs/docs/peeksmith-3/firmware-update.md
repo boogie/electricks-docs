@@ -35,7 +35,6 @@ Watch the following video about updating your device with the PeekSmith app.
 Make sure:
 
 - You have the latest PeekSmith app
-
 - You are logged in with your Google/Apple account
 
 The update option should appear on the home screen as a yellow button.
@@ -52,63 +51,23 @@ To begin the firmware update process, make sure that your PeekSmith 3 is turned 
 
 Releases:
 
-v1.9.9 is the latest firmware we have released. It is our most stable edition. [kbd:[DOWNLOAD](https://peeksmith.electricks.info/ps3_202505270710_v1.9.9.bin)]
+v1.9.9 is the latest firmware we have released. It is our most stable edition. [DOWNLOAD](https://peeksmith.electricks.info/ps3_202505270710_v1.9.9.bin)
 
 Steps:
 
--
-
--
-
-Download the latest firmware you would like to upgrade your device to. We have linked the available firmware from the link above.
-
--
-
-Open our firmware update tool in a compatible browser: [https://boogie.github.io/mcumgr-web/](https://boogie.github.io/mcumgr-web/)
-
--
-
-Connect to your PeekSmith 3 by pressing the Connect button on this page. Make sure that PeekSmith is not connected to your phone. Type “PeekSmith” (without quotes and paying attention to letter case) into the input field to ensure that only your device is listed.
-
--
-
-The page will list the firmware available on your device. There are usually two firmware images available, with the first one being the active one.
-
--
-
-To make room for the new firmware, press the Erase button to delete the second firmware image. The connection may be lost at this point. If the page is not reconnecting properly to your PeekSmith, try reloading the page and connecting again. If nothing happens when you press the button, move on to the next step.
-
--
-
-In the Image Upload section, press the Select file button to choose the new firmware.
-
--
-
-You should see the new firmware’s version number and other details. Press the Upload button to send the new firmware to your PeekSmith 3.
-
--
-
-If the connection is lost during the upload process, reload the page and repeat step 5.
-
--
-
-Once the new firmware has been uploaded to your PeekSmith, press the Test button to flag the firmware for activation. The next time you turn on your PeekSmith, it will set the new firmware as active and start it up.
-
--
-
-The new firmware should now be marked as “Pending: true”. Press the Reset button at the top of the page to restart your device and install the new firmware. This process should take about 30-40 seconds, the LED will be ON.
-
--
-
-When the new firmware is ready and running, the page should reconnect to your PeekSmith 3. If it doesn’t, reload the page and connect again.
-
--
-
-Confirm that the new firmware is active by checking the first slot. If it’s still in the second position, repeat the process from step 9.
-
--
-
-The new firmware is not yet permanent. If you restart your PeekSmith, it will downgrade to the previous firmware. If you can connect to PeekSmith via Bluetooth, the new firmware is working. Press the Confirm button to make it permanent.
+1. Download the latest firmware you would like to upgrade your device to. We have linked the available firmware from the link above.
+2. Open our firmware update tool in a compatible browser: [https://boogie.github.io/mcumgr-web/](https://boogie.github.io/mcumgr-web/)
+3. Connect to your PeekSmith 3 by pressing the Connect button on this page. Make sure that PeekSmith is not connected to your phone. Type “PeekSmith” (without quotes and paying attention to letter case) into the input field to ensure that only your device is listed.
+4. The page will list the firmware available on your device. There are usually two firmware images available, with the first one being the active one.
+5. To make room for the new firmware, press the Erase button to delete the second firmware image. The connection may be lost at this point. If the page is not reconnecting properly to your PeekSmith, try reloading the page and connecting again. If nothing happens when you press the button, move on to the next step.
+6. In the Image Upload section, press the Select file button to choose the new firmware.
+7. You should see the new firmware’s version number and other details. Press the Upload button to send the new firmware to your PeekSmith 3.
+8. If the connection is lost during the upload process, reload the page and repeat step 5.
+9. Once the new firmware has been uploaded to your PeekSmith, press the Test button to flag the firmware for activation. The next time you turn on your PeekSmith, it will set the new firmware as active and start it up.
+10. The new firmware should now be marked as “Pending: true”. Press the Reset button at the top of the page to restart your device and install the new firmware. This process should take about 30-40 seconds, the LED will be ON.
+11. When the new firmware is ready and running, the page should reconnect to your PeekSmith 3. If it doesn’t, reload the page and connect again.
+12. Confirm that the new firmware is active by checking the first slot. If it’s still in the second position, repeat the process from step 9.
+13. The new firmware is not yet permanent. If you restart your PeekSmith, it will downgrade to the previous firmware. If you can connect to PeekSmith via Bluetooth, the new firmware is working. Press the Confirm button to make it permanent.
 
 Please note that beta firmware may contain bugs. If you experience any issues during the update process or with the new firmware, please report them. Enjoy the new features!
 
@@ -121,11 +80,8 @@ In addition to updating the firmware with a newer version, it is also possible t
 Starting with firmware version 1.5.7, we’ve added a feature that allows you to switch back to a previous firmware version directly on your PeekSmith 3 device. Here’s how to do it:
 
 - Turn off your PeekSmith
-
 - Press and hold the side button and the right button at the same time – do not release the buttons until you enter the System menu.
-
 - Press the left button to access the “Switch to Firmware vx.x.x” option.
-
 - Press and hold the right button until the device restarts.
 
 This will switch your PeekSmith 3 back to the previous firmware version. Keep in mind that downgrading the firmware may remove any new features or improvements that were added in newer versions.

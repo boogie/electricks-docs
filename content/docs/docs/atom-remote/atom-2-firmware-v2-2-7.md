@@ -10,20 +10,7 @@ sidebar: "aa887b8"
 
 ## What's New
 
- 
- 
- 
- 
- 
-
-- 
-fixes the bug (built-in mini-apps were not launching)
-
-- 
-adds a keep-alive feature for background app running (PeekSmith and TimeSmith apps will utilize this feature)
-
-- 
-introduces the `atom.id()` function to query the Atom’s Bluetooth name
-
-- 
-introduces the `atom.battery()`, `ps.battery()` and `sbwatch.battery()` functions to query the battery percentage of the devices. If no PS or SB Watch connected, it responds with `undefined`.
+- fixes the bug (built-in mini-apps were not launching)
+- adds a keep-alive feature for background app running (PeekSmith and TimeSmith apps will utilize this feature)
+- introduces the `atom.id()` function to query the Atom’s Bluetooth name
+- introduces the `atom.battery()`, `ps.battery()` and `sbwatch.battery()` functions to query the battery percentage of the devices. If no PS or SB Watch connected, it responds with `undefined`.

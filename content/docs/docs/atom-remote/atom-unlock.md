@@ -23,11 +23,7 @@ And you are ready to unlock the phone later during your show.
 
 ## Launching and Using the Atom Unlock Mini-app
 
-[
-
 ![](https://electricks.info/wp-content/uploads/2025/01/atom-unlock-1024x426.png)
-
-](https://electricks.info/wp-content/uploads/2025/01/atom-unlock.png)
 
 By default, the Atom Unlock mini-app is not assigned to any button, however, it is launched by the [Atom Alias](https://electricks.info/docs/atom-remote/atom-alias/) mini-app, which renames your Atom to a device like “AirPods Pro”. You can launch it with button #6 (when Atom is in launch mode).
 

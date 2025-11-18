@@ -8,63 +8,26 @@ category: guides
 # Solving a 3×3 Rubik’s Cube
 
 ## 1. Overview
-
  
+With **43 quintillion** possible scrambled states, a Rubik’s Cube can look intimidating – yet in practice, you can solve it consistently by following just **seven logical stages** and remembering under a dozen short algorithms. Expect your first successful solve in under an hour, and, after practice, times well below one minute.
  
- 
- 
- With **43 quintillion** possible scrambled states, a Rubik’s Cube can look intimidating – yet in practice, you can solve it consistently by following just **seven logical stages** and remembering under a dozen short algorithms. Expect your first successful solve in under an hour, and, after practice, times well below one minute.
-
- 
- 
- 
- 
- ## 2. Getting Started
-
- 
- 
- 
- 
+## 2. Getting Started
  
 - **Explore first.** Turn the cube freely and attempt to solve the **white face** without written help. Most people manage this after a little experimentation, and it builds spatial intuition.
-
 - **Learn the notation.** Algorithms are written with single‑letter moves (F, R, U…) plus *’* (counter‑clockwise) or *2*(180°). See Section 4 for a quick reference.
-
 - **Memorise key sequences.** Practise the six main triggers until they flow from muscle memory.
 
 *Tip:* Random twists almost never solve the puzzle. Deliberate patterns are the secret.
-
  
- 
- 
- 
- ## 3. Cube Anatomy & Good‑to‑Know Facts
-
- 
- 
- 
- 
- 
+## 3. Cube Anatomy & Good‑to‑Know Facts
 
 - **Fixed centres** – Each face’s centre never moves; it defines that face’s colour.
-
 - **8 corners** – Three stickers each.
-
 - **12 edges** – Two stickers each.
 
 Understanding that the cube is *built around* its centres helps you keep colours consistent when matching pieces later.
-
  
- 
- 
- 
- ## 4. Notation at a Glance
-
- 
- 
- 
- 
- 
+## 4. Notation at a Glance
 
 Symbol
 Face Turn
@@ -102,18 +65,10 @@ Down
 **D2**
 
 Hold the cube so **white = Up** and **green = Front** when reading any algorithm.
-
  
+## 5. Step‑by‑Step Guide
  
- 
- 
- ## 5. Step‑by‑Step Guide
-
- 
- 
- 
- 
- **Step 1 – White Cross**
+**Step 1 – White Cross**
 
 Create a plus sign on the white face **with each edge’s side colour matching its adjacent centre**. *Work intuitively.* If an edge flips the wrong way, use **F R D R’ F’**.
 
@@ -125,11 +80,8 @@ Finish the first layer. Put a white corner beneath its slot, then repeat **R’�
 
 Turn the cube *upside‑down* (white on bottom). For an edge in the top layer **without yellow**:
 
-- 
-**Right insert** (edge goes to the right slot): U R U’ R’ U’ F’ U F
-
-- 
-**Left insert** (edge to left slot): U’ L’ U L U F U’ F’
+- **Right insert** (edge goes to the right slot): U R U’ R’ U’ F’ U F
+- **Left insert** (edge to left slot): U’ L’ U L U F U’ F’
 
 If an edge is in the middle but flipped, run either insert to pop it up, then place correctly.
 
@@ -151,62 +103,24 @@ Hold an unsolved yellow corner at FRU and repeat **R’ D’ R D** until i
 
 **Congratulations—cube solved!** If the cube looks scrambled mid‑process, keep faith and continue; only the top layer pieces are moving.
 
- 
- 
- 
- 
- ## 6. All Algorithms – Pocket Cheat‑Sheet
-
- 
- 
- 
- 
+## 6. All Algorithms – Pocket Cheat‑Sheet
  
 - White Edge Flip F R D R' F'
-
 - White Corner Insert R' D' R D
-
 - Middle Edge – Right U R U' R' U' F' U F
-
 - Middle Edge – Left U' L' U L U F U' F'
-
 - Yellow Cross F R U R' U' F'
-
 - Swap Yellow Edges R U R' U R U2 R' U
-
 - Place Yellow Corners U R U' L' U R' U' L
-
 - Orient Yellow Corners R' D' R D (repeat)
-
  
- 
- 
- 
- ## 7. Practice Pointers
-
- 
- 
- 
- 
- 
+## 7. Practice Pointers
 
 - **Look‑ahead:** Identify the next target piece during the current algorithm.
-
 - **Finger tricks:** Use single‑finger flicks for quick *U*, *R* and *F* turns.
-
 - **Time yourself:** Online timers and phone apps track solves and highlight improvement areas.
-
  
- 
- 
- 
- ## 8. Next Steps
-
- 
- 
- 
- 
- 
+## 8. Next Steps
 
 Skill
 Why Learn
@@ -223,24 +137,12 @@ Ruwix advanced guide
 **Hardware tuning**
 Lubes & magnets boost control
 SpeedCubeReview.com
+ 
+## 9. Further Reading & Videos
+ 
+**A full 10‑minute walk‑through**
 
- 
- 
- 
- 
- ## 9. Further Reading & Videos
-
- 
- 
- 
- 
- **A full 10‑minute walk‑through**
-
-[![YouTube Video](https://img.youtube.com/vi/7Ron6MN45LY/0.jpg)](
-
-[YouTube Video](https://www.youtube.com/watch?v=7Ron6MN45LY)
-
-)
+[youtube:7Ron6MN45LY]
 
 **Interactive step‑by‑step guide**
 

@@ -1717,11 +1717,11 @@ body {
 
 /* Feedback Section */
 .article-feedback {
-    background: var(--bg-secondary);
+    background: rgba(118, 136, 217, 0.08);
     padding: 32px;
     border-radius: 8px;
     margin: 64px 0 32px;
-    border: 1px solid var(--bg-tertiary);
+    border: 1px solid rgba(82, 114, 255, 0.3);
 }
 
 .article-feedback h4 {
@@ -1739,7 +1739,7 @@ body {
 .btn-feedback {
     background: white;
     color: var(--text-primary);
-    border: 1px solid var(--bg-tertiary);
+    border: 1px solid rgba(82, 114, 255, 0.3);
     padding: 10px 20px;
     border-radius: 8px;
     font-size: 14px;
@@ -1748,8 +1748,70 @@ body {
 }
 
 .btn-feedback:hover {
-    background: var(--bg-secondary);
-    border-color: var(--text-secondary);
+    background: rgba(82, 114, 255, 0.08);
+    border-color: var(--color-primary);
+}
+
+.btn-feedback.selected {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
+}
+
+.btn-feedback:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+.feedback-form {
+    margin-top: 16px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.feedback-form.visible {
+    display: flex;
+}
+
+.feedback-form label {
+    font-size: 14px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.feedback-form textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--bg-tertiary);
+    padding: 12px;
+    resize: vertical;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--text-primary);
+    background: white;
+    min-height: 96px;
+}
+
+.feedback-form textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(82, 114, 255, 0.15);
+}
+
+.feedback-form-actions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.feedback-form button {
+    padding: 8px 16px;
+}
+
+.feedback-status {
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--text-secondary);
 }
 
 /* Page Navigation */

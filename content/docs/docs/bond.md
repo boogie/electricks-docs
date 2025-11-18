@@ -26,12 +26,9 @@ As for using Bond, the possibilities are vast. You can wear it on your wrist, pa
 Congrats on having your Bond. Contents of the box:
 
 - Electricks Bond smartwatch
-
 - Charger (under the watch)
 
 ## You're Backed by a Supportive Network
-
- our PeekSmith Facebook community for updates, feature discussions, and to share your experiences. Your feedback is incredibly valuable to us, and we’re eager to hear your suggestions, requests, and bug reports as we continue to refine Bond.
 
 Don’t forget to join our [PeekSmith Facebook community](https://www.facebook.com/groups/peeksmith) , feature discussions, and to share your experiences. Your feedback is incredibly valuable to us, and we’re eager to hear your suggestions, requests, and bug reports as we continue to refine Bond. It is a welcoming and active community you will love.
 

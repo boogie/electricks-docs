@@ -9,47 +9,22 @@ sidebar: "297a4df"
 # External Displays
 
 ## About
-
  
- 
- 
- 
- The **External Displays** is a premium add-on for the PeekSmith app. You will be able to **display text from the PeekSmith app on a variety of 3rd party devices**, so you can enjoy most of the benefits of the app even if you don’t have a PeekSmith device.
+The **External Displays** is a premium add-on for the PeekSmith app. You will be able to **display text from the PeekSmith app on a variety of 3rd party devices**, so you can enjoy most of the benefits of the app even if you don’t have a PeekSmith device.
 
 **This is a premium add-on sold separately by Benke Smith, available for individual purchase.
 **[https://bsmagic.app/payment/?item=externaldisplays](https://bsmagic.app/payment/?item=externaldisplays)
-
  
- 
- 
- 
- ## The Add-On Currently Supports the Following Display Options:
-
- 
- 
- 
- 
- 
-
-- 
+## The Add-On Currently Supports the Following Display Options:
 
 - Local Notifications (use any smartwatch or smartband)
-
 - WearOS Watches (Android only)
-
 - Pebble Watch (Android only)
-
 - Apple Watch (iOS only)
-
 - WEB Screen (in any browser)
-
 - BT Screen (on connected phones & tablets)
-
  
- 
- 
- 
- ## Local Notifications
+## Local Notifications
 
  
  

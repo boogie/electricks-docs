@@ -17,7 +17,6 @@ Some Inject 2 routine allows you to enter information, and you can use Atom for 
 Requirements:
 
 - Inject 2 by Greg Rostami.
-
 - Atom, with turned on [Bluetooth keyboard](https://electricks.info/docs/atom-remote/bluetooth-keyboard/) support.
 
 ## Setting Up Atom
@@ -34,11 +33,7 @@ This will transform Atom to a Bluetooth keyboard, the two left buttons in first 
 
 You should set up the key mapping for swipes in Inject 2. Go to the Settings, and Bluetooth Keyboard Settings, and set up the keys like this:
 
-[
-
 ![](https://electricks.info/wp-content/uploads/2023/05/inject2-swipes-724x1024.png)
-
-](https://electricks.info/wp-content/uploads/2023/05/inject2-swipes.png)
 
 Once you have it, you can try a routine with swipe input.
 

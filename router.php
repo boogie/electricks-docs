@@ -13,7 +13,10 @@ if (preg_match('/\.(?:css|js|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|ico)$/', $u
 
 // Route API requests
 if (strpos($uri, '/api/') === 0) {
-    $apiFile = __DIR__ . $uri . '.php';
+    $apiFile = __DIR__ . $uri;
+    if (substr($uri, -4) !== '.php') {
+        $apiFile .= '.php';
+    }
     if (file_exists($apiFile)) {
         require $apiFile;
         exit;

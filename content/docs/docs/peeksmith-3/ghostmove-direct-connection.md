@@ -14,15 +14,8 @@ With firmware v1.7.41, we’ve introduced a direct GhostMove connection in stand
 
 There are two supported GhostMove routines:
 
--
-
--
-
-Which Side Up and
-
--
-
-Movement
+- Which Side Up and
+- Movement
 
 ## Which Side Up
 
@@ -34,34 +27,12 @@ For the “Movement” routine, a bit more setup is required, but the connection
 
 To name your GhostMoves for the “Movement” routine, follow these steps:
 
--
-
--
-
-Connect your devices in the GhostMove app.
-
--
-
-Tap on each GhostMove to reveal its “Original name” on the screen.
-
--
-
-Note down the ID after the dash (e.g., 01ACE9 for GhostMove-01ACE9).
-
--
-
-Connect your PeekSmith and go to its Details page.
-
--
-
-Locate the text box and input “ *cg* 01ACE9:b:Bee,” replacing the ID with yours.
-
--
-
-The first one-letter name after the double colon is unused, and the second one (e.g., “Bee”) is the name the “Movement” routine will use.
-
--
-
-Upon successful configuration, you should see a “GhostMove Configured GM-01ACE9” message on the PeekSmith screen.
+1. Connect your devices in the GhostMove app.
+2. Tap on each GhostMove to reveal its “Original name” on the screen.
+3. Note down the ID after the dash (e.g., 01ACE9 for GhostMove-01ACE9).
+4. Connect your PeekSmith and go to its Details page.
+5. Locate the text box and input “ *cg* 01ACE9:b:Bee,” replacing the ID with yours.
+6. The first one-letter name after the double colon is unused, and the second one (e.g., “Bee”) is the name the “Movement” routine will use.
+7. Upon successful configuration, you should see a “GhostMove Configured GM-01ACE9” message on the PeekSmith screen.
 
 While this process may seem intricate initially, it’s a one-time setup, ensuring a smooth and personalized GhostMove interaction.

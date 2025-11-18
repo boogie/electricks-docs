@@ -18,12 +18,8 @@ The SBWatch Steel model has a screw-back case , which can be opened and closed u
 
 There are a few places where you can purchase a watch case wrench:
 
--
-
 - Jewelry or watch repair shops
-
 - Online retailers such as Amazon or eBay
-
 - Specialty stores that sell watch repair tools
 
 You may also be able to find a watch case wrench at a hardware store or a store that sells general repair tools.

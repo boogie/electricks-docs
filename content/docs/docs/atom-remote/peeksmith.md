@@ -14,33 +14,12 @@ PeekSmith is the free companion app for the [PeekSmith display](https://electric
 
 You can do these things with Atom and the PeekSmith app:
 
--
-
- 
-
--
-
-Upgrading the Atom firmware
-
--
-
-Assigning app actions to the Atom buttons
-
--
-
-Use PeekSmith App as a Peeking Device
-
--
-
-Entering LOTTO numbers with Atom, and sending them to Glyphs
-
--
-
-Entering Pi Revelations number and display the page, line, and column information
-
--
-
-Entering a number, or sending the actually displayed information to a Web API
+- Upgrading the Atom firmware
+- Assigning app actions to the Atom buttons
+- Use PeekSmith App as a Peeking Device
+- Entering LOTTO numbers with Atom, and sending them to Glyphs
+- Entering Pi Revelations number and display the page, line, and column information
+- Entering a number, or sending the actually displayed information to a Web API
 
 You can also upgrade the Atom firmware with our [web browser-based MagiScript editor](https://peeksmith.electricks.info/atom/).
 
@@ -84,11 +63,7 @@ Congrats, Atom is connected to the app.
 
 Each and every apps and MagiScript mini-apps defines its own button layout. Our most common layout is the “numeric” layout, but even this layout can change how it handles the bottom-left and bottom-right buttons.
 
-[
-
 ![](https://electricks.info/wp-content/uploads/2023/04/atom_numeric_buttons-1024x658.png)
-
-](https://electricks.info/wp-content/uploads/2023/04/atom_numeric_buttons.png)
 
 This is how PeekSmith works with the buttons. The bottom-left button is space, and the bottom-right button is backspace.
 

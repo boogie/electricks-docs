@@ -12,7 +12,7 @@ sidebar: "aa887b8"
 
 Launch this mini-app with button 11 (4th row-middle).
 
-The Custom Keyboard  (button #11) is our Jolly Joker layout. By default, it enters the keywords of the WikiTest (by Marc Kerstein), however you can assign any key press or words to the buttons. The backspace key is smart, if you enter a whole word with one press, backspace will delete all the letters.
+The Custom Keyboard  (button `#11`) is our Jolly Joker layout. By default, it enters the keywords of the WikiTest (by Marc Kerstein), however you can assign any key press or words to the buttons. The backspace key is smart, if you enter a whole word with one press, backspace will delete all the letters.
 
 ![](https://electricks.info/wp-content/uploads/2024/07/custom-1024x426.jpg)
 
@@ -26,22 +26,21 @@ In addition to entering words, letters, numbers, or other characters, there are 
 
 Configurable Keys
 
-- #SUBMIT – by default, it is an ENTER key, but you can select other keys, see the Submit Key dropdown above.
-
-- #SEPARATOR – by default, it is a SPACE key, but you can select other values, like COMMA “,”, or COMMA + SPACE “, “.
+- `#SUBMIT` – by default, it is an **ENTER** key, but you can select other keys, see the Submit Key dropdown above.
+- `#SEPARATOR` – by default, it is a **SPACE** key, but you can select other values, like **COMMA**, or **COMMA + SPACE**.
 
 You can configure them above the Custom Keyboard Assignments .
 
 Other Keys
 
-- #UP, #DOWN, #LEFT, #RIGHT
+- `#UP`, `#DOWN`, `#LEFT`, `#RIGHT`
 
-- #PAGE_UP, #PAGE_DOWN, #HOME, #END
+- `#PAGE_UP`, `#PAGE_DOWN`, `#HOME`, `#END`
 
-- #BACKSPACE / #DEL / #DELETE, #TAB, #ENTER / #RETURN, #INS / #INSERT, #PRTSC, #CAPS_LOCK
+- `#BACKSPACE` / `#DEL` / `#DELETE`, `#TAB`, `#ENTER` / `#RETURN`, `#INS` / `#INSERT`, `#PRTSC`, `#CAPS_LOCK`
 
-- #F1, #F2, #F3, #F4, #F5, #F6, #F7, #F8, #F9, #F10, #F11, #F12
+- `#F1`, `#F2`, `#F3`, `#F4`, `#F5`, `#F6`, `#F7`, `#F8`, `#F9`, `#F10`, `#F11`, `#F12`
 
-- #PLAY / #PAUSE / #PLAY_PAUSE, #NEXT, #PREV / #PREVIOUS, #STOP, #MUTE, #VOL_UP / #VOLUME_UP, #VOL_DOWN / #VOLUME_DOWN
+- `#PLAY` / `#PAUSE` / `#PLAY_PAUSE`, `#NEXT`, `#PREV` / `#PREVIOUS`, `#STOP`, `#MUTE`, `#VOL_UP` / `#VOLUME_UP`, `#VOL_DOWN` / `#VOLUME_DOWN`
 
 The Custom Keyboard feature lets you design your own keyboard to fit your needs, without requiring the creation of a MagiScript mini-app.

@@ -1,12 +1,12 @@
 ---
-title: Bluetooth Keyboard / Mouse
+title: Bluetooth Keyboard
 updated: "2025-10-26"
 author: Electricks
 category: guides
 sidebar: "aa887b8"
 ---
 
-# Bluetooth Keyboard / Mouse
+# Bluetooth Keyboard
 
 ## Introduction
 
@@ -61,11 +61,3 @@ Bluetooth keyboards are sending keyboard positions, not the exact character asso
 Operating systems are handling the situation differently. You are likely to use an iOS or Android phone with Atom, and perhaps a Windows or Mac for development. You will know the settings of the device you are working with, but you can also connect Atom to a spectator’s phone. This allows you to perform a lock screen effect or to type a prediction on their phone, however, their keyboard settings will be unknown.
 
 Currently we support a keyboard variation called “International Keyboard”. We have tested it with both iOS and Android. By default, all the English letters and other characters are working, and additionally some accented letters (mostly Western European) are working as well, but to have them, make sure you configure your OS in the Keyboard section of [Atom Settings](https://electricks.info/docs/atom-remote/). Currently, the accented characters are available with MagiScript only, no built-in mini-apps supports entering them.
-
-## Bluetooth Mouse
-
-More information coming soon…
-
-![](https://electricks.info/wp-content/plugins/elementor/assets/images/placeholder.png)
-
-![](https://electricks.info/wp-content/plugins/elementor/assets/images/placeholder.png)

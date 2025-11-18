@@ -18,15 +18,9 @@ The PeekSmith app is a free companion app designed for mentalists and magicians.
 
 The app is FREE for Electricks hardware owners (some add-ons might be purchased separately). Click on the image below to install the app on iOS
 
-[
-
 ![](https://electricks.info/wp-content/uploads/2024/09/appstore.png)
 
-](https://apps.apple.com/us/app/peeksmith-bs-magic/id1498435882)
-
 On Android, you can download the APK through your phone’s [browser](https://bsmagic.app/apps/peeksmith/).
-
-[youtube:Jjsau9XEPqE]
 
 [youtube:Jjsau9XEPqE]
 
@@ -58,7 +52,6 @@ Note: To send data (like text or drawings) to Teleport, you’ll also need a com
 
 Now that you’re connected, try out some of the powerful routines designed for Teleport:
 
-- [Poker Card Image:](https://electricks.info/docs/teleport/poker-card-image/) Try the most basic poker card reveal by entering the suit and value in the app.
-- [ Handwritten Text: ](https://electricks.info/docs/teleport/handwritten-text/) Reveal hand-written text on Teleport based on text from any sources the app can collect.
-
-- [ Doodle Drawing: ](https://electricks.info/docs/teleport/doodle-drawing/) Reveal a drawing coming from Doodle, Web Doodle or from an impression pad.
+- [Poker Card Image](https://electricks.info/docs/teleport/poker-card-image/): Try the most basic poker card reveal by entering the suit and value in the app.
+- [ Handwritten Text](https://electricks.info/docs/teleport/handwritten-text/): Reveal hand-written text on Teleport based on text from any sources the app can collect.
+- [ Doodle Drawing](https://electricks.info/docs/teleport/doodle-drawing/): Reveal a drawing coming from Doodle, Web Doodle or from an impression pad.

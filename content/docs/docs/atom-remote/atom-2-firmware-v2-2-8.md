@@ -10,21 +10,11 @@ sidebar: "aa887b8"
 
 ## What's New
 
- 
- 
- 
- 
- Notable changes:
+Notable changes:
 
-- 
-new `atom.id(‘AirPods Pro’);` command to rename the device
-
-- 
-changes to the numeric keyboard to be compatible with iThump/Toxic+
-
-- 
-new built-in apps (configurable with the MagiScript Editor)
-
+- new `atom.id(‘AirPods Pro’);` command to rename the device
+- changes to the numeric keyboard to be compatible with iThump/Toxic+
+- new built-in apps (configurable with the MagiScript Editor)
  
 You can rename the Atom device using MagiScript, and this change will remain as long as the device is powered on. 
 

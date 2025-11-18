@@ -33,7 +33,6 @@ You can also contact us directly if you have app or hardware related questions.
 It is important:
 
 - for useful tips and details, read our documentation
-
 - to get the latest features, keep updating the app and the firmware
 
 ## Turning ON and OFF Teleport
@@ -52,16 +51,17 @@ You can charge the device with the Qi wireless charger you got it with, it has a
 
 It is about 1-2 hours to charge your device to 100%. You will not damage the device by keeping it on the charger for the night.
 
-There are two important notes:
-
-- [
+**Important notes**
 
 ![](https://electricks.info/wp-content/uploads/2025/09/teleport-charging.jpg)
 
-](https://electricks.info/wp-content/uploads/2025/09/teleport-charging.jpg)Charging options – Use the included Qi wireless charger (USB-A plug) or connect your device directly to a computer USB port or a wall charger. The marking on the back of Teleport should be aligned with the center of the Qi charger for proper charging.
+- Use the included Qi wireless charger (USB-A plug) or connect your device directly to a computer USB port or a wall charger. The marking on the back of Teleport should be aligned with the center of the Qi charger for proper charging.
 - Charging indicator – While charging, Teleport’s red LED light will turn on. The light will automatically turn off once the device is fully charged.
 - Charging time – It takes about 1–2 hours to fully charge the device. You can safely leave it on the charger overnight without causing damage.
-- Battery care tips : Avoid complete discharge – Letting the battery fully drain can cause damage (as with any LiPo battery). Charge it at least once a month, even if not in use.
+
+**Battery care tips**
+
+- Avoid complete discharge – Letting the battery fully drain can cause damage (as with any LiPo battery). Charge it at least once a month, even if not in use.
 - Charger compatibility – Any 5V charger is safe to use, including high-power (100W) laptop chargers—they won’t overload the device.
 
 That’s it! You’re now ready to start using Teleport. If you have any questions, check out our [specs](https://electricks.info/docs/teleport/specifications/), [FAQ](https://electricks.info/docs/teleport/faq/) pages, or learn how to use it with the [PeekSmith app](https://electricks.info/docs/teleport/peeksmith-app/) or [Atom](https://electricks.info/docs/teleport/atom-2/) directly.
